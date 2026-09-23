@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light hide-scrollbar" lang="vi" style><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-lg antialiased pt-28"
+        data-use-chatbot="true">
+        <div id="header-placeholder"></div>
+<main class="max-w-container-max mx-auto px-lg py-xl">
+        <div class="grid grid-cols-12 gap-gutter items-start">
+            
+            <!-- CỘT TRÁI: Selector Panel -->
+            <aside id="aside-product-list" class="col-span-12 lg:col-span-4 flex flex-col gap-lg hidden">
+                <div class="flex items-center justify-between pb-xs border-b border-mist">
+                    <div class="flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-carbon-ink">inventory_2</span>
+                        <h2 class="font-label-caps text-label-caps text-carbon-ink">
+                            CHỌN SẢN PHẨM CẦN ĐÁNH GIÁ
+                        </h2>
+                    </div>
+                </div>
+                <!-- Vùng chứa danh sách sản phẩm (JS render) -->
+                <div id="product-selector-container" class="flex flex-col gap-md"></div>
+
+                <!-- Technical Assurance Banner -->
+                <div class="p-md bg-fog border border-mist rounded-lg">
+                    <div class="flex items-start gap-xs">
+                        <span class="material-symbols-outlined text-carbon-ink mt-[2px]">verified</span>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps text-carbon-ink mb-xs">ĐÁNH GIÁ CHÍNH CHỦ</h4>
+                            <p class="font-body-sm text-body-sm text-graphite">
+                                Mỗi đánh giá của quý khách đều được gắn nhãn định danh “ĐÃ MUA HÀNG” sau khi xác thực dữ liệu đơn hàng thành công trên hệ thống TECHNOVA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CỘT PHẢI: Review Form & Feedback Dossier -->
+            <section id="review-section" class="col-span-12 lg:col-span-8 bg-paper-white border border-mist rounded-xl p-lg md:p-xl w-full">
+                <!-- Form Header: Active Product Summary -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-lg border-b border-mist gap-md">
+                    <div class="flex items-center gap-md">
+                        <div class="w-16 h-16 bg-fog border border-mist rounded-DEFAULT flex items-center justify-center p-xs flex-shrink-0">
+                            <img id="product-image-display" class="w-full h-full object-contain" src="" alt="Product Image">
+                        </div>
+                        <div>
+                            <h2 id="product-name-display" class="font-body-lg text-[32px] font-semibold text-carbon-ink leading-none">Đang tải thông tin...</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vùng chứa Thống kê đánh giá -->
+                <div id="review-stats-container" class="mt-lg"></div>
+
+                <!-- THÔNG BÁO ĐÃ ĐÁNH GIÁ (Ẩn mặc định) -->
+                <div id="already-reviewed-message" class="hidden mt-lg p-xl border border-mist bg-surface-bright rounded-xl flex flex-col items-center justify-center text-center gap-sm">
+                    <span class="material-symbols-outlined text-[64px] text-[#16a34a] mb-2">verified</span>
+                    <h3 class="font-headline-md text-[28px] text-carbon-ink font-bold leading-tight">Bạn đã đánh giá sản phẩm này!</h3>
+                    <p class="font-body-lg text-graphite max-w-md">
+                        Cảm ơn bạn đã dành thời gian chia sẻ trải nghiệm. Phản hồi của bạn giúp cộng đồng TechNova mua sắm dễ dàng và an tâm hơn.
+                    </p>
+                    <button onclick="window.location.href='orders.html'" class="mt-4 px-lg py-sm bg-fog text-carbon-ink font-label-caps text-label-caps rounded-lg border border-mist hover:bg-mist transition-colors">
+                        QUAY LẠI ĐƠN HÀNG
+                    </button>
+                </div>
+
+                <!-- FORM ĐÁNH GIÁ -->
+                <form id="review-form" class="mt-lg flex flex-col gap-lg" onsubmit="event.preventDefault();">
+                    <!-- 1. Star Rating Block -->
+                    <div class="p-md bg-fog border border-mist rounded-lg">
+                        <label class="font-label-caps text-label-caps text-carbon-ink block mb-xs">
+                            MỨC ĐỘ HÀI LÒNG TỔNG QUAN <span class="text-ember-red">*</span>
+                        </label>
+                        <p class="font-body-sm text-body-sm text-graphite mb-md">
+                            Chạm vào số sao để xếp hạng trải nghiệm sử dụng thiết bị này.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-md">
+                            <!-- Input ẩn lưu giá trị sao -->
+                            <input type="hidden" id="review-rating" value="5">
+                            
+                            <!-- Star buttons -->
+                            <div class="flex items-center gap-xs text-carbon-ink" id="star-rating">
+                                <button onclick="setRating(1)" aria-label="1 sao" class="p-xs hover:scale-110 transition-transform focus:outline-none" type="button">
+                                    <span class="material-symbols-outlined material-symbols-fill !text-3xl text-carbon-ink">star</span>
+                                </button>
+                                <button onclick="setRating(2)" aria-label="2 sao" class="p-xs hover:scale-110 transition-transform focus:outline-none" type="button">
+                                    <span class="material-symbols-outlined material-symbols-fill !text-3xl text-carbon-ink">star</span>
+                                </button>
+                                <button onclick="setRating(3)" aria-label="3 sao" class="p-xs hover:scale-110 transition-transform focus:outline-none" type="button">
+                                    <span class="material-symbols-outlined material-symbols-fill !text-3xl text-carbon-ink">star</span>
+                                </button>
+                                <button onclick="setRating(4)" aria-label="4 sao" class="p-xs hover:scale-110 transition-transform focus:outline-none" type="button">
+                                    <span class="material-symbols-outlined material-symbols-fill !text-3xl text-carbon-ink">star</span>
+                                </button>
+                                <button onclick="setRating(5)" aria-label="5 sao" class="p-xs hover:scale-110 transition-transform focus:outline-none" type="button">
+                                    <span class="material-symbols-outlined material-symbols-fill !text-3xl text-carbon-ink">star</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Reviewer Identity Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-md pt-xs">
+                        <div>
+                            <label class="font-label-caps text-label-caps text-carbon-ink block mb-xs">
+                                HỌ VÀ TÊN NGƯỜI ĐÁNH GIÁ <span class="text-ember-red">*</span>
+                            </label>
+                            <input id="guest-name" class="w-full bg-paper-white border border-ash-border rounded-DEFAULT px-md py-xs font-body-sm text-carbon-ink focus:border-carbon-ink focus:ring-0 focus:outline-none" type="text" placeholder="Nhập họ và tên của bạn">
+                        </div>
+                        <div>
+                            <label class="font-label-caps text-label-caps text-carbon-ink block mb-xs">
+                                TÌNH TRẠNG XÁC THỰC
+                            </label>
+                            <input class="w-full bg-fog border border-ash-border rounded-DEFAULT px-md py-xs font-body-sm text-graphite cursor-not-allowed focus:outline-none" readonly type="text" value="Khách mua hàng đã xác thực">
+                        </div>
+                    </div>
+
+                    <!-- 4. Review Content Textarea -->
+                    <div>
+                        <div class="flex justify-between items-center mb-xs">
+                            <label class="font-label-caps text-label-caps text-carbon-ink">
+                                NỘI DUNG ĐÁNH GIÁ CHI TIẾT <span class="text-ember-red">*</span>
+                            </label>
+                        </div>
+                        <textarea id="review-comment" class="w-full bg-paper-white border border-ash-border rounded-DEFAULT p-md font-body-sm text-carbon-ink placeholder:text-graphite/50 focus:border-carbon-ink focus:ring-0 focus:outline-none resize-y" placeholder="Chia sẻ cảm nhận chi tiết về thiết kế, hiệu năng sử dụng thực tế, thời lượng pin, nhiệt độ khi hoạt động..." rows="5"></textarea>
+                    </div>
+
+                    <!-- 6. Form Action Buttons -->
+                    <div class="pt-md border-t border-mist flex flex-col sm:flex-row items-center justify-between gap-md">
+                        <p class="font-body-sm text-xs text-graphite">
+                            Bằng việc gửi biểu mẫu, bạn xác nhận nội dung đánh giá tuân thủ
+                            <a class="text-carbon-ink underline underline-offset-2" href="#">Quy chuẩn cộng đồng TechNova</a>.
+                        </p>
+                        <div class="flex items-center gap-md w-full sm:w-auto">
+                            <button onclick="window.location.href='orders.html'" class="w-1/2 sm:w-auto px-lg py-xs border border-carbon-ink text-carbon-ink font-label-caps text-label-caps rounded-lg hover:bg-fog transition-colors scale-95 active:scale-90" type="button">
+                                HỦY
+                            </button>
+                            <!-- Nút Gửi -->
+                            <button onclick="submitGuestReview(this)" class="w-1/2 sm:w-auto px-xl py-xs bg-carbon-ink text-paper-white font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity shadow-none scale-95 active:scale-90" type="submit">
+                                GỬI
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+        <div id="footer-placeholder"></div>
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/review.js"></script>
+</html>

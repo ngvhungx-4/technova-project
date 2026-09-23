@@ -1,0 +1,42 @@
+<aside
+    class="w-full md:w-50 h-full flex-shrink-0 hairline-r bg-paper-white p-6 border-r">
+    <div class="flex flex-col gap-6">
+        <!-- Khu vực hiển thị Avatar và Tên -->
+        <div class="flex items-center gap-4 hairline-b pb-6 border-b">
+            <!-- 1. Thêm flex-shrink-0 để ảnh luôn giữ đúng kích thước, không bị ép nhỏ lại -->
+            <div id="sidebar-avatar"
+                class="flex-shrink-0 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12"
+                style="background-image: url('assets/img/avatar-default-svgrepo-com.svg');"></div>
+
+            <!-- 2. Thêm min-w-0 và flex-1 vào div bọc ngoài để tạo giới hạn chiều rộng -->
+            <div class="flex flex-col min-w-0 flex-1">
+                <!-- 3. Thêm truncate vào thẻ <h1> để giữ chữ trên 1 dòng -->
+                <h1 id="sidebar-fullname"
+                    class="font-headline-lg md:text-[22px] italic tracking-tight">Khách
+                    hàng</h1>
+                
+            </div>
+        </div>
+
+        <!-- Khu vực Menu điều hướng (Gắn id và class chuẩn để SidebarLogic.init hoạt động) -->
+        <nav id="sidebar-nav" class="flex flex-col gap-2">
+            <a href="user_infor.html" class="sidebar-link">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-sm font-body-sm font-medium">Thông tin tài
+                    khoản</span>
+            </a>
+
+            <a href="address.html" class="sidebar-link">
+                <span class="material-symbols-outlined">location_on</span>
+                <span class="text-sm font-body-sm font-medium">Địa chỉ nhận
+                    hàng</span>
+            </a>
+
+            <a href="orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">package_2</span>
+                <span class="text-sm font-body-sm font-medium">Đơn hàng của
+                    tôi</span>
+            </a>
+        </nav>
+    </div>
+</aside>

@@ -1,0 +1,37 @@
+<header
+    class="bg-paper-white dark:bg-obsidian text-carbon-ink dark:text-paper-white docked full-width top-0 h-14 border-b border-mist dark:border-carbon-ink flat no shadows flex justify-between items-center px-gutter w-full z-40 relative">
+    <div class="flex items-center gap-md">
+        <h2 id="admin-page-title"
+            class="font-body-lg text-label-caps text-carbon-ink dark:text-paper-white uppercase">Bảng
+            điều khiển</h2>
+    </div>
+    <div class="flex items-center gap-sm">
+        <button
+            class="text-carbon-ink dark:text-paper-white p-2 flex items-center justify-center rounded-DEFAULT hover:bg-fog transition-colors">
+            <span class="material-symbols-outlined text-[20px]"
+                data-icon="search">search</span>
+        </button>
+        <button
+            class="text-carbon-ink dark:text-paper-white p-2 flex items-center justify-center rounded-DEFAULT hover:bg-fog transition-colors relative">
+            <span class="material-symbols-outlined text-[20px]"
+                data-icon="notifications">notifications</span>
+            <span
+                class="absolute top-2 right-2 w-1.5 h-1.5 bg-ember-red rounded-full"></span>
+        </button>
+        <div class="w-px h-6 bg-mist mx-xs"></div>
+
+        <!-- Thêm ID vào khu vực này để JS có thể xử lý hiển thị ảnh -->
+        <button id="admin-profile-btn"
+            class="text-carbon-ink dark:text-paper-white p-2 flex items-center justify-center rounded-DEFAULT hover:bg-fog transition-colors">
+
+            <!-- Icon mặc định -->
+            <span id="admin-default-icon"
+                class="material-symbols-outlined text-[24px]"
+                data-icon="account_circle">account_circle</span>
+
+            <!-- Vùng chứa ảnh đại diện (ẩn theo mặc định) -->
+            <div id="admin-avatar-container"
+                class="hidden w-6 h-6 rounded-full bg-cover bg-center"></div>
+        </button>
+    </div>
+</header>

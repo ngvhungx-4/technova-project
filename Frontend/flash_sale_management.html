@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-surface text-on-surface h-screen overflow-hidden flex">
+        <div id="admin-sidebar-placeholder"></div>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col h-screen overflow-hidden">
+            <div id="admin-header-placeholder"></div>
+            <!-- Canvas -->
+            <main
+                class="flex-1 overflow-y-auto p-gutter bg-surface hide-scrollbar">
+                <div class="max-w-[1440px] mx-auto space-y-xl">
+                    <!-- Page Header -->
+                    <div
+                        class="flex justify-between items-end border-b border-carbon-ink pb-md">
+                        <div>
+                            <h1
+                                class="font-headline-md text-headline-md text-carbon-ink">Quản
+                                lý Flash Sale</h1>
+                            <p
+                                class="font-body-lg text-body-lg text-graphite mt-xs">Quản
+                                lý các chiến dịch giảm giá chớp nhoáng.</p>
+                        </div>
+                        <button id="btn-open-create-modal"
+                            class="bg-carbon-ink text-paper-white font-label-sm text-label-sm uppercase px-lg py-sm rounded-DEFAULT hover:bg-primary-container transition-colors flex items-center gap-xs">
+                            <span
+                                class="material-symbols-outlined text-[18px]">add</span>
+                            THÊM CHIẾN DỊCH
+                        </button>
+                    </div>
+                    <!-- Active Campaign Hero -->
+                    <section id="active-campaign-container"
+                        class="bg-paper-white hairline rounded-lg p-lg grid grid-cols-1 md:grid-cols-3 gap-lg items-center relative overflow-hidden">
+                        <!-- Subtle background accent for active status -->
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-ember-red opacity-5 rounded-bl-full pointer-events-none"></div>
+                        <div class="col-span-1 md:col-span-2 space-y-md z-10">
+                            <div class="flex items-center gap-sm">
+                                <span
+                                    class="w-2 h-2 bg-ember-red rounded-full animate-pulse"></span>
+                                <span
+                                    class="font-label-caps text-label-caps font-semibold text-ember-red uppercase">ĐANG
+                                    DIỄN RA</span>
+                            </div>
+                            <h2
+                                class="font-body-lg text-[32px] font-bold  text-carbon-ink">Siêu
+                                Sale Tháng 9</h2>
+                            <div
+                                class="flex gap-lg font-label-caps text-technical-mono font-semibold text-carbon-ink mt-md">
+                                <div class="border-l-2 border-ember-red pl-md">
+                                    <div
+                                        class="text-graphite mb-xs text-[12px]">THỜI
+                                        GIAN CÒN LẠI</div>
+                                    <div
+                                        class="text-[24px] font-bold text-ember-red">01:45:22</div>
+                                </div>
+                                <div class="hairline-l pl-md">
+                                    <div
+                                        class="text-graphite mb-xs text-[12px]">SẢN
+                                        PHẨM</div>
+                                    <div class="text-[24px]">42</div>
+                                </div>
+                                <div class="hairline-l pl-md">
+                                    <div
+                                        class="text-graphite mb-xs text-[12px]">DOANH
+                                        THU TẠM TÍNH</div>
+                                    <div class="text-[24px]">125.4M ₫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-1 flex justify-end z-10">
+                            <button
+                                class="border border-carbon-ink text-carbon-ink bg-transparent font-label-sm text-label-sm uppercase px-lg py-sm rounded-DEFAULT hover:bg-carbon-ink hover:text-paper-white transition-colors">
+                                QUẢN LÝ CHIẾN DỊCH NÀY
+                            </button>
+                        </div>
+                    </section>
+                    <!-- Content Split Layout -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                        <!-- Left Sidebar: Schedule Grid -->
+                        <aside class="lg:col-span-3 space-y-md">
+                            <h3
+                                class="font-label-caps text-label-caps text-carbon-ink uppercase hairline-b pb-xs">Lịch
+                                Trình Hôm Nay</h3>
+                            <div id="schedule-container"
+                                class="flex flex-col gap-sm">
+                                <!-- Active Slot -->
+                                <div
+                                    class="bg-carbon-ink text-paper-white p-md rounded-DEFAULT cursor-pointer relative overflow-hidden group">
+                                    <div
+                                        class="absolute left-0 top-0 bottom-0 w-1 bg-ember-red"></div>
+                                    <div
+                                        class="font-label-sm text-label-sm uppercase mb-xs opacity-80 group-hover:opacity-100 transition-opacity">09:00
+                                        - 12:00</div>
+                                    <div
+                                        class="font-body-sm text-body-sm flex justify-between items-center">
+                                        <span>Đang diễn ra</span>
+                                        <span
+                                            class="material-symbols-outlined text-[16px] text-ember-red animate-pulse">bolt</span>
+                                    </div>
+                                </div>
+                                <!-- Upcoming Slots -->
+                                <div
+                                    class="bg-paper-white hairline p-md rounded-DEFAULT cursor-pointer hover:bg-fog transition-colors">
+                                    <div
+                                        class="font-label-sm text-label-sm uppercase text-carbon-ink mb-xs">12:00
+                                        - 15:00</div>
+                                    <div
+                                        class="font-body-sm text-body-sm text-graphite flex justify-between items-center">
+                                        <span>Sắp diễn ra</span>
+                                        <span class="text-xs">30 SP</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-paper-white hairline p-md rounded-DEFAULT cursor-pointer hover:bg-fog transition-colors">
+                                    <div
+                                        class="font-label-sm text-label-sm uppercase text-carbon-ink mb-xs">15:00
+                                        - 18:00</div>
+                                    <div
+                                        class="font-body-sm text-body-sm text-graphite flex justify-between items-center">
+                                        <span>Sắp diễn ra</span>
+                                        <span class="text-xs">15 SP</span>
+                                    </div>
+                                </div>
+                                <!-- Ended Slot -->
+                                <div
+                                    class="bg-surface-container-high hairline p-md rounded-DEFAULT opacity-60">
+                                    <div
+                                        class="font-label-sm text-label-sm uppercase text-graphite mb-xs">06:00
+                                        - 09:00</div>
+                                    <div
+                                        class="font-body-sm text-body-sm text-graphite flex justify-between items-center">
+                                        <span>Đã kết thúc</span>
+                                        <span
+                                            class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full border border-mist text-graphite bg-transparent font-label-sm text-label-sm uppercase px-md py-sm rounded-DEFAULT hover:border-carbon-ink hover:text-carbon-ink transition-colors mt-md">
+                                XEM TẤT CẢ LỊCH
+                            </button>
+                        </aside>
+                        <!-- Right Main Area: Product Table -->
+                        <section class="lg:col-span-9 space-y-md">
+                            <div
+                                class="flex justify-between items-end hairline-b pb-xs">
+                                <h3 id="current-slot-title"
+                                    class="font-label-caps text-label-caps text-carbon-ink uppercase">Sản
+                                    Phẩm Khung Giờ (09:00 - 12:00)</h3>
+                                <div class="flex gap-sm">
+
+                                </div>
+                            </div>
+                            <div
+                                class="bg-paper-white hairline rounded-DEFAULT overflow-hidden">
+                                <table class="w-full text-left border-collapse">
+                                    <thead
+                                        class="bg-surface-container-low hairline-b">
+                                        <tr>
+                                            <!-- Cột Sản phẩm chiếm 55% chiều rộng -->
+                                            <th
+                                                class="w-[55%] p-md font-label-sm text-label-sm text-graphite uppercase font-bold text-[14px]">Sản
+                                                Phẩm</th>
+
+                                            <!-- Cột Giá chiếm 25% chiều rộng -->
+                                            <th
+                                                class="w-[25%] p-md font-label-sm text-label-sm text-graphite uppercase font-bold text-[14px]">Giá
+                                                Cũ / Giá FS</th>
+
+                                            <!-- Cột Tồn kho chiếm 20% chiều rộng -->
+                                            <th
+                                                class="w-[20%] p-md font-label-sm text-label-sm text-graphite uppercase font-bold text-[14px] text-right">Đã
+                                                bán / Tồn</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="campaign-products-tbody"
+                                        class="divide-y divide-mist font-body-sm text-body-sm">
+                                        <!-- Product Row 1 -->
+                                        <tr
+                                            class="hover:bg-surface-bright transition-colors group">
+                                            <td
+                                                class="p-md flex items-center gap-md">
+                                                <div
+                                                    class="w-12 h-12 bg-surface-container hairline rounded-sm overflow-hidden flex-shrink-0">
+                                                    <img
+                                                        class="w-full h-full object-cover"
+                                                        data-alt="A high-end studio shot of a sleek, minimalist mechanical keyboard on a pure white background. The lighting is bright and even, highlighting the engineered precision of the keycaps and dark grey chassis. The aesthetic is clean, modern, and highly technical, fitting a premium gallery-grade electronics retail environment."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8FK-lm6kxyhf3D5UMmi5s2swDTQ1BInqMjzdczVa4q2KHFf8IIr2UdXD6-Yw0PqqglmDEqqZQKYR3U2eie5n-nxQ7tL56bd9wD9zE7px26BnN_v8On8Ci6sxkphIpC7-Hm-iyMBIZTPWBieDZnLdS_55pf6S9DBK47SDQ5BY9ztrBlkdytpDegVURP8G0hEo9nIiKT3ZW65_RJLE5iMtQCvR9bjRuVEf6pL3KVsobcrQQ7R7uTck">
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="font-bold text-carbon-ink">Bàn
+                                                        Phím Cơ NuPhy Air75
+                                                        V2</div>
+
+                                                </div>
+                                            </td>
+
+                                            <td class="p-md">
+                                                <div
+                                                    class="line-through text-graphite text-[12px]">2,500,000
+                                                    ₫</div>
+                                                <div
+                                                    class="text-ember-red font-bold flex items-center gap-xs">
+                                                    1,990,000 ₫
+
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="p-md text-right font-technical-mono">
+                                                <div
+                                                    class="flex flex-col items-end">
+                                                    <span class><span
+                                                            class="text-carbon-ink font-bold">42
+                                                            / 50</span></span>
+                                                    <div
+                                                        class="w-full max-w-[80px] h-1 bg-surface-variant mt-xs rounded-full overflow-hidden">
+                                                        <div
+                                                            class="h-full bg-ember-red w-[84%]"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <!-- Product Row 2 -->
+                                        <tr
+                                            class="hover:bg-surface-bright transition-colors group">
+                                            <td
+                                                class="p-md flex items-center gap-md">
+                                                <div
+                                                    class="w-12 h-12 bg-surface-container hairline rounded-sm overflow-hidden flex-shrink-0">
+                                                    <img
+                                                        class="w-full h-full object-cover"
+                                                        data-alt="A top-down studio photograph of a premium wireless gaming mouse, resting on an immaculate white surface. The mouse features a matte black finish with subtle geometric lines, emphasizing a minimalist and engineered design language. High-contrast lighting creates sharp edges without heavy shadows, typical of a gallery-style presentation."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA-31bKUrz6VvbBJ8WJC8I7aY1Ia3JcP70rilAPbsO-3h245IFJzzXONr5RT-Ykn_rNb4B1ShUFhXpsqN4m75R6u_sbmJZYCbqbJYSwduZzFAiGCHZnP8BRDC_XYLK3pumLd1bn55w9P2DhKmUvHnESs8rwKcv9rMZgnLO9jPvl6pH98D6c_tfbMJg26aRqPXyTDG_W44eV_Q57UX_SbNqJBFfqrMAAHJ_q9lekKgDMJkwE3Y5kqc">
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="font-bold text-carbon-ink">Chuột
+                                                        Logitech G Pro X
+                                                        Superlight 2</div>
+
+                                                </div>
+                                            </td>
+
+                                            <td class="p-md">
+                                                <div
+                                                    class="line-through text-graphite text-[12px]">3,800,000
+                                                    ₫</div>
+                                                <div
+                                                    class="text-ember-red font-bold flex items-center gap-xs">
+                                                    3,200,000 ₫
+
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="p-md text-right font-technical-mono">
+                                                <div
+                                                    class="flex flex-col items-end">
+                                                    <span class>30/<span
+                                                            class="text-carbon-ink font-bold">50</span></span>
+                                                    <div
+                                                        class="w-full max-w-[80px] h-1 bg-surface-variant mt-xs rounded-full overflow-hidden">
+                                                        <div
+                                                            class="h-full bg-carbon-ink w-[16%]"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <!-- Product Row 3 (Sold Out) -->
+                                        <tr
+                                            class="hover:bg-surface-bright transition-colors group bg-surface-container-low opacity-75">
+                                            <td
+                                                class="p-md flex items-center gap-md">
+                                                <div
+                                                    class="w-12 h-12 bg-surface-container hairline rounded-sm overflow-hidden flex-shrink-0 grayscale">
+                                                    <img
+                                                        class="w-full h-full object-cover"
+                                                        data-alt="A frontal, minimalist shot of high-end noise-canceling headphones in slate grey, set against a bright white background. The image is hyper-detailed, showing the texture of the earcups and the smooth metallic band. The aesthetic is purely editorial, employing alternating polarity between the dark product and the light background to convey premium quality without shadows."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw7vWLiMTYHUoucOiGX9WxcFo8lw-V16BzI-p4NuP8nUK2Ob9nh6wZsr3d6SRhKpVbucazb3MDwvH-Jr_smS1DGjVJWQ86DT-nq2aYdrVxGdJBV-rMrPWgbyOIfdDFBiQANJNu3izGUOmMVjlgcrbVvA_oM6DTJ9xPsODAqsChZdVhtETebzCeL4VLKELWMzfoamzbmmLz8snYvfLsRA0mCuuoEVv5NrB7_gYymK2oP5_7oC9XpFg">
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="font-bold text-graphite line-through">Tai
+                                                        nghe Sony
+                                                        WH-1000XM5</div>
+
+                                                </div>
+                                            </td>
+
+                                            <td class="p-md">
+                                                <div
+                                                    class="line-through text-graphite text-[12px]">7,990,000
+                                                    ₫</div>
+                                                <div
+                                                    class="text-graphite font-bold flex items-center gap-xs">
+                                                    5,990,000 ₫
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="p-md text-right font-technical-mono">
+                                                <div
+                                                    class="flex flex-col items-end">
+                                                    <span
+                                                        class="text-ember-red font-bold">20/20</span>
+                                                    <div
+                                                        class="w-full max-w-[80px] h-1 bg-surface-variant mt-xs rounded-full overflow-hidden">
+                                                        <div
+                                                            class="h-full bg-ember-red w-full"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="pb-xxl"></div> <!-- Spacing at bottom -->
+                </div>
+            </main>
+        </div>
+        <div
+            class="fixed inset-0 z-50 flex items-center justify-center p-md bg-true-black/60 backdrop-blur-sm hidden"
+            id="create-campaign-modal">
+            <div
+                class="bg-paper-white w-full max-w-3xl rounded-xl border border-mist shadow-2xl flex flex-col max-h-[90vh] overflow-hidden">
+                <!-- Modal Header -->
+                <div
+                    class="p-lg border-b border-mist flex justify-between items-start bg-surface-container-lowest flex-shrink-0">
+                    <div>
+                        <h2
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal">Thêm
+                            chiến dịch Flash Sale mới</h2>
+                    </div>
+                    <button id="btn-close-create-modal"
+                        class="text-graphite hover:text-carbon-ink p-xs rounded-sm hover:bg-surface-container transition-colors">
+                        <span
+                            class="material-symbols-outlined text-[20px]">close</span>
+                    </button>
+                </div>
+                <!-- Modal Body (Scrollable Form) -->
+                <div
+                    class="p-lg overflow-y-auto space-y-lg flex-1 bg-paper-white text-carbon-ink">
+                    <!-- Campaign Name -->
+                    <div>
+                        <label
+                            class="block font-label-caps text-label-sm text-carbon-ink uppercase mb-xs">Tên
+                            chiến dịch <span
+                                class="text-ember-red">*</span></label>
+                        <input id="input-campaign-name"
+                            class="w-full px-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest"
+                            placeholder="VD: Flash Sale Giữa Tháng 11 - Mega Tech"
+                            type="text">
+                    </div>
+                    <!-- Time & Schedule Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                        <div>
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase mb-xs">Ngày
+                                diễn ra <span
+                                    class="text-ember-red">*</span></label>
+                            <div class="relative flex items-center">
+                                <input id="input-campaign-date"
+                                    class="w-full px-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest pr-8"
+                                    type="date">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase mb-xs">Khung
+                                giờ áp dụng <span
+                                    class="text-ember-red">*</span></label>
+                            <input id="input-campaign-time"
+                                class="w-full px-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest"
+                                type="text" placeholder="Ví dụ: 09:00 - 12:00">
+                        </div>
+                    </div>
+                    <!-- Quick Product Selection Preview -->
+                    <div
+                        class="border border-mist rounded-DEFAULT p-lg bg-surface-container-low space-y-md w-full">
+                        <div
+                            class="flex justify-between items-center pb-xs border-b border-mist">
+                            <label
+                                class="font-label-caps text-label-sm text-carbon-ink uppercase">Sản
+                                phẩm tham gia</label>
+                            <button id="btn-open-select-products"
+                                class="text-xs font-label-sm uppercase text-ember-red flex items-center gap-xs group hover:text-carbon-ink transition-colors"
+                                type="button">
+                                <span
+                                    class="material-symbols-outlined text-[16px]">add</span>
+                                <span class="group-hover:underline">Thêm sản
+                                    phẩm</span>
+                            </button>
+                        </div>
+                        <!-- Mini Product List -->
+                        <div id="selected-products-container"
+                            class="space-y-sm w-full"></div>
+                    </div>
+                </div>
+                <!-- Modal Footer Actions -->
+                <div
+                    class="p-lg border-t border-mist bg-surface-container-low flex items-center flex-shrink-0 justify-end">
+                    <div class="flex items-center gap-sm">
+                        <button id="btn-cancel-create"
+                            class="border border-mist text-graphite hover:border-carbon-ink hover:text-carbon-ink px-lg py-sm rounded-DEFAULT font-label-sm text-label-sm uppercase transition-colors bg-paper-white"
+                            type="button">
+                            Hủy bỏ
+                        </button>
+                        <button id="btn-submit-campaign"
+                            class="bg-carbon-ink text-paper-white hover:bg-true-black px-lg py-sm rounded-DEFAULT font-label-sm text-label-sm uppercase font-bold tracking-wider transition-colors flex items-center gap-xs"
+                            type="button">
+                            <span
+                                class="material-symbols-outlined text-[16px]">check</span>
+                            Tạo chiến dịch
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="fixed inset-0 z-50 flex items-center justify-center p-md bg-true-black/60 backdrop-blur-sm hidden"
+            id="select-products-modal"><div
+                class="bg-paper-white w-full max-w-4xl rounded-xl border border-mist shadow-2xl flex flex-col max-h-[92vh] overflow-hidden"><div
+                    class="p-lg border-b border-mist flex justify-between items-center bg-surface-container-lowest flex-shrink-0"><div><h2
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal">Chọn
+                            sản phẩm tham gia Flash Sale</h2></div><button
+                        id="btn-close-select-modal"
+                        class="text-graphite hover:text-carbon-ink p-xs rounded-sm hover:bg-surface-container transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-[20px]">close</span></button></div><!-- Cập nhật ô nhập Tìm kiếm và 2 Dropdown Lọc -->
+                <div
+                    class="p-lg border-b border-mist bg-surface-container-low flex flex-col md:flex-row gap-md items-stretch md:items-center justify-between flex-shrink-0 w-full">
+                    <!-- Tìm kiếm -->
+                    <div class="relative flex-1 min-w-0">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-graphite text-[18px]">search</span>
+                        <input id="input-search-product"
+                            class="w-full pl-9 pr-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest"
+                            placeholder="Tìm kiếm theo tên sản phẩm, mã SKU..."
+                            type="text" value>
+                    </div>
+
+                    <!-- Bộ lọc -->
+                    <div class="flex gap-md items-center flex-shrink-0">
+                        <!-- Lọc Danh mục -->
+                        <select id="select-category-filter"
+                            class="w-52 px-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest cursor-pointer">
+                            <option value>Tất cả danh mục</option>
+                            <!-- Dữ liệu danh mục sẽ được load bằng JS -->
+                        </select>
+
+                        <!-- Lọc Trạng thái -->
+                        <select id="select-status-filter"
+                            class="w-56 px-md py-sm border border-mist rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:border-carbon-ink text-carbon-ink bg-surface-container-lowest cursor-pointer">
+                            <option value>Tất cả trạng thái</option>
+                            <option value="IN_STOCK">Còn hàng
+                            </option>
+                            <option value="OUT_OF_STOCK">Hết hàng
+                            </option>
+                            <option value="PRE_ORDER">Đặt trước
+                            </option>
+                        </select>
+                    </div>
+                </div><div
+                    class="p-lg overflow-y-auto flex-1 bg-paper-white hide-scrollbar"><table
+                        class="w-full text-left border-collapse"><thead
+                            class="bg-surface-container-low hairline-b top-0 z-10"><tr><th
+                                    class="p-sm w-10 text-center font-bold"></th><th
+                                    class="p-md font-label-sm text-label-sm text-graphite uppercase  text-[12px]">Sản
+                                    phẩM</th><th
+                                    class="p-md font-label-sm text-label-sm text-graphite uppercase  text-[12px] text-center">Tồn</th><th
+                                    class="p-md font-label-sm text-label-sm text-graphite uppercase  text-[12px] text-center">Giá
+                                    gốc</th><th
+                                    class="p-md font-label-sm text-label-sm text-graphite uppercase  text-[12px] text-center">Giá
+                                    FLASH SALE</th><th
+                                    class="p-md font-label-sm text-label-sm text-graphite uppercase text-[12px] text-center">Slot</th></tr></thead><tbody
+                            class="divide-y divide-mist font-body-sm text-body-sm"></tbody></table></div><div
+                    class="border-t border-mist px-gutter py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 select-none">
+                    <div id="pagination-info"
+                        class="flex items-center gap-3">
+                        <span
+                            class="text-secondary text-xs font-body-sm">
+                            Hiển thị <span
+                                class="font-medium text-carbon-ink">1 -
+                                20</span> trong tổng số <span
+                                class="font-medium text-carbon-ink font-body-sm">1,420</span>
+                            sản phẩm
+                        </span>
+                    </div>
+                    <div
+                        class="flex items-center gap-1 font-body-lg text-xs">
+                        <button id="btn-prev-page"
+                            onclick="changePage(-1)"
+                            class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                            title="Trang trước">
+                            <span
+                                class="material-symbols-outlined text-base">chevron_left</span>
+                        </button>
+                        <button id="btn-next-page"
+                            onclick="changePage(1)"
+                            class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                            title="Trang kế tiếp">
+                            <span
+                                class="material-symbols-outlined text-base">chevron_right</span>
+                        </button>
+                    </div>
+                </div><div
+                    class="p-lg border-t border-mist bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-md flex-shrink-0"><div
+                        class="flex items-center gap-sm text-body-sm font-body-lg text-carbon-ink">
+                        <span
+                            class="material-symbols-outlined text-ember-red text-[18px]">check_circle</span>
+                        <span>Đã chọn: <strong id="selected-count"
+                                class="text-ember-red font-bold">0</strong> sản
+                            phẩm</span>
+                    </div><div
+                        class="flex items-center gap-sm"><button
+                            id="btn-cancel-select"
+                            class="border border-mist text-graphite hover:border-carbon-ink hover:text-carbon-ink px-lg py-sm rounded-DEFAULT font-label-sm text-label-sm uppercase transition-colors bg-paper-white"
+                            type="button">HỦY BỎ</button><button
+                            id="btn-confirm-add-products"
+                            class="bg-carbon-ink text-paper-white hover:bg-true-black px-lg py-sm rounded-DEFAULT font-label-sm text-label-sm uppercase font-bold tracking-wider transition-colors flex items-center gap-xs"
+                            type="button"><span
+                                class="material-symbols-outlined text-[16px]">done_all</span>
+                            XÁC NHẬN THÊM</button></div></div></div></div>
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/flash_sale_management.js"></script>
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trang chủ VMAStore - Đồ Công Nghệ</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00c7c7",
+              "background-light": "#ffffff",
+              "background-dark": "#17191c",
+              "sale-red": "#ef4444",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .mega-menu-trigger:hover .mega-menu-content {
+        display: flex;
+      }
+      .category-item:hover .subcategory-panel {
+        display: block;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#101818] dark:text-white antialiased"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header
+        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#17191c]/95 backdrop-blur-md border-b border-[#f0f5f5] dark:border-gray-800 shadow-sm"
+      >
+        <div class="px-4 md:px-10 py-3 max-w-[1440px] mx-auto w-full">
+          <div class="flex items-center justify-between gap-4 md:gap-10">
+            <a
+              class="flex items-center gap-3 text-[#101818] dark:text-white shrink-0"
+              href="#"
+            >
+              <div class="size-8 text-primary">
+                <svg
+                  class="w-full h-full"
+                  fill="none"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 4L6 14V34L24 44L42 34V14L24 4Z"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  ></path>
+                  <path
+                    d="M24 14L34 20M24 14L14 20M24 14V26"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="text-xl md:text-2xl font-bold tracking-tight">
+                VMAStore
+              </h2>
+            </a>
+            <nav
+              class="hidden lg:flex gap-8 text-sm font-semibold h-10 items-center shrink-0"
+            >
+              <div class="mega-menu-trigger relative h-full flex items-center">
+                <button
+                  class="hover:text-primary transition-colors flex items-center gap-2 cursor-pointer group"
+                >
+                  <span
+                    class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform"
+                    >grid_view</span
+                  >
+                  Danh mục
+                </button>
+                <div
+                  class="mega-menu-content hidden absolute top-full left-0 pt-4 w-[850px] z-50"
+                >
+                  <div
+                    class="bg-white dark:bg-[#1e2125] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 flex overflow-hidden min-h-[450px]"
+                  >
+                    <div
+                      class="w-64 border-r border-gray-100 dark:border-gray-800 py-4 shrink-0 bg-gray-50/50 dark:bg-[#1a1c1f]"
+                    >
+                      <div class="flex flex-col">
+                        <div
+                          class="category-item group flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors cursor-pointer border-l-2 border-transparent hover:border-primary"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400 group-hover:text-primary"
+                              >laptop_mac</span
+                            >
+                            <span
+                              class="font-semibold text-sm group-hover:text-primary"
+                              >Laptop &amp; Mac</span
+                            >
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                          <div
+                            class="subcategory-panel hidden absolute top-0 left-64 right-0 bottom-0 bg-white dark:bg-[#1e2125] p-8"
+                          >
+                            <div class="grid grid-cols-2 gap-12">
+                              <div>
+                                <h3
+                                  class="text-xs font-black text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 dark:border-gray-800 pb-2"
+                                >
+                                  Theo nhu cầu
+                                </h3>
+                                <ul class="flex flex-col gap-4">
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                                      href="#"
+                                      ><span
+                                        class="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover:bg-primary"
+                                      ></span
+                                      >Gaming</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                                      href="#"
+                                      ><span
+                                        class="w-1.5 h-1.5 rounded-full bg-gray-200"
+                                      ></span
+                                      >Văn phòng</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                                      href="#"
+                                      ><span
+                                        class="w-1.5 h-1.5 rounded-full bg-gray-200"
+                                      ></span
+                                      >Đồ họa</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
+                                      href="#"
+                                      ><span
+                                        class="w-1.5 h-1.5 rounded-full bg-gray-200"
+                                      ></span
+                                      >Mỏng nhẹ</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                <h3
+                                  class="text-xs font-black text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 dark:border-gray-800 pb-2"
+                                >
+                                  Thương hiệu
+                                </h3>
+                                <ul class="flex flex-col gap-4">
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >Apple</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >Dell</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >ASUS</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >HP</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >Lenovo</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="text-sm font-medium hover:text-primary transition-colors"
+                                      href="#"
+                                      >MSI</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          class="flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors border-l-2 border-transparent hover:border-primary"
+                          href="#"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400"
+                              >smartphone</span
+                            >
+                            <span class="font-semibold text-sm"
+                              >Điện thoại &amp; Tablet</span
+                            >
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                        </a>
+                        <a
+                          class="flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors border-l-2 border-transparent hover:border-primary"
+                          href="#"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400"
+                              >keyboard</span
+                            >
+                            <span class="font-semibold text-sm">Phụ kiện</span>
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                        </a>
+                        <a
+                          class="flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors border-l-2 border-transparent hover:border-primary"
+                          href="#"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400"
+                              >headphones</span
+                            >
+                            <span class="font-semibold text-sm">Âm thanh</span>
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                        </a>
+                        <a
+                          class="flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors border-l-2 border-transparent hover:border-primary"
+                          href="#"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400"
+                              >monitor</span
+                            >
+                            <span class="font-semibold text-sm">Màn hình</span>
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                        </a>
+                        <a
+                          class="flex items-center justify-between px-6 py-3.5 hover:bg-white dark:hover:bg-[#25282c] transition-colors border-l-2 border-transparent hover:border-primary"
+                          href="#"
+                        >
+                          <div class="flex items-center gap-3">
+                            <span
+                              class="material-symbols-outlined text-gray-400"
+                              >settings_input_component</span
+                            >
+                            <span class="font-semibold text-sm"
+                              >Linh kiện PC</span
+                            >
+                          </div>
+                          <span
+                            class="material-symbols-outlined text-sm text-gray-400"
+                            >chevron_right</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex-1 p-8 bg-white dark:bg-[#1e2125]">
+                      <div
+                        class="flex flex-col items-center justify-center h-full text-center text-gray-400 gap-4"
+                      >
+                        <span class="material-symbols-outlined text-5xl"
+                          >category</span
+                        >
+                        <p class="text-sm font-medium">
+                          Di chuột vào danh mục để khám phá
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="hover:text-primary transition-colors flex items-center gap-2"
+                href="#"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px] text-sale-red"
+                  >sell</span
+                >
+                Khuyến mãi
+              </a>
+            </nav>
+            <div class="hidden md:flex flex-1 max-w-xl">
+              <label
+                class="flex w-full items-center rounded-lg bg-[#f0f5f5] dark:bg-[#25282c] px-3 h-10 ring-1 ring-transparent focus-within:ring-primary transition-all"
+              >
+                <span
+                  class="material-symbols-outlined text-[#5e8d8d] dark:text-gray-400"
+                  >search</span
+                >
+                <input
+                  class="w-full bg-transparent border-none focus:ring-0 text-sm px-3 placeholder:text-[#5e8d8d] dark:placeholder:text-gray-500 dark:text-white font-normal"
+                  placeholder="Tìm kiếm sản phẩm, thương hiệu..."
+                />
+              </label>
+            </div>
+            <div class="flex items-center gap-3 md:gap-4 shrink-0">
+              <div class="flex gap-1">
+                <button
+                  class="flex items-center justify-center size-10 rounded-lg hover:bg-[#f0f5f5] dark:hover:bg-[#25282c] transition-colors relative group"
+                >
+                  <span class="material-symbols-outlined">person</span>
+                </button>
+                <button
+                  class="flex items-center justify-center size-10 rounded-lg hover:bg-[#f0f5f5] dark:hover:bg-[#25282c] transition-colors relative group"
+                >
+                  <span class="material-symbols-outlined">favorite</span>
+                  <span
+                    class="absolute top-2 right-2 size-2 bg-sale-red rounded-full ring-2 ring-white dark:ring-[#17191c]"
+                  ></span>
+                </button>
+                <button
+                  class="flex items-center justify-center size-10 rounded-lg hover:bg-[#f0f5f5] dark:hover:bg-[#25282c] transition-colors relative group"
+                >
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                  <span
+                    class="absolute -top-1 -right-1 bg-primary text-[#101818] text-[10px] font-bold px-1.5 py-0.5 rounded-full ring-2 ring-white dark:ring-[#17191c]"
+                    >3</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="md:hidden mt-3">
+            <label
+              class="flex w-full items-center rounded-lg bg-[#f0f5f5] dark:bg-[#25282c] px-3 h-10"
+            >
+              <span class="material-symbols-outlined text-[#5e8d8d]"
+                >search</span
+              >
+              <input
+                class="w-full bg-transparent border-none focus:ring-0 text-sm px-3 placeholder:text-[#5e8d8d] dark:placeholder:text-gray-500 dark:text-white"
+                placeholder="Tìm kiếm..."
+              />
+            </label>
+          </div>
+        </div>
+      </header>
+      <main
+        class="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-10 py-6 flex flex-col gap-12"
+      >
+        <section
+          class="grid grid-cols-1 lg:grid-cols-12 gap-6 rounded-2xl overflow-hidden bg-[#f0f5f5] dark:bg-[#1e2125]"
+        >
+          <div
+            class="lg:col-span-7 flex flex-col justify-center p-8 md:p-12 lg:p-16 gap-6 order-2 lg:order-1"
+          >
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-white/10 text-[10px] font-bold w-fit shadow-sm text-primary uppercase tracking-[0.1em] border border-primary/20"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"
+              ></span>
+              Mới ra mắt
+            </div>
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-[#101818] dark:text-white"
+            >
+              Công Nghệ Đỉnh Cao <br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600"
+                >Giá Cực Tốt</span
+              >
+            </h1>
+            <p
+              class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-lg font-normal"
+            >
+              Khám phá hệ sinh thái công nghệ mới nhất với ưu đãi lên đến 40%
+              cho các sản phẩm Laptop, PC và Gear.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <button
+                class="h-12 px-8 rounded-lg bg-primary text-[#101818] font-bold hover:bg-primary/90 transition-colors shadow-[0_4px_14px_0_rgba(0,199,199,0.39)]"
+              >
+                Mua Ngay
+              </button>
+              <button
+                class="h-12 px-8 rounded-lg border-2 border-[#101818] dark:border-white/20 hover:bg-[#101818] hover:text-white dark:hover:bg-white dark:hover:text-[#101818] font-bold transition-all"
+              >
+                Xem Chi Tiết
+              </button>
+            </div>
+          </div>
+          <div
+            class="lg:col-span-5 h-[300px] lg:h-auto relative order-1 lg:order-2 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900"
+          >
+            <div
+              class="absolute inset-0 w-full h-full bg-cover bg-center"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZsGoFFnHbsvjSZuSZa8kfnGR5okKz_UrDnd6J1-4bITjShsdc1ksvvZ2qCOnCDj3mQEUCE197VTOkB5mvhD4ET1iJ5dr34tktaZCKP379HADs1zbgZ4moPHG_VG45j1ojEVbWcnHrCFhgtbCR3019mSt7Inh1ycNMkm8vohF9gWnUboANAnepIFZLeIFgWj0eTgv31W-OKsjMZso4HsHnWMxUPjiAqpJGTOnSNh9cMYqYJASk1IgGbS0Qc9b1uwB8fGaMURNRX0');
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#f0f5f5] dark:from-[#1e2125] lg:bg-gradient-to-l to-transparent opacity-50"
+            ></div>
+          </div>
+        </section>
+        <section class="flex flex-col gap-6">
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 dark:border-gray-800 pb-4"
+          >
+            <div class="flex items-center gap-4 md:gap-8">
+              <div class="flex items-center gap-2 text-sale-red">
+                <span class="material-symbols-outlined text-3xl">bolt</span>
+                <h2 class="text-2xl font-black italic tracking-tighter">
+                  FLASH SALE
+                </h2>
+              </div>
+              <div
+                class="flex items-center gap-2 text-sm md:text-base font-bold text-[#101818] dark:text-white"
+              >
+                <div
+                  class="bg-[#101818] text-white dark:bg-white dark:text-[#101818] px-2 py-1 rounded"
+                >
+                  02
+                </div>
+                <span>:</span>
+                <div
+                  class="bg-[#101818] text-white dark:bg-white dark:text-[#101818] px-2 py-1 rounded"
+                >
+                  15
+                </div>
+                <span>:</span>
+                <div
+                  class="bg-[#101818] text-white dark:bg-white dark:text-[#101818] px-2 py-1 rounded"
+                >
+                  47
+                </div>
+              </div>
+            </div>
+            <a
+              class="text-sm font-semibold text-gray-500 hover:text-primary flex items-center gap-1"
+              href="#"
+            >
+              Xem tất cả
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward_ios</span
+              >
+            </a>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
+          >
+            <div
+              class="group relative flex flex-col gap-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#1e2125] p-3 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div
+                class="absolute top-3 left-3 z-10 bg-sale-red text-white text-[10px] font-bold px-2 py-1 rounded"
+              >
+                -25%
+              </div>
+              <div
+                class="relative aspect-square w-full overflow-hidden rounded-lg bg-[#f8f9fa] dark:bg-gray-800"
+              >
+                <img
+                  class="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo6BkOTJN8-Zd5Pqa5RDSSopfVdp_1UsXP_vzMpMmAj1T60jUHYAsmOzj8Pf47wlJJ6t-bqD0NLbj0DD6uvkT3Eefj92YeMyOKZd8-NmN4gDiapMm2pT9Y9u-A8K2CTlL2kOt9QJVQTic34J-ne0hb7ujCS1hGAqGhQDi7cYze8LFtIsDJSLZyerbrmcxvYPVSnPHlbV8PEmPoMaMmViP25Db95dbDDVNQHCsCE4MDrGCje2MU7Oonu6PO2m84GvUCFSlyt7ryWwM"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-white/90 dark:from-[#1e2125]/90 to-transparent"
+                >
+                  <button
+                    class="w-full bg-primary text-[#101818] py-2 rounded-lg text-sm font-bold shadow-lg"
+                  >
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 text-yellow-400 text-xs">
+                  <span class="material-symbols-outlined text-sm filled"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined text-sm filled"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined text-sm filled"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined text-sm filled"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined text-sm filled"
+                    >star</span
+                  >
+                  <span class="text-gray-400 ml-1">(42)</span>
+                </div>
+                <h3
+                  class="font-semibold text-sm md:text-base line-clamp-2 min-h-[3rem]"
+                >
+                  Dell XPS 15 9530 i7-13700H
+                </h3>
+                <div class="flex flex-col">
+                  <span class="text-sale-red font-bold text-lg"
+                    >45.990.000 ₫</span
+                  >
+                  <span
+                    class="text-gray-400 text-[11px] line-through font-normal"
+                    >61.500.000 ₫</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="flex flex-col gap-6">
+          <h2 class="text-2xl font-bold tracking-tight px-1">
+            Danh Mục Nổi Bật
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >laptop_chromebook</span
+                >
+              </div>
+              <span class="font-bold text-sm text-center">Laptop Gaming</span>
+            </a>
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >desktop_windows</span
+                >
+              </div>
+              <span class="font-bold text-sm text-center">PC Văn Phòng</span>
+            </a>
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >smartphone</span
+                >
+              </div>
+              <span class="font-bold text-sm text-center">Điện Thoại</span>
+            </a>
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >headphones</span
+                >
+              </div>
+              <span class="font-bold text-sm text-center">Âm Thanh</span>
+            </a>
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">keyboard</span>
+              </div>
+              <span class="font-bold text-sm text-center">Phụ Kiện</span>
+            </a>
+            <a
+              class="group flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-[#f0f5f5] dark:bg-[#1e2125] hover:bg-white hover:shadow-md dark:hover:bg-[#25282c] border border-transparent hover:border-primary/20 transition-all"
+              href="#"
+            >
+              <div
+                class="size-14 rounded-full bg-white dark:bg-[#25282c] group-hover:bg-primary/10 flex items-center justify-center text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">monitor</span>
+              </div>
+              <span class="font-bold text-sm text-center">Màn Hình</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-[#17191c] text-white pt-16 pb-8">
+        <div class="max-w-[1440px] mx-auto px-4 md:px-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-800 pb-12"
+          >
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <div class="size-8 text-primary">
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 4L6 14V34L24 44L42 34V14L24 4Z"
+                      stroke="currentColor"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                    ></path>
+                    <path
+                      d="M24 14L34 20M24 14L14 20M24 14V26"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-2xl font-bold tracking-tight">VMAStore</h2>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed font-normal">
+                Hệ thống bán lẻ đồ công nghệ uy tín hàng đầu Việt Nam. Cam kết
+                chính hãng 100%, bảo hành tận tâm.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h3 class="font-bold text-lg">Hỗ Trợ Khách Hàng</h3>
+              <div
+                class="flex flex-col gap-2 text-sm text-gray-400 font-normal"
+              >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Trung tâm bảo hành</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Thanh toán &amp; Giao hàng</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Chính sách đổi trả</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h3 class="font-bold text-lg">Về VMAStore</h3>
+              <div
+                class="flex flex-col gap-2 text-sm text-gray-400 font-normal"
+              >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Giới thiệu công ty</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Tuyển dụng</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Liên hệ hợp tác</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h3 class="font-bold text-lg">Đăng Ký Nhận Tin</h3>
+              <form class="flex flex-col gap-2">
+                <input
+                  class="bg-[#25282c] border-none rounded-lg px-4 py-3 text-sm focus:ring-1 focus:ring-primary text-white placeholder:text-gray-600 font-normal"
+                  placeholder="Email của bạn"
+                  type="email"
+                />
+                <button
+                  class="bg-primary text-[#101818] font-bold rounded-lg px-4 py-3 text-sm hover:bg-primary/90 transition-colors"
+                  type="button"
+                >
+                  Đăng ký ngay
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-medium"
+          >
+            <p>© 2024 VMAStore. All rights reserved.</p>
+            <div class="flex gap-6">
+              <span
+                >Hotline:
+                <strong class="text-white font-bold">1900 1234</strong></span
+              >
+              <span
+                >Email:
+                <strong class="text-white font-bold"
+                  >hotro@vmastore.vn</strong
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

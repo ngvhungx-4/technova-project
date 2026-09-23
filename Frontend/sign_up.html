@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="vi" style><head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Tham gia TechNova - Đăng ký tài khoản</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet">
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dfe0e0",
+                        "secondary-fixed": "#e2e2e2",
+                        "ember-red": "#cc2e39",
+                        "surface-container": "#ebeeed",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#e0e3e2",
+                        "tertiary": "#190001",
+                        "graphite": "#606562",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "background": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "on-background": "#181c1c",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "primary-container": "#1a211e",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-dim": "#d7dbda",
+                        "mist": "#e0e0e0",
+                        "on-primary-fixed": "#161d1a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-container": "#818984",
+                        "primary-fixed": "#dde4df",
+                        "true-black": "#000000",
+                        "secondary": "#5d5f5f",
+                        "outline-variant": "#c3c7c4",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "fog": "#eef1f0",
+                        "surface": "#f7faf9",
+                        "obsidian": "#0c0c0c",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#181c1c",
+                        "on-tertiary-container": "#f14a50",
+                        "on-tertiary-fixed": "#410006",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "paper-white": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#747875",
+                        "carbon-ink": "#1a211e",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "inverse-primary": "#c1c8c3",
+                        "surface-container-high": "#e6e9e8",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "inverse-surface": "#2d3131",
+                        "surface-container-low": "#f1f4f3",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#414845",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "surface-bright": "#f7faf9",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "primary": "#030806"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "md": "12px",
+                        "sm": "8px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "label-caps": ["Barlow Condensed", "sans-serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-sm": ["Barlow Condensed", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input {
+            transition: border-color 0.2s ease-in-out;
+        }
+        .form-input:focus {
+            border-color: theme('colors.carbon-ink');
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+    </head>
+    <body
+        class="min-h-screen flex flex-col font-body-lg text-body-lg selection:bg-carbon-ink selection:text-paper-white antialiased">
+        <!-- Top Navigation -->
+        <nav class="bg-paper-white w-full top-0 border-b border-mist z-50">
+        </nav>
+        <!-- Main Content Area -->
+        <!-- Main Content Area -->
+        <main
+            class="flex-grow flex items-center justify-center py-xxl px-gutter"><div
+                class="fixed inset-0 z-0 overflow-hidden">
+                <img alt="Background"
+                    class="absolute inset-0 w-full h-full object-cover blur-xl scale-100"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3j-gV3uOsFsk1gWEmG8q1cQ5vR7vPbaEP-oERgZBQSQfzIoLTQEBK-3YCRLO6DZN9vMLB67Wm-9FN3lpiOOE9BjuahRo9zmr32jvCO8jM_6VRVGHpDfGTiDVucPOvj1TE7eI8XUCcmqTQNfzFuRCtNjuhJU0cnkNBtj-csMX-c17CZ6CjZBH687Hvi7uxBUMdx9xHn47HUo-GWu1cI38oq_cOGSy9umTq8iEp1_yeqoEnk425kD0">
+                <div class="absolute inset-0"></div>
+            </div>
+
+            <div
+                class="w-full bg-paper-white p-lg md:p-xl border border-mist rounded-lg relative z-10 max-w-xl">
+
+                <!-- PHẦN 1: FORM ĐĂNG KÝ (Được bọc trong id="register-section") -->
+                <div id="register-section">
+                    <div class="text-center mb-lg">
+                        <h1
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-carbon-ink italic mb-sm">Tham
+                            gia TechNova</h1>
+                        <p
+                            class="font-body-sm text-body-sm text-on-surface-variant">Tạo
+                            tài khoản để trải nghiệm mua sắm đẳng cấp.</p>
+                    </div>
+                    <!-- Đã thêm onsubmit để chặn reload trang và gọi hàm JS -->
+                    <form onsubmit="event.preventDefault(); handleRegister();"
+                        class="space-y-md" method="POST">
+                        <div class="space-y-xs">
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase"
+                                for="reg-fullname">Họ và tên</label>
+                            <!-- Đổi id thành reg-fullname -->
+                            <input
+                                class="form-input block w-full rounded border-ash-border bg-transparent px-md py-sm font-body-lg text-body-lg text-carbon-ink placeholder-on-surface-variant/50 focus:border-carbon-ink focus:ring-0"
+                                id="reg-fullname" name="fullname" required
+                                type="text">
+                        </div>
+                        <div class="space-y-xs">
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase"
+                                for="reg-email">Email</label>
+                            <!-- Đổi id thành reg-email -->
+                            <input
+                                class="form-input block w-full rounded border-ash-border bg-transparent px-md py-sm font-body-lg text-body-lg text-carbon-ink placeholder-on-surface-variant/50 focus:border-carbon-ink focus:ring-0"
+                                id="reg-email" name="email" required
+                                type="email">
+                        </div>
+                        <div class="space-y-xs">
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase"
+                                for="reg-phone">Số điện thoại</label>
+                            <!-- Đổi id thành reg-phone -->
+                            <input
+                                class="form-input block w-full rounded border-ash-border bg-transparent px-md py-sm font-body-lg text-body-lg text-carbon-ink placeholder-on-surface-variant/50 focus:border-carbon-ink focus:ring-0"
+                                id="reg-phone" name="phone" type="tel">
+                        </div>
+                        <div class="space-y-xs">
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase"
+                                for="reg-password">Mật khẩu</label>
+                            <!-- Đổi id thành reg-password -->
+                            <input
+                                class="form-input block w-full rounded border-ash-border bg-transparent px-md py-sm font-body-lg text-body-lg text-carbon-ink placeholder-on-surface-variant/50 focus:border-carbon-ink focus:ring-0"
+                                id="reg-password" name="password" required
+                                type="password">
+                        </div>
+                        <div class="space-y-xs">
+                            <label
+                                class="block font-label-caps text-label-sm text-carbon-ink uppercase"
+                                for="confirm-password">Xác nhận mật khẩu</label>
+                            <input
+                                class="form-input block w-full rounded border-ash-border bg-transparent px-md py-sm font-body-lg text-body-lg text-carbon-ink placeholder-on-surface-variant/50 focus:border-carbon-ink focus:ring-0"
+                                id="confirm-password" name="confirm-password"
+                                required type="password">
+                        </div>
+                        <div class="flex items-start mt-lg mb-lg">
+                            <div class="flex items-center h-5">
+                                <!-- Đã thêm sự kiện onchange để kích hoạt nút đăng ký -->
+                                <input onchange="toggleRegisterButton()"
+                                    class="h-4 w-4 rounded border-ash-border text-carbon-ink focus:ring-carbon-ink focus:ring-offset-paper-white bg-transparent"
+                                    id="terms" name="terms" required
+                                    type="checkbox">
+                            </div>
+                            <div class="ml-sm text-sm">
+                                <label
+                                    class="font-body-sm text-body-sm text-on-surface-variant"
+                                    for="terms">
+                                    Tôi đồng ý với các <a
+                                        class="text-carbon-ink underline hover:opacity-70 transition-opacity"
+                                        href="#">điều khoản dịch vụ</a> và <a
+                                        class="text-carbon-ink underline hover:opacity-70 transition-opacity"
+                                        href="#">chính sách bảo mật</a>.
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Đã thêm id="btn-register" -->
+                        <button id="btn-register"
+                            class="w-full flex justify-center py-md px-lg border border-transparent rounded bg-carbon-ink font-label-caps text-label-caps text-paper-white hover:bg-true-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-carbon-ink transition-colors duration-200 uppercase"
+                            type="submit">
+                            Đăng ký
+                        </button>
+                    </form>
+                    <div class="mt-lg text-center">
+                        <p
+                            class="font-body-sm text-body-sm text-on-surface-variant">
+                            Đã có tài khoản?
+                            <a
+                                class="font-label-caps text-label-sm text-carbon-ink uppercase hover:underline underline-offset-4 transition-all"
+                                href="login.html">Đăng nhập</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PHẦN 2: FORM XÁC THỰC OTP (Được ẩn mặc định với class 'hidden') -->
+                <div id="otp-section" class="hidden">
+                    <div class="text-center mb-lg">
+                        <h1
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-carbon-ink italic mb-sm">Xác
+                            thực Email</h1>
+                        <p
+                            class="font-body-sm text-body-sm text-on-surface-variant">Mã
+                            6 chữ số đã được gửi đến email của bạn. Vui lòng
+                            nhập mã để hoàn tất.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center space-y-md">
+                        <!-- Vùng chứa 6 ô OTP giữ nguyên phong cách thiết kế -->
+                        <div id="otp-container"
+                            class="flex gap-2 justify-center mb-6">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                            <input type="text" maxlength="1"
+                                class="form-input w-12 h-14 text-center text-xl font-bold rounded border-ash-border bg-transparent text-carbon-ink focus:border-carbon-ink focus:ring-0">
+                        </div>
+
+                        <!-- Input ẩn chứa mã đầy đủ 6 số cho JS xử lý -->
+                        <input type="hidden" id="verify-code">
+
+                        <button id="btn-verify" onclick="handleVerifyOTP()"
+                            class="w-full flex justify-center py-md px-lg border border-transparent rounded bg-carbon-ink font-label-caps text-label-caps text-paper-white hover:bg-true-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-carbon-ink transition-colors duration-200 uppercase">
+                            Xác nhận mã
+                        </button>
+
+                        <!-- Nút quay lại giữ nguyên class của body text -->
+                        <button onclick="showRegisterForm()"
+                            class="mt-4 font-body-sm text-body-sm text-on-surface-variant hover:text-carbon-ink transition-colors">
+                            &larr; Quay lại
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/auth.js"></script>
+</html>

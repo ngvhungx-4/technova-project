@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light hide-scrollbar" lang="vi" style><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="antialiased">
+        <div id="header-placeholder"></div>
+        <!-- Hero Section -->
+        <div class="pt-28"><header
+                class="w-full max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 border-b border-mist h-[550px] mb-xxl relative">
+                <div
+                    class="absolute top-0 left-0 w-2 h-full bg-ember-red hidden md:block"></div>
+                <!-- Left Panel -->
+                <div
+                    class="bg-obsidian text-paper-white flex flex-col justify-center px-xl py-lg border-r border-mist h-full pl-[calc(theme(spacing.xl)+8px)]">
+                    <h1 id="flash-sale-title"
+                        class="font-display-xl text-headline-lg mb-md leading-tight uppercase">
+                        FLASH SALE<br /><span
+                            class="text-ember-red ">—</span>GIỜ
+                        VÀNG<br />CÔNG
+                        NGHỆ
+                    </h1>
+                    <div class="flex flex-col gap-sm mb-lg">
+                        <p
+                            class="font-label-caps text-label-caps text-mist tracking-widest">KẾT
+                            THÚC TRONG</p>
+                        <div
+                            class="font-body-lg text-headline-md tracking-tighter text-ember-red"
+                            id="countdown-timer">04:09:22</div>
+                    </div>
+                </div>
+                <!-- Right Panel -->
+                <div
+                    class="bg-paper-white h-full w-full relative flex items-center justify-center p-lg">
+                    <video
+                        class="absolute inset-0 w-full h-full object-cover z-0"
+                        autoplay
+                        loop
+                        muted
+                        playsinline>
+                        <source src="assets/img/Sale_Super_Sale.mp4"
+                            type="video/mp4" />
+                    </video>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="w-full max-w-container-max mx-auto px-gutter pb-xxl">
+                <!-- Filter Tabs -->
+                <section id="flash-sale-filters"
+                    class="flex flex-wrap items-center justify-center gap-sm mb-xl border-b border-mist pb-lg">
+                    <!-- JavaScript sẽ tự động nạp các nút bấm vào đây -->
+                </section>
+                <!-- Product Grid -->
+                <section id="flash-sale-product-grid"
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter mb-xl">
+                    <!-- Khu vực này hiện tại cứ để trống, JavaScript sẽ tự động nạp thẻ <article> sản phẩm vào đây -->
+                </section>
+                <!-- Pagination Component -->
+                <div class="w-full flex justify-center mt-xl pt-md">
+                    <div id="pagination"
+                        class="flex justify-center items-center gap-md font-body-sm text-body-sm">
+                        <!-- JS sẽ tự động vẽ các nút phân trang vào đây -->
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer -->
+    </body>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/flash_sale.js"></script>
+</html>

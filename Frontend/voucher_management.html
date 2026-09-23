@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="vi" class="hide-scrollbar">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-surface text-on-surface h-screen overflow-hidden flex">
+
+        <!-- Sidebar Placeholder -->
+        <div id="admin-sidebar-placeholder"></div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+            <!-- TopNavBar Placeholder -->
+            <div id="admin-header-placeholder"></div>
+
+            <main
+                class="flex-1 overflow-y-auto px-gutter py-lg space-y-lg hide-scrollbar">
+                <div class="max-w-container-max mx-auto space-y-gutter">
+
+                    <!-- Header Section -->
+                    <div
+                        class="flex flex-col md:flex-row md:items-end justify-between gap-md pb-2 border-b border-mist">
+                        <div>
+                            <h2
+                                class="font-headline-lg text-headline-lg text-carbon-ink tracking-tight">Quản
+                                lý khuyến mãi</h2>
+                            <p
+                                class="font-body-lg text-body-lg text-graphite mt-xs">Kiểm
+                                soát sổ cái mã ưu đãi, quy tắc giảm giá và tiến
+                                độ phát hành voucher toàn hệ thống.</p>
+                        </div>
+                        <!-- BỔ SUNG SỰ KIỆN ONCLICK ĐỂ MỞ MODAL -->
+                        <button onclick="openVoucherModal()"
+                            class="shrink-0 inline-flex items-center gap-2 px-lg py-md bg-carbon-ink text-paper-white hover:bg-black transition-colors rounded-DEFAULT font-label-caps text-label-caps uppercase tracking-wider active:scale-[0.98]">
+                            <span
+                                class="material-symbols-outlined text-[18px]">add</span>
+                            Tạo voucher mới
+                        </button>
+                    </div>
+
+                    <!-- Filter Bar Card -->
+                    <div
+                        class="bg-paper-white border border-mist rounded-xl p-md">
+                        <div
+                            class="flex flex-col lg:flex-row items-stretch lg:items-center gap-md">
+                            <div class="flex-1 relative">
+                                <span
+                                    class="material-symbols-outlined text-graphite text-[18px] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+                                <!-- THÊM ID: filter-keyword -->
+                                <input id="filter-keyword"
+                                    class="w-full pl-9 pr-12 py-2 text-[14px] font-body-sm text-carbon-ink bg-surface border border-ash-border rounded-DEFAULT focus:outline-none focus:border-carbon-ink transition-colors placeholder:text-graphite/70"
+                                    placeholder="Tìm theo mã voucher, tên chương trình... (Enter)"
+                                    type="text">
+                            </div>
+                            <div class="flex flex-wrap items-center gap-md">
+                                <div class="relative min-w-[170px]">
+                                    <!-- THÊM ID: filter-type -->
+                                    <select id="filter-type"
+                                        class="w-full appearance-none pl-3 pr-8 py-2 text-[14px] font-body-sm text-carbon-ink bg-surface border border-ash-border rounded-DEFAULT focus:outline-none focus:border-carbon-ink cursor-pointer">
+                                        <option value>Tất cả loại giảm</option>
+                                        <option value="PERCENTAGE">Phần trăm
+                                            (%)</option>
+                                        <option value="FIXED_AMOUNT">Số tiền
+                                            (₫)</option>
+                                    </select>
+                                </div>
+                                <div class="relative min-w-[170px]">
+                                    <!-- THÊM ID: filter-isActive -->
+                                    <select id="filter-isActive"
+                                        class="w-full appearance-none pl-3 pr-8 py-2 text-[14px] font-body-sm text-carbon-ink bg-surface border border-ash-border rounded-DEFAULT focus:outline-none focus:border-carbon-ink cursor-pointer">
+                                        <option value>Tất cả trạng thái</option>
+                                        <option value="true">Đang hoạt
+                                            động</option>
+                                        <option value="false">Đã khóa</option>
+                                    </select>
+                                </div>
+                                <!-- Nút Xóa Lọc -->
+                                <div class="flex items-center gap-sm">
+                                    <button onclick="clearVoucherFilters()"
+                                        class="px-3 py-2 text-[14px] font-body-sm text-graphite bg-surface border border-ash-border rounded-DEFAULT hover:bg-mist transition-colors">Bỏ
+                                        lọc</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voucher Ledger Table Card -->
+                    <div
+                        class="bg-paper-white border border-mist rounded-xl overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="border-b border-ash-border bg-surface-bright text-center font-label-caps text-[14px] font-bold">
+                                        <th
+                                            class="py-md px-lg text-graphite uppercase tracking-wider w-[13%] text-left">Mã
+                                            voucher</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[10%]">Loại
+                                            giảm</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[12%]">Giá
+                                            trị</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[16%]">Đơn
+                                            tối thiểu</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[12%]">Đã
+                                            dùng / Tổng</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[12%]">Hạn
+                                            dùng</th>
+                                        <th
+                                            class="py-md px-md text-graphite uppercase tracking-wider w-[12%]">Trạng
+                                            thái</th>
+                                        <th
+                                            class="py-md px-lg text-graphite uppercase tracking-wider text-center w-[13%]">Hành
+                                            động</th>
+                                    </tr>
+                                </thead>
+                                <!-- THÊM ID: voucher-table-body -->
+                                <tbody id="voucher-table-body"
+                                    class="divide-y divide-mist">
+                                    <!-- Dữ liệu JS sẽ đổ vào đây -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div
+                            class="border-t border-mist px-gutter py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 select-none">
+                            <!-- THÊM ID: voucher-pagination-info -->
+                            <div id="voucher-pagination-info"
+                                class="flex items-center gap-3">
+                                <span
+                                    class="text-secondary text-xs font-body-sm">Đang
+                                    tải dữ liệu...</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1 font-body-lg text-xs">
+                                <!-- THÊM ID VÀ ONCLICK -->
+                                <button id="btn-voucher-prev"
+                                    onclick="changeVoucherPage(-1)"
+                                    class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                    title="Trang trước">
+                                    <span
+                                        class="material-symbols-outlined text-base">chevron_left</span>
+                                </button>
+                                <button id="btn-voucher-next"
+                                    onclick="changeVoucherPage(1)"
+                                    class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                    title="Trang kế tiếp">
+                                    <span
+                                        class="material-symbols-outlined text-base">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- ==========================================
+             MODAL THÊM / SỬA VOUCHER (Đã cấu trúc dạng Card & Đồng bộ màu)
+             ========================================== -->
+        <div id="voucher-modal"
+            class="hidden opacity-0 transition-opacity duration-300 fixed inset-0 z-50 flex items-center justify-center bg-obsidian/60 backdrop-blur-sm">
+            <!-- Modal Container (Nền xám nhạt để nổi bật Card) -->
+            <div
+                class="bg-surface-container-low rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
+
+                <!-- Header -->
+                <div
+                    class="bg-paper-white flex justify-between items-center px-6 py-4 border-b border-mist sticky top-0 z-10">
+                    <h2 id="modal-voucher-title"
+                        class="font-headline-md text-xl text-carbon-ink font-medium tracking-tight">Thêm
+                        mã giảm giá mới</h2>
+                    <button onclick="closeVoucherModal()"
+                        class="text-graphite hover:text-ember-red transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Body (Scrollable) -->
+                <div
+                    class="px-6 pb-6 pt-0.5 overflow-y-auto flex-1 font-body-sm space-y-6 hide-scrollbar">
+                    <form id="voucher-form" class="space-y-6">
+                        <input type="hidden" id="modal-voucher-id">
+
+                        <!-- CARD 1: THÔNG TIN CƠ BẢN -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">sell</span>
+                                <h3 class="font-semibold text-base">Thông tin cơ
+                                    bản</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+                                <!-- Mã Voucher -->
+                                <div class="md:col-span-5">
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Mã
+                                        Voucher (Code) <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="text" id="modal-voucher-code"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] uppercase focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="VD: TET2025">
+                                </div>
+                                <!-- Loại giảm -->
+                                <div class="md:col-span-4">
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Loại
+                                        giảm <span
+                                            class="text-ember-red">*</span></label>
+                                    <select id="modal-voucher-type"
+                                        onchange="toggleMaxDiscountField()"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none cursor-pointer transition-colors">
+                                        <option value="PERCENTAGE">Phần trăm
+                                            (%)</option>
+                                        <option value="FIXED_AMOUNT">Số tiền
+                                            (₫)</option>
+                                    </select>
+                                </div>
+                                <!-- Giá trị giảm -->
+                                <div class="md:col-span-3">
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Giá
+                                        trị giảm <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="number"
+                                        id="modal-voucher-value"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="Ví dụ: 10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: ĐIỀU KIỆN ÁP DỤNG -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">tune</span>
+                                <h3 class="font-semibold text-base">Điều kiện áp
+                                    dụng</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <!-- Đơn tối thiểu -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Đơn
+                                        tối thiểu (VNĐ)</label>
+                                    <input type="number"
+                                        id="modal-voucher-min-order"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="0">
+                                </div>
+                                <!-- Giảm tối đa -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Giảm
+                                        tối đa (VNĐ) <span
+                                            class="text-graphite font-normal text-xs">(Chỉ
+                                            cho %)</span></label>
+                                    <input type="number"
+                                        id="modal-voucher-max-discount"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="Không giới hạn">
+                                </div>
+                                <!-- Lượt dùng -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Tổng
+                                        số lượt sử dụng</label>
+                                    <input type="number"
+                                        id="modal-voucher-usage-limit"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="Không giới hạn">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: THỜI GIAN & TRẠNG THÁI -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">schedule</span>
+                                <h3 class="font-semibold text-base">Thời gian &
+                                    Trạng thái</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <!-- Ngày bắt đầu -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Ngày
+                                        bắt đầu</label>
+                                    <input type="datetime-local"
+                                        id="modal-voucher-start"
+                                        onchange="handleStartDateChange()"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] text-carbon-ink focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors cursor-pointer">
+                                </div>
+                                <!-- Ngày kết thúc -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Ngày
+                                        kết thúc</label>
+                                    <input type="datetime-local"
+                                        id="modal-voucher-end"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] text-carbon-ink focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors cursor-pointer">
+                                </div>
+                                <!-- Trạng thái -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Trạng
+                                        thái</label>
+                                    <select id="modal-voucher-active"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none cursor-pointer transition-colors">
+                                        <option value="true">Đang kích
+                                            hoạt</option>
+                                        <option value="false">Khóa
+                                            voucher</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 4: ĐỐI TƯỢNG & ĐỔI ĐIỂM -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">group</span>
+                                <h3 class="font-semibold text-base">Đối tượng &
+                                    Đổi điểm</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <!-- Nhóm khách hàng -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Dành
+                                        cho nhóm khách hàng</label>
+                                    <select id="modal-voucher-customer-group"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none cursor-pointer transition-colors">
+                                        <option value>Tất cả khách hàng (Mặc
+                                            định)</option>
+                                        <option value="BASIC">Basic</option>
+                                        <option value="SILVER">Silver</option>
+                                        <option value="GOLD">Gold</option>
+                                        <option value="ELITE">Elite</option>
+                                    </select>
+                                </div>
+
+                                <!-- Email khách hàng -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Dành
+                                        riêng cho Email</label>
+                                    <input type="email" id="modal-voucher-email"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="Nhập email (nếu có)">
+                                </div>
+
+                                <!-- Đổi điểm tiêu dùng -->
+                                <div>
+                                    <label
+                                        class="block text-[14px] font-bold text-carbon-ink mb-1.5">Điểm
+                                        cần để đổi voucher</label>
+                                    <input type="number"
+                                        id="modal-voucher-points"
+                                        class="w-full bg-paper-white border border-ash-border rounded-md px-3 py-2 text-[14px] focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors"
+                                        placeholder="Nếu có">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div
+                    class="bg-paper-white px-6 py-4 border-t border-mist flex justify-end gap-3 sticky bottom-0 z-10">
+                    <button type="button" onclick="closeVoucherModal()"
+                        class="px-5 py-2 text-[14px] font-label-caps tracking-wider font-bold text-graphite bg-paper-white border border-ash-border rounded hover:bg-mist/50 transition-colors">Hủy</button>
+                    <!-- Nút Lưu dùng màu carbon-ink để đồng bộ với nút Tạo mới ở ngoài màn hình chính -->
+                    <button type="button" id="btn-save-voucher"
+                        onclick="saveVoucher()"
+                        class="px-5 py-2 text-[14px] font-label-caps tracking-wider font-bold text-paper-white bg-carbon-ink rounded hover:bg-black shadow-sm transition-colors flex items-center gap-2">
+                        <span
+                            class="material-symbols-outlined text-[18px]">save</span>
+                        Lưu voucher
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/voucher_management.js"></script>
+    </body>
+</html>

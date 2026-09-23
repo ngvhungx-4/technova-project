@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi" class="hide-scrollbar">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-surface text-on-surface h-screen overflow-hidden flex">
+
+        <!-- Sidebar Placeholder -->
+        <div id="admin-sidebar-placeholder"></div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+            <!-- TopNavBar Placeholder -->
+            <div id="admin-header-placeholder"></div>
+
+            <main
+                class="flex-1 overflow-y-auto px-gutter py-lg space-y-lg hide-scrollbar">
+                <!-- Header Title Section -->
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-mist pb-6">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <h1
+                                class="font-headline-lg text-3xl md:text-4xl text-carbon-ink tracking-tight">Quản
+                                lý danh mục</h1>
+
+                        </div>
+                        <p
+                            class="font-body-lg text-graphite mt-1.5 max-w-2xl text-xs md:text-sm">
+                            Kiểm soát cấu trúc phân loại sản phẩm.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 shrink-0">
+                        <button onclick="openCategoryModal()"
+                            class="h-10 px-5 bg-carbon-ink text-paper-white hover:bg-black font-label-caps text-[14px] tracking-widest uppercase rounded transition-colors flex items-center gap-2"
+                            type="button">
+                            <span class="material-symbols-outlined text-base"
+                                data-icon="add">add</span>
+                            <span class>THÊM DANH MỤC MỚI</span>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="bg-paper-white border border-mist p-4 rounded flex flex-col md:flex-row items-center justify-between gap-3">
+                    <!-- Search Input with Clear Button -->
+                    <div class="relative w-full md:w-96">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-graphite"
+                            data-icon="search">search</span>
+                        <input id="search-category"
+                            class="w-full bg-fog/60 border border-ash-border rounded text-[14px] font-body-lg pl-10 pr-4 py-2 text-xs placeholder:text-graphite focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-colors"
+                            placeholder="Tìm kiếm theo tên danh mục, mã định danh slug, mô tả..."
+                            type="text">
+                    </div>
+                    <!-- Filter Clusters -->
+                    <div
+                        class="flex items-center gap-3 w-full md:w-auto justify-end overflow-x-auto">
+                        <!-- Status Dropdown -->
+                        <div class="flex items-center gap-2 text-xs">
+
+                        </div>
+                        <!-- Sort Order -->
+
+                        <!-- Quick Refresh Button -->
+                        <button aria-label="Làm mới dữ liệu"
+                            class="w-8 h-8 rounded flex items-center justify-center text-carbon-ink hover:bg-fog transition-colors shrink-0"
+                            title="Làm mới" type="button">
+                            <span class="material-symbols-outlined text-base"
+                                data-icon="refresh">refresh</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- ===================================================================== -->
+                <!-- SECTION D: Category Data Grid Table                                   -->
+                <!-- ===================================================================== -->
+                <div
+                    class="bg-paper-white border border-mist rounded overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-fog/80 border-b border-mist text-graphite font-label-caps text-[14px] font-semibold text-center tracking-wider uppercase">
+
+                                    <th
+                                        class="py-3.5 px-4 min-w-[320px] font-semibold text-left">TÊN
+                                        DANH MỤC</th>
+                                    <th
+                                        class="py-3.5 px-4 w-60 font-semibold">SỐ
+                                        LƯỢNG SẢN PHẨM</th>
+                                    <th
+                                        class="py-3.5 px-4 w-40 font-semibold">TRẠNG
+                                        THÁI</th>
+                                    <th
+                                        class="py-3.5 px-4 w-32 text-right font-semibold">HÀNH
+                                        ĐỘNG</th>
+                                </tr>
+                            </thead>
+                            <tbody id="category-table-body"
+                                class="divide-y divide-mist text-carbon-ink">
+                                <!-- Row 1: Laptop & Máy tính xách tay -->
+                                <tr
+                                    class="hover:bg-fog/30 transition-colors group">
+
+                                    <td class="py-4 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-12 h-12 rounded bg-fog border border-ash-border flex items-center justify-center shrink-0 overflow-hidden">
+                                                <img
+                                                    class="w-full h-full object-cover"
+                                                    data-alt="Ultra-sleek titanium finish laptop placed on a pristine matte grey pedestal under diffused high-key studio gallery lighting, highlighting precision engineered aerospace-grade materials, monochromatic minimal atmosphere"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJPvHIQ_G3y5qg58Zecy8WMe2YTC2UmrwupEHiKNqfNvr87EU5dAFpZCcQC9FGLTmKaeP92IADGyQVWBJO82btEhy31mC2tdG3AURONsVfXEkeCDEI0Wnb6UGsgGkYOgVVnhyjDvgJ52wepWdvcJViTWr-08W9o5xpymdlJMWF5BsOynEhGHhGhnC8nyr50D8pJSFGkOpKsNOEzohu4DXlvgGa3SwOI7rVGdyZ4rRB-eYUOIrw0hY">
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="flex items-center gap-2">
+                                                    <span
+                                                        class="font-body-lg font-semibold text-sm text-carbon-ink group-hover:underline cursor-pointer">Laptop
+                                                        &amp; Máy tính xách
+                                                        tay</span>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div
+                                                class="flex justify-between items-baseline font-body-lg text-sm">
+                                                <span
+                                                    class="font-bold text-carbon-ink">450</span>
+                                                <span
+                                                    class="text-graphite text-[12px]">8.6%
+                                                    tổng kho</span>
+
+                                            </div>
+                                            <div
+                                                class="w-full h-1.5 bg-fog rounded-full overflow-hidden">
+                                                <div
+                                                    class="bg-carbon-ink h-full rounded-full"
+                                                    style="width: 65%;"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-carbon-ink text-paper-white font-label-caps text-xs tracking-wider">
+                                            <span
+                                                class="material-symbols-outlined fill-icon text-amber-300 text-xs"
+                                                data-icon="star">star</span>
+                                            <span class>NỔI BẬT</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-end gap-1">
+                                            <button
+                                                class="w-8 h-8 rounded-lg flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-all duration-200 hover:scale-105 active:scale-95"
+                                                title="Chỉnh sửa danh mục"
+                                                type="button">
+                                                <span
+                                                    class="material-symbols-outlined text-base"
+                                                    data-icon="edit">edit</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded-lg flex items-center justify-center text-graphite hover:text-ember-red hover:bg-red-50 transition-all duration-200 hover:scale-105 active:scale-95"
+                                                title="Xóa danh mục"
+                                                type="button">
+                                                <span
+                                                    class="material-symbols-outlined text-base"
+                                                    data-icon="delete">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Row 2: Điện thoại thông minh -->
+                                <tr
+                                    class="hover:bg-fog/30 transition-colors group">
+
+                                    <td class="py-4 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-12 h-12 rounded bg-fog border border-ash-border flex items-center justify-center shrink-0 overflow-hidden">
+                                                <img
+                                                    class="w-full h-full object-cover"
+                                                    data-alt="Rugged titanium smartwatch with sapphire crystal glass surface showcasing intricate health sensor telemetry against a pure studio background with soft natural side lighting"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc9Y10Mc4LxmKJLzcKHnBu1PmabZ9Xxl4CCKPugIdoiR-Irs04vumTa7v14uIhj6hCpEkwFnyWhW0FTcanJ744UyDkGet0i0us5_Z1bB9ExPIDH5L8v8R-r4jLfIpTGVig2bmzZ62dzKdleuPB7RQI9h-0lmrHQojWnjMlT7pwNZhvvhcMtucncDbFp-fXpZ_iwOdNdEiWNO666ONXXe2eoiygakNGjGpQOlcPfHQX_VjMPE5XsJw">
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="flex items-center gap-2">
+                                                    <span
+                                                        class="font-body-lg font-semibold text-sm text-carbon-ink group-hover:underline cursor-pointer">Đồng
+                                                        hồ thông minh &amp;
+                                                        Wearables</span>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div
+                                                class="flex justify-between items-baseline font-body-lg text-sm">
+                                                <span
+                                                    class="font-bold text-carbon-ink">185</span>
+                                                <span
+                                                    class="text-graphite text-[12px]">7.5%
+                                                    tổng kho</span>
+                                            </div>
+                                            <div
+                                                class="w-full h-1.5 bg-fog rounded-full overflow-hidden">
+                                                <div
+                                                    class="bg-graphite h-full rounded-full"
+                                                    style="width: 28%;"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-fog border border-ash-border text-graphite font-label-caps text-xs tracking-wider">
+                                            <span
+                                                class="w-1.5 h-1.5 rounded-full bg-graphite"></span>
+                                            <span class>BÌNH THƯỜNG</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-end gap-1">
+                                            <button
+                                                class="w-8 h-8 rounded-lg flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-all duration-200 hover:scale-105 active:scale-95"
+                                                title="Chỉnh sửa danh mục"
+                                                type="button">
+                                                <span
+                                                    class="material-symbols-outlined text-base"
+                                                    data-icon="edit">edit</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded-lg flex items-center justify-center text-graphite hover:text-ember-red hover:bg-red-50 transition-all duration-200 hover:scale-105 active:scale-95"
+                                                title="Xóa danh mục"
+                                                type="button">
+                                                <span
+                                                    class="material-symbols-outlined text-base"
+                                                    data-icon="delete">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- =================================================================== -->
+                    <!-- SECTION E: Pagination & Batch Bar                                    -->
+                    <!-- =================================================================== -->
+                    <div
+                        class="p-4 bg-paper-white border-t border-mist flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <!-- Information Counter -->
+                        <div id="category-count-info"
+                            class="text-xs text-graphite font-technical-mono">Tổng
+                            cộng: 21 danh mục</div>
+                        <!-- Pagination Controls -->
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Modal Thêm/Sửa Danh Mục -->
+        <div id="category-modal"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto hidden">
+            <!-- Lớp phủ (Backdrop) -->
+            <div
+                class="fixed inset-0 bg-carbon-ink/60 transition-opacity duration-200"
+                onclick="closeCategoryModal()"></div>
+
+            <!-- Khối Nội dung Modal -->
+            <div
+                class="relative bg-paper-white w-full max-w-[500px] rounded-lg border border-ash-border shadow-md z-10 overflow-hidden flex flex-col my-auto">
+
+                <!-- Tiêu đề Modal -->
+                <div
+                    class="p-6 pb-4 border-b border-mist flex items-start justify-between">
+                    <div class="pr-4">
+                        <h2 id="modal-title"
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal leading-tight">Thêm
+                            danh mục</h2>
+                        <p
+                            class="font-body-sm text-graphite text-[14px] mt-1">Tạo
+                            hoặc chỉnh sửa phân loại sản phẩm.</p>
+                    </div>
+                    <button onclick="closeCategoryModal()"
+                        class="w-8 h-8 rounded-DEFAULT flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-colors duration-150"
+                        title="Đóng popup" type="button">
+                        <span class="material-symbols-outlined text-[20px]"
+                            data-icon="close">close</span>
+                    </button>
+                </div>
+
+                <!-- Form Nội dung -->
+                <div
+                    class="p-6 space-y-5 max-h-[70vh] overflow-y-auto hide-scrollbar">
+                    <input type="hidden" id="modal-cat-id" />
+
+                    <!-- Trường Tải Ảnh Danh mục -->
+                    <div
+                        class="flex flex-col items-center gap-3 pb-4 border-b border-mist border-dashed">
+                        <div id="modal-cat-img-preview"
+                            class="w-32 h-32 rounded bg-fog border border-ash-border flex items-center justify-center text-graphite overflow-hidden shadow-sm">
+                            <span
+                                class="material-symbols-outlined text-4xl">add_photo_alternate</span>
+                        </div>
+                        <input type="file" id="modal-cat-img-input"
+                            class="hidden"
+                            accept="image/jpeg, image/png, image/webp"
+                            onchange="handleCategoryImagePreview(this)" />
+                        <button type="button"
+                            onclick="document.getElementById('modal-cat-img-input').click()"
+                            class="font-label-caps text-[13px] uppercase tracking-wider text-graphite hover:text-carbon-ink transition-colors underline underline-offset-2">
+                            TẢI ẢNH DANH MỤC
+                        </button>
+                    </div>
+
+                    <!-- Trường Tên danh mục -->
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">TÊN
+                            DANH MỤC <span
+                                class="text-ember-red">*</span></label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="category">category</span>
+                            <input id="modal-cat-name"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                placeholder="Ví dụ: Laptop Gaming"
+                                type="text" />
+                        </div>
+                    </div>
+
+                    <!-- Trường Danh mục cha -->
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">DANH
+                            MỤC CHA (TÙY CHỌN)</label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="account_tree">account_tree</span>
+                            <select id="modal-cat-parent"
+                                class="w-full pl-10 pr-10 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 appearance-none cursor-pointer">
+                                <option value>-- Trống (Đây là danh mục gốc)
+                                    --</option>
+                            </select>
+                            <span
+                                class="material-symbols-outlined absolute right-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="expand_more">expand_more</span>
+                        </div>
+                    </div>
+
+                    <!-- Đánh dấu nổi bật -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="relative flex items-center">
+                            <input id="modal-cat-featured" type="checkbox"
+                                class="w-5 h-5 rounded border-ash-border text-carbon-ink focus:ring-carbon-ink cursor-pointer bg-surface-container-low" />
+                        </div>
+                        <label
+                            class="text-[14px] font-body-lg text-carbon-ink cursor-pointer"
+                            for="modal-cat-featured">
+                            Đánh dấu là <strong>Danh mục nổi bật</strong>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Khu vực nút bấm (Footer) -->
+                <div
+                    class="px-6 py-4 border-t border-mist flex items-center justify-end gap-3 bg-fog/30">
+                    <button onclick="closeCategoryModal()"
+                        class="px-4 py-2 border border-ash-border bg-paper-white text-graphite hover:text-carbon-ink hover:border-carbon-ink hover:bg-fog font-label-caps text-[14px] uppercase tracking-wider rounded-DEFAULT transition-all duration-150 cursor-pointer"
+                        type="button">
+                        HỦY BỎ
+                    </button>
+                    <button id="btn-save-category" onclick="saveCategory()"
+                        class="flex items-center gap-2 px-5 py-2 bg-carbon-ink text-paper-white hover:bg-obsidian font-label-caps text-[14px] uppercase tracking-wider font-semibold rounded-DEFAULT transition-all duration-150 cursor-pointer shadow-sm active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined text-[18px]"
+                            data-icon="save">save</span>
+                        <span>LƯU DANH MỤC</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/category_management.js"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+package com.auth.AuthService.repository;
+import com.auth.AuthService.entity.User;
+import com.auth.AuthService.enums.MembershipTier;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.Optional;
+import java.time.LocalDateTime; // Nhớ import thư viện này
+import java.util.List;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Integer> {
+    // Tìm kiếm user bằng email để đăng nhập
+    Optional<User> findByEmail(String email);
+
+    // Kiểm tra email đã tồn tại chưa
+    Boolean existsByEmail(String email);
+
+    // Tìm kiếm khách hàng có phân trang
+    @Query("SELECT u FROM User u JOIN u.roles r WHERE r.roleName = 'USER' " +
+            "AND (:keyword IS NULL OR LOWER(u.fullName) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
+            "OR LOWER(u.email) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
+            "OR u.phoneNumber LIKE CONCAT('%', :keyword, '%')) " +
+            "AND (:tier IS NULL OR u.membershipTier = :tier) " +
+            "AND (:isActive IS NULL OR u.isActive = :isActive)")
+    Page<User> searchCustomers(
+            @Param("keyword") String keyword, 
+            @Param("tier") MembershipTier tier, 
+            @Param("isActive") Boolean isActive, 
+            Pageable pageable);
+
+    long countByCreatedAtAfter(java.time.LocalDateTime dateTime);
+    long countByCreatedAtBetween(java.time.LocalDateTime startDate, java.time.LocalDateTime endDate);
+
+    // Thống kê người dùng mới
+    @Query("SELECT COUNT(u) FROM User u JOIN u.roles r WHERE r.roleName = 'USER' AND u.createdAt BETWEEN :startDate AND :endDate")
+    long countNewUsersByRoleAndDateRange(@Param("startDate") java.time.LocalDateTime startDate, @Param("endDate") java.time.LocalDateTime endDate);
+    
+    List<User> findByTierCycleStartBefore(LocalDateTime date);
+    
+    long countByMembershipTier(com.auth.AuthService.enums.MembershipTier tier);
+}

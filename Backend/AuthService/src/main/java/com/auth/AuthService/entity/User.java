@@ -1,0 +1,138 @@
+package com.auth.AuthService.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
+import com.auth.AuthService.enums.MembershipTier;
+
+@Data 
+@Builder
+@NoArgsConstructor 
+@AllArgsConstructor 
+@Entity
+@Table(name = "users")
+public class User implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Integer userId;
+
+    @Column(name = "avatar")
+    private String avatar;
+
+    @Column(name = "email", unique = true, nullable = false, length = 100)
+    private String email;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @Column(name = "full_name", nullable = false, length = 100)
+    private String fullName;
+
+    @Column(name = "phone_number", nullable = false, length = 15)
+    private String phoneNumber;
+    
+    @Column (name = "gender")
+    private Integer gender;
+    
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+
+    @Column(name = "is_active")
+    @Builder.Default 
+    private Boolean isActive = true;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+    
+    @Column(name = "verification_code")
+    private String verificationCode;
+
+    @Column(name = "reset_password_code")
+    private String resetPasswordCode;
+
+    @Column(name = "code_expiry")
+    private LocalDateTime codeExpiry;
+
+    @Column(name = "is_verified")
+    private boolean isVerified = false; // Mặc định chưa xác thực
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "membership_tier")
+    @Builder.Default
+    private MembershipTier membershipTier = MembershipTier.BASIC;
+
+    @Column(name = "current_points")
+    @Builder.Default
+    private Integer currentPoints = 0; // Điểm hiện tại user đang có (để tiêu/đổi quà)
+
+    @Column(name = "cycle_points")
+    @Builder.Default
+    private Integer cyclePoints = 0; // Điểm tích lũy trong chu kỳ 12 tháng để xét hạng
+
+    @Column(name = "tier_cycle_start")
+    @Builder.Default
+    private LocalDateTime tierCycleStart = LocalDateTime.now();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserAddress> addresses = new ArrayList<>();
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE})
+    @JoinTable(
+        name = "user_roles",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    @Builder.Default
+    private Set<Role> roles = new HashSet<>();
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+        if (this.isActive == null) this.isActive = true;
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.getRoleName())) 
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public String getUsername() { return email; }
+
+    @Override
+    public boolean isAccountNonExpired() { return true; }
+
+    @Override
+    public boolean isAccountNonLocked() { return true; }
+
+    @Override
+    public boolean isCredentialsNonExpired() { return true; }
+
+    @Override
+    public boolean isEnabled() { return Boolean.TRUE.equals(isActive); }
+
+    public void addRole(Role role) { this.roles.add(role); }
+}

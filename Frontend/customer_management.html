@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="vi" class="hide-scrollbar">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-surface text-on-surface h-screen overflow-hidden flex">
+
+        <!-- Sidebar Placeholder -->
+        <div id="admin-sidebar-placeholder"></div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+            <!-- TopNavBar Placeholder -->
+            <div id="admin-header-placeholder"></div>
+
+            <main
+                class="flex-1 overflow-y-auto px-gutter py-lg space-y-lg hide-scrollbar">
+                <!-- Header Title Section -->
+                <section
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-mist">
+                    <div>
+                        <h1
+                            class="font-headline-md text-[32px] text-carbon-ink tracking-tight font-normal">Quản
+                            lý khách hàng</h1>
+                        <p class="font-body-sm text-secondary text-[15px] mt-1">
+                            Kiểm soát hồ sơ, phân hạng thành viên, theo dõi điểm
+                            thưởng và điều phối trạng thái tài khoản.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 shrink-0">
+
+                        <button onclick="openAddCustomerModal()"
+                            class="flex items-center gap-2 px-4 py-2 bg-carbon-ink text-paper-white font-label-caps text-[14px] uppercase tracking-wider rounded-DEFAULT hover:bg-black/85 transition-opacity duration-150 active:scale-95 cursor-pointer shadow-sm"
+                            type="button">
+                            <span class="material-symbols-outlined text-[18px]"
+                                data-icon="person_add">person_add</span>
+                            <span>THÊM KHÁCH HÀNG MỚI</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- 4 KPI Metric Cards (Bento/Engineered Style) with Interactive Hover -->
+                <section
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Card 1: Tổng khách hàng -->
+                    <div
+                        class="bg-paper-white p-5 border border-mist rounded-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer hover:border-ash-border group">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-label-caps text-[14px] font-semibold text-graphite uppercase tracking-wider group-hover:text-carbon-ink transition-colors">TỔNG
+                                KHÁCH HÀNG</span>
+                            <div
+                                class="w-8 h-8 rounded-DEFAULT bg-fog flex items-center justify-center text-carbon-ink group-hover:bg-mist transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px]"
+                                    data-icon="group">group</span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <!-- THÊM id="stat-total" -->
+                            <div id="stat-total"
+                                class="font-body-lg text-3xl font-medium text-carbon-ink tracking-tight">...</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Basic Member -->
+                    <div
+                        class="bg-paper-white p-5 border border-mist rounded-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer hover:border-ash-border group">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-label-caps text-[14px] font-semibold text-graphite uppercase tracking-wider group-hover:text-carbon-ink transition-colors">BASIC
+                                MEMBER</span>
+                            <span
+                                class="px-2 py-0.5 bg-fog text-secondary font-label-caps text-[11px] uppercase tracking-wider rounded-full border border-mist group-hover:border-ash-border transition-colors">Tệp
+                                cơ bản</span>
+                        </div>
+                        <div class="mt-4">
+                            <!-- THÊM id="stat-basic" -->
+                            <div id="stat-basic"
+                                class="font-body-lg text-3xl font-medium text-carbon-ink tracking-tight">...</div>
+                            <div
+                                class="flex items-center gap-1.5 mt-1 font-body-sm text-[12px] text-secondary"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Gold Member -->
+                    <div
+                        class="bg-paper-white p-5 border border-mist rounded-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer hover:border-ash-border group">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-label-caps text-[14px] font-semibold text-graphite uppercase tracking-wider group-hover:text-carbon-ink transition-colors">GOLD
+                                MEMBER</span>
+                            <span
+                                class="px-2 py-0.5 bg-amber-50 text-amber-900 border border-amber-200 font-label-caps text-[11px] uppercase tracking-wider rounded-full group-hover:border-amber-300 transition-colors">Hạng
+                                Vàng</span>
+                        </div>
+                        <div class="mt-4">
+                            <!-- THÊM id="stat-gold" -->
+                            <div id="stat-gold"
+                                class="font-body-lg text-3xl font-medium text-carbon-ink tracking-tight">...</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Elite Member -->
+                    <div
+                        class="bg-carbon-ink text-paper-white p-5 rounded-lg flex flex-col justify-between border border-obsidian transition-all duration-200 hover:-translate-y-1 hover:shadow-lg cursor-pointer hover:border-graphite group">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-label-caps text-[14px] text-mist uppercase tracking-wider group-hover:text-paper-white transition-colors">ELITE
+                                MEMBER</span>
+                            <span
+                                class="px-2 py-0.5 bg-obsidian text-fog border border-graphite/60 font-label-caps text-[11px] uppercase tracking-wider rounded-full flex items-center gap-1 group-hover:border-graphite transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[12px] text-amber-400"
+                                    data-icon="diamond">diamond</span> VIP
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <!-- THÊM id="stat-elite" -->
+                            <div id="stat-elite"
+                                class="font-body-lg text-3xl font-medium text-paper-white tracking-tight">...</div>
+                            <div
+                                class="flex items-center gap-1.5 mt-1 font-body-sm text-[12px] text-mist"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Filter Toolbar -->
+                <section
+                    class="bg-paper-white p-4 border border-mist rounded-lg space-y-3">
+                    <div class="flex flex-col lg:flex-row items-center gap-3">
+                        <!-- Search input -->
+                        <div class="relative flex-1 w-full">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-2.5 text-graphite text-[18px]"
+                                data-icon="search">search</span>
+                            <input id="search-customer"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-lg text-[14px] focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                placeholder="Tìm theo tên khách hàng, email, số điện thoại..."
+                                type="text" />
+                        </div>
+                        <div
+                            class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+                            <!-- Tier Filter -->
+                            <!-- Cập nhật Tier Filter -->
+                            <div class="flex-1 sm:flex-none">
+                                <select id="filter-tier"
+                                    class="w-full sm:w-44 py-2 px-3 bg-surface-container-low hover:bg-fog/60 border border-ash-border rounded-DEFAULT font-body-lg text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-colors duration-150 cursor-pointer">
+                                    <option value>Tất cả cấp bậc</option>
+                                    <option value="elite">Elite Member</option>
+                                    <option value="gold">Gold Member</option>
+                                    <option value="silver">Silver
+                                        Member</option>
+                                    <option value="basic">Basic Member</option>
+                                </select>
+                            </div>
+                            <!-- Cập nhật Status Filter -->
+                            <div class="flex-1 sm:flex-none">
+                                <select id="filter-status"
+                                    class="w-full sm:w-40 py-2 px-3 bg-surface-container-low hover:bg-fog/60 border border-ash-border rounded-DEFAULT font-body-lg text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-colors duration-150 cursor-pointer">
+                                    <option value>Tất cả trạng thái</option>
+                                    <option value="active">Hoạt động</option>
+                                    <option value="locked">Tạm khóa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Customer Data Table (Engineered Gallery Layout) -->
+                <section
+                    class="bg-paper-white border border-mist rounded-lg overflow-hidden shadow-sm">
+                    <!-- Table Responsive Container -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="border-b border-mist bg-surface-container/40 text-center">
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-left">Khách
+                                        hàng</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite">Email</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite">Số
+                                        điện thoại</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-right">Tổng
+                                        chi tiêu</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-right">Điểm
+                                        tiêu dùng</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-right">Điểm
+                                        xếp hạng</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-center">Trạng
+                                        thái</th>
+                                    <th
+                                        class="py-3 px-4 font-label-caps text-[14px] font-bold uppercase tracking-wider text-graphite text-center">Hành
+                                        động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customer-table-body"
+                                class="divide-y divide-mist/80 font-body-sm text-[13px]">
+                                <!-- Row 1: Elite Member -->
+                                <tr
+                                    class="hover:bg-fog/80 transition-colors duration-150">
+                                    <td class="py-3.5 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-9 h-9 rounded-full bg-obsidian text-paper-white flex items-center justify-center font-body-lg text-xs font-bold border border-graphite/40">
+                                                NA
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="font-medium text-carbon-ink leading-snug text-[14px]">Nguyễn
+                                                    Văn An</div>
+                                                <span
+                                                    class="inline-block mt-0.5 px-2 py-0.5 bg-obsidian text-amber-300 border border-graphite/50 font-label-caps text-[12px] uppercase tracking-wider rounded-full">
+                                                    ELITE</span></div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">nguyenvanan@tech.vn</td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">0901234567</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-carbon-ink font-semibold">350.000.000₫</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-secondary">12.400</td>
+                                    <td
+                                        class="py-3.5 px-4  text-center font-body-lg text-[14px] text-carbon-ink font-medium">35.000</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-body-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+                                            <span
+                                                class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                            Hoạt động
+                                        </span>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-center mx-auto text-center gap-1.5">
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-carbon-ink hover:bg-mist/70 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Xem chi tiết">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="visibility">visibility</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-emerald-700 hover:bg-emerald-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Cộng điểm">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="add_circle">add_circle</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-rose-600 hover:bg-rose-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Khóa tài khoản">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="lock">lock</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="hover:bg-fog/80 transition-colors duration-150">
+                                    <td class="py-3.5 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-9 h-9 rounded-full bg-surface-container-high text-carbon-ink flex items-center justify-center font-technical-mono text-xs font-bold border border-ash-border">
+                                                TH
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="font-medium text-carbon-ink leading-snug">Trần
+                                                    Đình Hoàng</div>
+                                                <span
+                                                    class="inline-block mt-0.5 px-2 py-0.5 bg-amber-50 text-amber-900 border border-amber-300 font-label-caps text-[12px] uppercase tracking-wider rounded-full">
+                                                    GOLD</span></div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">nguyenvanan@tech.vn</td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">0901234567</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-carbon-ink font-semibold">350.000.000₫</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-secondary">12.400</td>
+                                    <td
+                                        class="py-3.5 px-4  text-center font-body-lg text-[14px] text-carbon-ink font-medium">35.000</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-body-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+                                            <span
+                                                class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                            Hoạt động
+                                        </span>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-center mx-auto text-center gap-1.5">
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-carbon-ink hover:bg-mist/70 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Xem chi tiết">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="visibility">visibility</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-emerald-700 hover:bg-emerald-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Cộng điểm">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="add_circle">add_circle</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-rose-600 hover:bg-rose-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Khóa tài khoản">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="lock">lock</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="hover:bg-fog/80 transition-colors duration-150">
+                                    <td class="py-3.5 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-9 h-9 rounded-full bg-surface-container-high text-carbon-ink flex items-center justify-center font-technical-mono text-xs font-bold border border-ash-border">
+                                                PT
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="font-medium text-carbon-ink leading-snug">Phạm
+                                                    Quỳnh Trang</div>
+                                                <span
+                                                    class="inline-block mt-0.5 px-2 py-0.5 bg-fog text-secondary border border-ash-border font-label-caps text-[12px] uppercase tracking-wider rounded-full">SILVER</span></div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">nguyenvanan@tech.vn</td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">0901234567</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-carbon-ink font-semibold">350.000.000₫</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-secondary">12.400</td>
+                                    <td
+                                        class="py-3.5 px-4  text-center font-body-lg text-[14px] text-carbon-ink font-medium">35.000</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-body-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+                                            <span
+                                                class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                            Hoạt động
+                                        </span>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-center mx-auto text-center gap-1.5">
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-carbon-ink hover:bg-mist/70 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Xem chi tiết">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="visibility">visibility</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-emerald-700 hover:bg-emerald-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Cộng điểm">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="add_circle">add_circle</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-rose-600 hover:bg-rose-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Khóa tài khoản">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="lock">lock</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="hover:bg-fog/80 transition-colors duration-150 bg-error-container/10">
+                                    <td class="py-3.5 px-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-9 h-9 rounded-full bg-mist text-secondary flex items-center justify-center font-technical-mono text-xs font-bold border border-ash-border">
+                                                DA
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="font-medium text-carbon-ink leading-snug">Đỗ
+                                                    Nhật Anh</div>
+                                                <span
+                                                    class="inline-block mt-0.5 px-2 py-0.5 bg-fog text-secondary border border-mist font-label-caps text-[12px] uppercase tracking-wider rounded-full">
+                                                    BASIC</span></div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">nguyenvanan@tech.vn</td>
+                                    <td
+                                        class="py-3.5 px-4 font-body-lg text-[14px] text-secondary text-center">0901234567</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-carbon-ink font-semibold">350.000.000₫</td>
+                                    <td
+                                        class="py-3.5 px-4 text-center font-body-lg text-[14px] text-secondary">12.400</td>
+                                    <td
+                                        class="py-3.5 px-4  text-center font-body-lg text-[14px] text-carbon-ink font-medium">35.000</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <span
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-body-sm bg-error-container text-on-error-container border border-error/30">
+                                            <span
+                                                class="w-1.5 h-1.5 rounded-full bg-ember-red"></span>
+                                            Tạm khóa
+                                        </span>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <div
+                                            class="flex items-center justify-center mx-auto text-center gap-1.5">
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-carbon-ink hover:bg-mist/70 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Xem chi tiết">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="visibility">visibility</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-graphite hover:text-emerald-700 hover:bg-emerald-50 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Cộng điểm">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="add_circle">add_circle</span>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 flex items-center justify-center text-center text-emerald-700 hover:bg-emerald-100 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
+                                                title="Mở khóa tài khoản">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px] leading-none"
+                                                    data-icon="lock_open">lock_open</span>
+                                            </button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Table Footer Pagination -->
+                    <!-- PHÂN TRANG (PAGINATION) -->
+                    <div
+                        class="border-t border-mist px-gutter py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 select-none">
+                        <div id="pagination-info"
+                            class="flex items-center gap-3">
+                            <span
+                                class="text-secondary text-xs font-body-sm">
+                                Hiển thị <span
+                                    class="font-medium text-carbon-ink">1 -
+                                    20</span> trong tổng số <span
+                                    class="font-medium text-carbon-ink font-body-sm">1,420</span>
+                                đơn hàng
+                            </span>
+                        </div>
+                        <div
+                            class="flex items-center gap-1 font-body-lg text-xs">
+                            <button id="btn-prev-page"
+                                onclick="changePage(-1)"
+                                class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                title="Trang trước">
+                                <span
+                                    class="material-symbols-outlined text-base">chevron_left</span>
+                            </button>
+                            <button id="btn-next-page"
+                                onclick="changePage(1)"
+                                class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                title="Trang kế tiếp">
+                                <span
+                                    class="material-symbols-outlined text-base">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto hidden"
+            id="add-customer-modal">
+            <div
+                class="fixed inset-0 bg-carbon-ink/60 transition-opacity duration-200"
+                onclick="closeAddCustomerModal()"></div>
+            <div
+                class="relative bg-paper-white w-full max-w-[580px] rounded-lg border border-ash-border shadow-md z-10 overflow-hidden flex flex-col my-auto">
+                <div
+                    class="p-6 pb-4 border-b border-mist flex items-start justify-between">
+                    <div class="pr-4">
+                        <h2
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal leading-tight">Thêm
+                            khách hàng mới</h2>
+                        <p
+                            class="font-body-sm text-graphite text-[14px] mt-1">Tạo
+                            tài khoản thành viên thủ công trong hệ thống
+                            TechNova Admin.</p>
+                    </div>
+                    <button onclick="closeAddCustomerModal()"
+                        class="w-8 h-8 rounded-DEFAULT flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-colors duration-150"
+                        title="Đóng popup" type="button">
+                        <span class="material-symbols-outlined text-[20px]"
+                            data-icon="close">close</span>
+                    </button>
+                </div>
+                <!-- THÊM onsubmit -->
+                <form onsubmit="submitAddCustomer(event)" class="p-6 space-y-4">
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">HỌ
+                            VÀ TÊN <span class="text-ember-red">*</span></label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="person">person</span>
+                            <!-- THÊM id="add-fullname" -->
+                            <input id="add-fullname"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                placeholder="Nhập họ và tên" required
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">EMAIL
+                                <span class="text-ember-red">*</span></label>
+                            <div class="relative flex items-center">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                    data-icon="mail">mail</span>
+                                <!-- THÊM id="add-email" -->
+                                <input id="add-email"
+                                    class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                    placeholder="an.nguyen@example.vn" required
+                                    type="email">
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">SỐ
+                                ĐIỆN THOẠI <span
+                                    class="text-ember-red">*</span></label>
+                            <div class="relative flex items-center">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                    data-icon="call">call</span>
+                                <!-- THÊM id="add-phone" -->
+                                <input id="add-phone"
+                                    class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                    placeholder="0901234567" required
+                                    type="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">MẬT
+                            KHẨU BAN ĐẦU <span
+                                class="text-ember-red">*</span></label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="key">key</span>
+                            <!-- THÊM id="add-password" -->
+                            <input id="add-password"
+                                class="w-full pl-10 pr-10 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                placeholder="••••••••" required type="password">
+                            <!-- THÊM onclick gọi togglePassword có sẵn trong common.js -->
+                            <button
+                                onclick="UIUtils.togglePassword('add-password', this)"
+                                class="absolute right-2.5 flex items-center justify-center text-graphite hover:text-carbon-ink"
+                                title="Hiện/Ẩn mật khẩu" type="button">
+                                <span
+                                    class="material-symbols-outlined text-[18px]"
+                                    data-icon="visibility">visibility</span>
+                            </button>
+                        </div>
+                        <p class="font-body-sm text-[12px] text-graphite">Tối
+                            thiểu 6 ký tự bao gồm chữ và số</p>
+                    </div>
+                    <div
+                        class="pt-4 mt-4 border-t border-mist flex items-center justify-end gap-3">
+                        <button onclick="closeAddCustomerModal()"
+                            class="px-4 py-2 border border-ash-border bg-paper-white text-graphite hover:text-carbon-ink hover:border-carbon-ink hover:bg-fog font-label-caps text-[14px] uppercase tracking-wider rounded-DEFAULT transition-all duration-150 cursor-pointer"
+                            type="button">HỦY BỎ</button>
+                        <!-- THÊM id="btn-submit-add" -->
+                        <button id="btn-submit-add"
+                            class="flex items-center gap-2 px-5 py-2 bg-carbon-ink text-paper-white hover:bg-obsidian font-label-caps text-[14px] uppercase tracking-wider font-semibold rounded-DEFAULT transition-all duration-150 cursor-pointer shadow-sm active:scale-95"
+                            type="submit">
+                            <span class="material-symbols-outlined text-[18px]"
+                                data-icon="person_add">person_add</span>
+                            <span>TẠO TÀI KHOẢN</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Xem/Sửa/Thêm Khách Hàng (Đã đồng bộ thiết kế TechNova) -->
+        <div id="customer-modal"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto hidden">
+            <!-- Lớp phủ tối (Backdrop) -->
+            <div
+                class="fixed inset-0 bg-carbon-ink/60 transition-opacity duration-200"
+                onclick="closeCustomerModal()"></div>
+
+            <!-- Khối Nội dung Modal -->
+            <div
+                class="relative bg-paper-white w-full max-w-[580px] rounded-lg border border-ash-border shadow-md z-10 overflow-hidden flex flex-col my-auto">
+
+                <!-- Tiêu đề Modal -->
+                <div
+                    class="p-6 pb-4 border-b border-mist flex items-start justify-between">
+                    <div class="pr-4">
+                        <h2 id="modal-title"
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal leading-tight">Thông
+                            tin khách hàng</h2>
+                        <p
+                            class="font-body-sm text-graphite text-[14px] mt-1">Xem
+                            và chỉnh sửa hồ sơ khách hàng.</p>
+                    </div>
+                    <button onclick="closeCustomerModal()"
+                        class="w-8 h-8 rounded-DEFAULT flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-colors duration-150"
+                        title="Đóng popup" type="button">
+                        <span class="material-symbols-outlined text-[20px]"
+                            data-icon="close">close</span>
+                    </button>
+                </div>
+
+                <!-- Form Nội dung -->
+                <!-- Form Nội dung -->
+                <form id="customer-form"
+                    class="p-6 space-y-5 max-h-[70vh] overflow-y-auto hide-scrollbar">
+                    <input type="hidden" id="modal-user-id" />
+
+                    <!-- Ảnh đại diện -->
+                    <div class="flex flex-col items-center gap-3 pb-2">
+                        <div id="modal-avatar-preview"
+                            class="w-24 h-24 rounded-full bg-cover bg-center border border-ash-border flex items-center justify-center bg-surface-container-high text-carbon-ink text-2xl font-headline-md shadow-sm"></div>
+                        <input type="file" id="modal-avatar-input"
+                            class="hidden" accept="image/jpeg, image/png" />
+                        <button type="button" id="btn-change-avatar"
+                            onclick="document.getElementById('modal-avatar-input').click()"
+                            class="font-label-caps text-[13px] uppercase tracking-wider text-graphite hover:text-carbon-ink transition-colors hidden underline underline-offset-2">
+                            THAY ĐỔI ẢNH
+                        </button>
+                    </div>
+
+                    <!-- KHU VỰC LƯỚI 2 CỘT (Khớp với hình ảnh) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                        <!-- Hàng 1 - Cột Trái: Họ và tên -->
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">HỌ
+                                VÀ TÊN</label>
+                            <div class="relative flex items-center">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                    data-icon="person">person</span>
+                                <input id="modal-fullname"
+                                    class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                                    type="text" />
+                            </div>
+                        </div>
+
+                        <!-- Hàng 1 - Cột Phải: Email -->
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">EMAIL</label>
+                            <div class="relative flex items-center">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                    data-icon="mail">mail</span>
+                                <input id="modal-email"
+                                    class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                                    type="email" />
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 - Cột Trái: Số điện thoại -->
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">SỐ
+                                ĐIỆN THOẠI</label>
+                            <div class="relative flex items-center">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                    data-icon="call">call</span>
+                                <input id="modal-phone"
+                                    class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                                    type="tel" />
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 - Cột Phải: Ngày sinh -->
+                        <div class="space-y-1.5">
+                            <label
+                                class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">NGÀY
+                                SINH</label>
+                            <input id="modal-dob"
+                                class="w-full px-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                                type="date" />
+                        </div>
+
+                    </div>
+
+                    <!-- GIỚI TÍNH (Nằm ngoài lưới 2 cột, dạt về bên trái) -->
+                    <div class="space-y-1.5 pt-2">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">GIỚI
+                            TÍNH</label>
+                        <div
+                            class="flex gap-6 items-center h-[38px] font-body-sm text-[14px] text-carbon-ink">
+                            <label
+                                class="flex items-center gap-1.5 cursor-pointer">
+                                <input type="radio" name="modal-gender"
+                                    value="1"
+                                    class="text-carbon-ink focus:ring-carbon-ink border-ash-border disabled:opacity-60 disabled:cursor-not-allowed" />
+                                Nam
+                            </label>
+                            <label
+                                class="flex items-center gap-1.5 cursor-pointer">
+                                <input type="radio" name="modal-gender"
+                                    value="0"
+                                    class="text-carbon-ink focus:ring-carbon-ink border-ash-border disabled:opacity-60 disabled:cursor-not-allowed" />
+                                Nữ
+                            </label>
+                            <label
+                                class="flex items-center gap-1.5 cursor-pointer">
+                                <input type="radio" name="modal-gender"
+                                    value="2"
+                                    class="text-carbon-ink focus:ring-carbon-ink border-ash-border disabled:opacity-60 disabled:cursor-not-allowed" />
+                                Khác
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Mật khẩu (Chỉ hiện khi tạo mới nếu logic JS hỗ trợ) -->
+                    <div id="modal-password-group"
+                        class="space-y-1.5 hidden pt-2">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">MẬT
+                            KHẨU</label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="key">key</span>
+                            <input id="modal-password"
+                                class="w-full pl-10 pr-10 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 disabled:opacity-60"
+                                type="password" />
+                            <button
+                                onclick="UIUtils.togglePassword('modal-password', this)"
+                                class="absolute right-2.5 flex items-center justify-center text-graphite hover:text-carbon-ink"
+                                title="Hiện/Ẩn mật khẩu" type="button">
+                                <span
+                                    class="material-symbols-outlined text-[18px]"
+                                    data-icon="visibility">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực nút bấm (Footer) -->
+                    <div
+                        class="pt-4 mt-2 border-t border-mist flex items-center justify-end gap-3">
+                        <button onclick="closeCustomerModal()"
+                            class="px-4 py-2 border border-ash-border bg-paper-white text-graphite hover:text-carbon-ink hover:border-carbon-ink hover:bg-fog font-label-caps text-[14px] uppercase tracking-wider rounded-DEFAULT transition-all duration-150 cursor-pointer"
+                            type="button">
+                            ĐÓNG
+                        </button>
+                        <button id="btn-save-customer"
+                            onclick="saveCustomerDetails()"
+                            class="flex items-center gap-2 px-5 py-2 bg-carbon-ink text-paper-white hover:bg-obsidian font-label-caps text-[14px] uppercase tracking-wider font-semibold rounded-DEFAULT transition-all duration-150 cursor-pointer shadow-sm active:scale-95 hidden"
+                            type="button">
+                            <span class="material-symbols-outlined text-[18px]"
+                                data-icon="save">save</span>
+                            <span>LƯU THAY ĐỔI</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Điều Chỉnh Điểm Thưởng -->
+        <div id="points-modal"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto hidden">
+            <!-- Lớp phủ (Backdrop) -->
+            <div
+                class="fixed inset-0 bg-carbon-ink/60 transition-opacity duration-200"
+                onclick="closePointsModal()"></div>
+
+            <!-- Nội dung Modal -->
+            <div
+                class="relative bg-paper-white w-full max-w-[500px] rounded-lg border border-ash-border shadow-md z-10 overflow-hidden flex flex-col my-auto">
+                <div
+                    class="p-6 pb-4 border-b border-mist flex items-start justify-between">
+                    <div class="pr-4">
+                        <h2
+                            class="font-headline-md text-[24px] text-carbon-ink font-normal leading-tight">Điều
+                            chỉnh điểm số</h2>
+                        <p
+                            class="font-body-sm text-graphite text-[14px] mt-1">Cộng
+                            hoặc trừ điểm trực tiếp cho khách hàng.</p>
+                    </div>
+                    <button onclick="closePointsModal()"
+                        class="w-8 h-8 rounded-DEFAULT flex items-center justify-center text-graphite hover:text-carbon-ink hover:bg-fog transition-colors duration-150"
+                        title="Đóng popup" type="button">
+                        <span class="material-symbols-outlined text-[20px]"
+                            data-icon="close">close</span>
+                    </button>
+                </div>
+
+                <form onsubmit="submitPointsChange(event)"
+                    class="p-6 space-y-5">
+                    <!-- Input ẩn lưu ID khách hàng -->
+                    <input type="hidden" id="point-user-id" />
+
+                    <!-- Trường 1: Thông tin người nhận -->
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">THÔNG
+                            TIN NGƯỜI NHẬN</label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="person">person</span>
+                            <input id="point-user-info"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-graphite focus:outline-none cursor-not-allowed"
+                                type="text" disabled>
+                        </div>
+                    </div>
+
+                    <!-- Trường 2: Số điểm -->
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">SỐ
+                            ĐIỂM ĐIỀU CHỈNH <span
+                                class="text-ember-red">*</span></label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-graphite text-[18px] pointer-events-none"
+                                data-icon="toll">toll</span>
+                            <!-- Sử dụng type="number" để cho phép nhập số âm/dương -->
+                            <input id="point-amount"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200"
+                                placeholder="Ví dụ: 1000 (để cộng) hoặc -500 (để trừ)"
+                                required type="number">
+                        </div>
+                        <p class="font-body-sm text-[12px] text-graphite">Nhập
+                            số dương để cộng điểm, nhập số âm (có dấu - ở trước)
+                            để trừ điểm.</p>
+                    </div>
+
+                    <!-- Trường 3: Lý do -->
+                    <div class="space-y-1.5">
+                        <label
+                            class="font-label-caps text-[14px] uppercase tracking-wider text-graphite font-bold flex items-center gap-1">LÝ
+                            DO ĐIỀU CHỈNH <span
+                                class="text-ember-red">*</span></label>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-2.5 text-graphite text-[18px] pointer-events-none"
+                                data-icon="edit_note">edit_note</span>
+                            <textarea id="point-reason"
+                                class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-ash-border rounded-DEFAULT font-body-sm text-[14px] text-on-surface focus:outline-none focus:border-carbon-ink focus:bg-paper-white transition-all duration-200 min-h-[80px]"
+                                placeholder="Ví dụ: Tặng quà sinh nhật, Bồi thường đơn hàng lỗi..."
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Nút hành động -->
+                    <div
+                        class="pt-4 mt-2 border-t border-mist flex items-center justify-end gap-3">
+                        <button onclick="closePointsModal()"
+                            class="px-4 py-2 border border-ash-border bg-paper-white text-graphite hover:text-carbon-ink hover:border-carbon-ink hover:bg-fog font-label-caps text-[14px] uppercase tracking-wider rounded-DEFAULT transition-all duration-150 cursor-pointer"
+                            type="button">HỦY BỎ</button>
+                        <button id="btn-submit-points"
+                            class="flex items-center gap-2 px-5 py-2 bg-carbon-ink text-paper-white hover:bg-obsidian font-label-caps text-[14px] uppercase tracking-wider font-semibold rounded-DEFAULT transition-all duration-150 cursor-pointer shadow-sm active:scale-95"
+                            type="submit">
+                            <span class="material-symbols-outlined text-[18px]"
+                                data-icon="check_circle">check_circle</span>
+                            <span>XÁC NHẬN</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/customer_management.js"></script>
+    </body>
+</html>

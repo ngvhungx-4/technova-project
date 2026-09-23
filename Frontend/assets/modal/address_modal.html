@@ -1,0 +1,73 @@
+<div id="address-modal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-true-black/40 backdrop-blur-sm p-6">
+    <div
+        class="bg-paper-white w-full max-w-2xl border border-mist shadow-xl flex flex-col rounded-xl overflow-hidden">
+        <div class="p-6 hairline-b flex justify-between items-center">
+            <h2 id="modal-title"
+                class="text-[32px] font-headline-md italic text-carbon-ink">Thêm địa chỉ
+                mới</h2>
+            <button type="button" onclick="toggleModal(false)"
+                class="material-symbols-outlined text-carbon-ink hover:text-graphite transition-colors">close</button>
+        </div>
+        <form id="address-form"
+            onsubmit="event.preventDefault(); AddressManager.save();"
+            class="flex flex-col h-full">
+            <input type="hidden" id="address-id">
+            <div class="p-8 flex flex-col gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-[16px] font-body-sm font-bold uppercase tracking-widest text-graphite">Họ
+                            và tên</label>
+                        <input id="receiverName" required
+                            class="w-full border border-mist p-3 text-[16px] font-body-sm focus:border-carbon-ink focus:ring-0 outline-none transition-colors"
+                            placeholder="Nhập họ và tên" type="text">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-[16px] font-body-sm font-bold uppercase tracking-widest text-graphite">Số
+                            điện thoại</label>
+                        <input id="phoneNumber" required
+                            pattern="^(0[3|5|7|8|9])+([0-9]{8})$"
+                            title="Số điện thoại Việt Nam hợp lệ (10 số)"
+                            class="w-full border border-mist p-3 text-[16px] font-body-sm focus:border-carbon-ink focus:ring-0 outline-none transition-colors"
+                            placeholder="Nhập số điện thoại" type="tel">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 relative">
+                    <label
+                        class="text-[16px] font-body-sm font-bold uppercase tracking-widest text-graphite">Địa
+                        chỉ chi tiết</label>
+                    <textarea id="fullAddress" required autocomplete="off"
+                        class="w-full border border-mist p-3 text-[16px] font-body-sm focus:border-carbon-ink focus:ring-0 outline-none transition-colors resize-none"
+                        placeholder="Gõ số nhà, tên đường để tìm kiếm..."
+                        rows="3"></textarea>
+                    <div id="suggestionBox"
+                        class="absolute top-full left-0 right-0 z-50 bg-paper-white border border-mist shadow-lg mt-1 hidden max-h-60 overflow-y-auto hide-scrollbar"></div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label
+                        class="text-[16px] font-body-sm font-bold uppercase tracking-widest text-graphite">Loại
+                        địa chỉ</label>
+                    <input id="addressName"
+                        class="w-full border border-mist p-3 text-[16px] font-body-sm focus:border-carbon-ink focus:ring-0 outline-none transition-colors"
+                        placeholder="Ví dụ: Nhà riêng, Công ty, Trường học..."
+                        type="text">
+                </div>
+                <label class="flex items-center gap-3 cursor-pointer">
+                    <input id="isDefault"
+                        class="size-4 border-mist text-carbon-ink focus:ring-carbon-ink"
+                        type="checkbox">
+                    <span class="text-[16px] font-body-sm text-carbon-ink">Đặt làm
+                        địa chỉ mặc định</span>
+                </label>
+            </div>
+            <div class="p-8 hairline-t flex justify-end gap-4 mt-auto">
+                <button type="button" onclick="toggleModal(false)"
+                    class="px-8 py-3 border border-mist text-carbon-ink font-body-sm text-[14px] font-bold uppercase tracking-widest hover:bg-surface-container-low transition-colors">Hủy</button>
+                <button type="submit" id="btn-submit"
+                    class="px-8 py-3 bg-carbon-ink text-paper-white font-body-sm text-[14px] font-bold uppercase tracking-widest hover:bg-obsidian transition-colors">Lưu</button>
+            </div>
+        </form>
+    </div>
+</div>

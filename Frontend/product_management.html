@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi" class="hide-scrollbar">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-surface text-on-surface h-screen overflow-hidden flex">
+
+        <!-- Sidebar Placeholder -->
+        <div id="admin-sidebar-placeholder"></div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col h-screen overflow-hidden">
+
+            <!-- TopNavBar Placeholder -->
+            <div id="admin-header-placeholder"></div>
+
+            <main
+                class="flex-1 overflow-y-auto px-gutter py-lg space-y-lg hide-scrollbar">
+                <section
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-mist pb-6">
+                    <div>
+                        <h1
+                            class="font-headline-md text-[32px] text-carbon-ink tracking-tight">Quản
+                            lý sản phẩm</h1>
+                        <p
+                            class="text-secondary text-sm font-body-sm mt-1 max-w-2xl">Kiểm
+                            soát danh mục sản phẩm, biến thể thiết bị phần
+                            cứng.</p>
+                    </div>
+                    <div class="flex items-center gap-3 shrink-0">
+                        <button onclick="openProductModal()"
+                            class="bg-carbon-ink hover:bg-black hover:shadow-md text-paper-white px-4 py-2 rounded text-[14px] font-label-caps uppercase tracking-wider flex items-center gap-2 transition-all duration-150 active:scale-[0.98]">
+                            <span
+                                class="material-symbols-outlined text-base">add</span>Thêm
+                            sản phẩm mới
+                        </button>
+                    </div>
+                </section>
+
+                <!-- METRIC CHIPS -->
+                <section class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div
+                        class="bg-paper-white border border-mist hover:border-ash-border/90 p-4 rounded flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-200 cursor-default group">
+                        <span
+                            class="text-[14px] font-bold font-label-sm uppercase tracking-wider text-graphite group-hover:text-carbon-ink transition-colors">Tổng
+                            kho</span>
+                        <div
+                            class="flex items-baseline justify-between mt-2"><span
+                                id="stat-total-stock"
+                                class="font-body-lg text-2xl font-bold text-carbon-ink">...</span></div>
+                    </div>
+
+                    <div
+                        class="bg-paper-white border border-mist hover:border-ash-border/90 p-4 rounded flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-200 cursor-default group">
+                        <span
+                            class="text-[14px] font-bold font-label-sm uppercase tracking-wider text-graphite group-hover:text-carbon-ink transition-colors">Sản
+                            phẩm Đang Bán</span>
+                        <div
+                            class="flex items-baseline justify-between mt-2"><span
+                                id="stat-active-products"
+                                class="font-body-lg text-2xl font-bold text-carbon-ink">...</span></div>
+                    </div>
+
+                    <div
+                        class="bg-paper-white border border-mist hover:border-ash-border/90 p-4 rounded flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-200 cursor-default group">
+                        <span
+                            class="text-[14px] font-bold font-label-sm uppercase tracking-wider text-graphite group-hover:text-ember-red transition-colors">Cảnh
+                            báo tồn thấp</span>
+                        <div
+                            class="flex items-baseline justify-between mt-2"><span
+                                id="stat-low-stock"
+                                class="font-body-lg text-2xl font-bold text-ember-red">...</span></div>
+                    </div>
+
+                    <div
+                        class="bg-paper-white border border-mist hover:border-ash-border/90 p-4 rounded flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-200 cursor-default group">
+                        <span
+                            class="text-[14px] font-bold font-label-sm uppercase tracking-wider text-graphite group-hover:text-carbon-ink transition-colors">Tổng
+                            giá trị tồn kho</span>
+                        <div
+                            class="flex items-baseline justify-between mt-2"><span
+                                id="stat-total-value"
+                                class="font-body-lg text-2xl font-bold text-carbon-ink">...</span></div>
+                    </div>
+                </section>
+
+                <section
+                    class="bg-paper-white border border-mist p-4 rounded shadow-sm">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+                        <div class="md:col-span-4 relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-graphite text-base pointer-events-none">search</span>
+                            <input id="search-product"
+                                class="w-full bg-paper-white border border-ash-border hover:border-graphite/60 rounded py-2 pl-9 pr-3 text-[14px] font-body-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink focus:outline-none placeholder:text-secondary transition-all duration-150"
+                                placeholder="Tìm theo tên sản phẩm, mã SKU..."
+                                type="text" />
+                        </div>
+                        <div class="md:col-span-4">
+                            <select id="filter-category"
+                                class="w-full bg-paper-white border border-ash-border hover:border-graphite/60 rounded py-2 px-3 text-[14px] font-body-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink focus:outline-none text-on-surface cursor-pointer transition-all duration-150 hide-scrollbar">
+                                <option value>Tất cả danh mục</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-4">
+                            <select id="filter-status"
+                                class="w-full bg-paper-white border border-ash-border hover:border-graphite/60 rounded py-2 px-3 text-[14px] font-body-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink focus:outline-none text-on-surface cursor-pointer transition-all duration-150">
+                                <option value>Tất cả trạng thái</option>
+                                <option value="IN_STOCK">Còn hàng</option>
+                                <option value="OUT_OF_STOCK">Hết hàng</option>
+                                <option value="PRE_ORDER">Đặt trước</option>
+                            </select>
+                        </div>
+                        <!-- <div class="md:col-span-2">
+                            <select
+                                class="w-full bg-paper-white border border-ash-border hover:border-graphite/60 rounded py-2 px-3 text-[14px] font-body-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink focus:outline-none text-on-surface cursor-pointer transition-all duration-150">
+                                <option value>Tất cả hiển thị</option>
+                                <option value="visible">Đang hiện</option>
+                                <option value="hidden">Đang ẩn</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </section>
+
+                <div
+                    class="bg-paper-white border border-mist rounded overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-fog/60 border-b border-mist text-graphite font-label-caps text-[14px] font-semibold uppercase tracking-wider text-center">
+                                    <th
+                                        class="py-3.5 px-3 w-16 text-center">Ảnh</th>
+                                    <th class="py-3.5 px-4 text-left">Tên sản
+                                        phẩm & SKU</th>
+                                    <th class="py-3.5 px-4">Danh mục</th>
+                                    <th class="py-3.5 px-4">Giá bán</th>
+                                    <th class="py-3.5 px-4">Tồn kho</th>
+                                    <th class="py-3.5 px-4">Trạng thái</th>
+                                    <th class="py-3.5 px-4 text-center">Hiển
+                                        thị</th>
+                                    <th class="py-3.5 px-4 text-center">Thao
+                                        tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="product-table-body"
+                                class="divide-y divide-mist text-xs">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div
+                        class="border-t border-mist px-gutter py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 select-none">
+                        <div id="pagination-info"
+                            class="flex items-center gap-3">
+                            <span
+                                class="text-secondary text-xs font-body-sm">Đang
+                                tải dữ liệu...</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-1 font-body-lg text-xs">
+                            <button id="btn-prev-page" onclick="changePage(-1)"
+                                class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                title="Trang trước">
+                                <span
+                                    class="material-symbols-outlined text-base">chevron_left</span>
+                            </button>
+                            <button id="btn-next-page" onclick="changePage(1)"
+                                class="w-8 h-8 flex items-center justify-center rounded border border-ash-border bg-paper-white text-secondary hover:text-carbon-ink hover:border-carbon-ink disabled:opacity-40 transition-colors"
+                                title="Trang kế tiếp">
+                                <span
+                                    class="material-symbols-outlined text-base">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div id="product-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-obsidian/60 backdrop-blur-sm">
+            <!-- Modal Container -->
+            <div
+                class="bg-surface-container-low rounded-xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col overflow-hidden">
+
+                <!-- Modal Header -->
+                <div
+                    class="bg-paper-white flex justify-between items-center px-6 py-4 border-b border-mist sticky top-0 z-10 ">
+                    <h2 id="modal-product-title"
+                        class="font-headline-md text-xl text-carbon-ink">Cập
+                        nhật sản phẩm</h2>
+                    <button onclick="closeProductModal()"
+                        class="text-graphite hover:text-ember-red transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body (Cuộn) -->
+                <div class="p-6 overflow-y-auto flex-1 font-body-sm space-y-6 hide-scrollbar ">
+                    <form id="product-form" class="flex flex-col gap-8">
+                        <input type="hidden" id="modal-product-id">
+
+                        <!-- CARD 1: THÔNG TIN CƠ BẢN -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">info</span>
+                                <h3 class="font-semibold text-base">Thông tin cơ
+                                    bản</h3>
+                            </div>
+
+                            <!-- Dòng 1: Tên & Các loại Giá -->
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+                                <div class="md:col-span-5">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Tên
+                                        sản phẩm <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="text" id="modal-product-name"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Giá
+                                        nhập (VNĐ)</label>
+                                    <input type="number"
+                                        id="modal-product-cost-price"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Giá
+                                        niêm yết (VNĐ)</label>
+                                    <input type="number"
+                                        id="modal-product-base-price"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                                <div class="md:col-span-3">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Giá
+                                        bán (VNĐ) <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="number"
+                                        id="modal-product-sale-price"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                            </div>
+
+                            <!-- Dòng 2: SKU, Tồn kho, Trạng thái kho -->
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+                                <div class="md:col-span-5">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Mã
+                                        SKU <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="text" id="modal-product-sku"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                                <div class="md:col-span-3">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Tồn
+                                        kho <span
+                                            class="text-ember-red">*</span></label>
+                                    <input type="number"
+                                        id="modal-product-stock"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none transition-colors">
+                                </div>
+                                <div class="md:col-span-4">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Trạng
+                                        thái kho</label>
+                                    <select id="modal-product-stock-status"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none bg-paper-white cursor-pointer transition-colors">
+                                        <option value="IN_STOCK">Còn
+                                            hàng</option>
+                                        <option value="OUT_OF_STOCK">Hết
+                                            hàng</option>
+                                        <option value="PRE_ORDER">Đặt
+                                            trước</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Dòng 3: Danh mục, Trạng thái hiển thị & Nổi bật -->
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+                                <div class="md:col-span-5">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Danh
+                                        mục <span
+                                            class="text-ember-red">*</span></label>
+                                    <select id="modal-product-category"
+                                        onchange="handleCategoryChange()"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none bg-paper-white cursor-pointer transition-colors"></select>
+                                </div>
+                                <div class="md:col-span-7">
+                                    <label
+                                        class="block text-sm font-medium text-carbon-ink mb-1">Hiển
+                                        thị / Ẩn</label>
+                                    <select id="modal-product-is-active"
+                                        class="w-full border border-ash-border rounded-md px-3 py-2 text-sm focus:border-carbon-ink focus:ring-1 focus:ring-carbon-ink outline-none bg-paper-white cursor-pointer transition-colors">
+                                        <option value="true">Đang hiện</option>
+                                        <option value="false">Tạm ẩn</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Checkbox Nổi bật -->
+                            <div class="flex items-center mt-2">
+                                <input type="checkbox"
+                                    id="modal-product-featured"
+                                    class="w-4 h-4 text-carbon-ink border-ash-border rounded focus:ring-carbon-ink cursor-pointer">
+                                <label for="modal-product-featured"
+                                    class="ml-2 text-sm font-medium text-carbon-ink cursor-pointer">Sản
+                                    phẩm nổi bật (Hiển thị lên trang
+                                    chủ)</label>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: HÌNH ẢNH & BIẾN THỂ MÀU -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">image</span>
+                                <h3 class="font-semibold text-base">Hình ảnh &
+                                    Biến thể màu</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- Cột Trái -->
+                                <div class="space-y-6">
+                                    <div>
+                                        <label
+                                            class="block text-sm font-bold text-carbon-ink mb-2">Ảnh
+                                            đại diện (Thumbnail)</label>
+                                        <input type="file" id="upload-thumbnail"
+                                            accept="image/*"
+                                            class="w-full text-sm text-graphite file:mr-4 file:py-1 file:px-3 file:rounded file:border file:border-ash-border file:bg-surface file:text-sm file:font-medium hover:file:bg-mist cursor-pointer">
+                                        <input type="hidden"
+                                            id="modal-product-thumbnail-base64">
+                                        <img id="preview-thumbnail"
+                                            class="hidden w-24 h-24 object-cover rounded border border-mist mt-3">
+                                    </div>
+
+                                    <div>
+                                        <div
+                                            class="flex justify-between items-center mb-2">
+                                            <label
+                                                class="block text-sm font-bold text-carbon-ink">Ảnh
+                                                chi tiết (Nhiều ảnh)</label>
+                                            <button type="button"
+                                                onclick="addDetailImageRow()"
+                                                class="text-xs font-medium text-carbon-ink hover:text-black bg-surface border border-mist px-2 py-1 rounded transition-colors">+
+                                                Thêm ảnh</button>
+                                        </div>
+                                        <div id="detail-images-container"
+                                            class="space-y-3"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Cột Phải -->
+                                <div>
+                                    <div
+                                        class="flex justify-between items-center mb-2">
+                                        <label
+                                            class="block text-sm font-bold text-carbon-ink">Biến
+                                            thể màu sắc</label>
+                                        <button type="button"
+                                            onclick="addColorRow()"
+                                            class="text-xs font-medium text-carbon-ink hover:text-black bg-surface border border-mist px-2 py-1 rounded transition-colors">+
+                                            Thêm màu</button>
+                                    </div>
+                                    <div id="colors-container"
+                                        class="space-y-3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: THÔNG SỐ KỸ THUẬT -->
+                        <div
+                            class="bg-paper-white border border-mist rounded-lg p-5 shadow-sm">
+                            <div
+                                class="flex items-center text-carbon-ink mb-5 border-b border-mist pb-3">
+                                <span
+                                    class="material-symbols-outlined mr-2">memory</span>
+                                <h3 class="font-semibold text-base">Thông số kỹ
+                                    thuật</h3>
+                            </div>
+
+                            <p id="specs-guide"
+                                class="text-sm text-secondary italic mb-4">Vui
+                                lòng chọn danh mục ở phần "Thông tin cơ bản" để
+                                tải cấu trúc thông số kỹ thuật tương ứng.</p>
+                            <div id="dynamic-specs-container"
+                                class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div
+                    class="bg-paper-white px-6 py-4 border-t border-mist flex justify-end gap-3 sticky bottom-0 z-10">
+                    <button type="button" onclick="closeProductModal()"
+                        class="px-5 py-2 text-sm font-medium text-carbon-ink bg-paper-white border border-ash-border rounded-md hover:bg-mist/50 transition-colors">Hủy</button>
+                    <button type="button" id="btn-save-product"
+                        onclick="saveProduct()"
+                        class="px-5 py-2 text-sm font-medium text-paper-white bg-carbon-ink rounded-md hover:bg-black shadow-sm transition-colors">Lưu
+                        sản phẩm</button>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/product_management.js"></script>
+    </body>
+</html>

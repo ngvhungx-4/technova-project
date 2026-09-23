@@ -1,0 +1,439 @@
+<!DOCTYPE html><html class="light hide-scrollbar" lang="vi" style><head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Máy Tính Xách Tay - TECHNOVA</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet">
+        <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "mist": "#e0e0e0",
+                      "inverse-on-surface": "#eef1f0",
+                      "on-tertiary-container": "#f14a50",
+                      "error-container": "#ffdad6",
+                      "ash-border": "#cccfcd",
+                      "primary-fixed": "#dde4df",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "carbon-ink": "#1a211e",
+                      "fog": "#eef1f0",
+                      "secondary": "#5d5f5f",
+                      "on-surface-variant": "#434845",
+                      "on-secondary": "#ffffff",
+                      "primary-container": "#1a211e",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#c1c8c3",
+                      "on-primary-fixed": "#161d1a",
+                      "on-background": "#181c1c",
+                      "surface": "#f7faf9",
+                      "secondary-fixed": "#e2e2e2",
+                      "inverse-surface": "#2d3131",
+                      "on-primary-container": "#818984",
+                      "tertiary-container": "#480008",
+                      "outline": "#747875",
+                      "on-secondary-container": "#616363",
+                      "error": "#ba1a1a",
+                      "ember-red": "#cc2e39",
+                      "on-error": "#ffffff",
+                      "primary": "#030806",
+                      "secondary-container": "#dfe0e0",
+                      "surface-container-low": "#f1f4f3",
+                      "tertiary": "#190001",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#ffdad8",
+                      "surface-variant": "#e0e3e2",
+                      "surface-tint": "#59605c",
+                      "on-secondary-fixed-variant": "#454747",
+                      "graphite": "#606562",
+                      "paper-white": "#ffffff",
+                      "primary-fixed-dim": "#c1c8c3",
+                      "obsidian": "#0c0c0c",
+                      "surface-bright": "#f7faf9",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "surface-container-high": "#e6e9e8",
+                      "on-tertiary-fixed-variant": "#93001b",
+                      "on-surface": "#181c1c",
+                      "on-tertiary-fixed": "#410006",
+                      "outline-variant": "#c3c7c4",
+                      "on-primary-fixed-variant": "#414845",
+                      "surface-container-highest": "#e0e3e2",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#f7faf9",
+                      "surface-dim": "#d7dbda",
+                      "tertiary-fixed-dim": "#ffb3b0",
+                      "true-black": "#000000",
+                      "surface-container": "#ebeeed",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "xl": "64px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "xxl": "80px",
+                      "base": "4px",
+                      "md": "12px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "headline-md": ["Playfair Display", "serif"],
+                      "label-caps": [
+                              "Archivo Narrow"
+                      ],
+                      "headline-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-sm": [
+                              "Geist"
+                      ],
+                      "label-sm": [
+                              "Archivo Narrow"
+                      ],
+                      "technical-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "display-xl": [
+                              "Libre Caslon Text"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.025em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "technical-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.025em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+        <style type="text/tailwindcss">
+    @layer utilities {
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+</style>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet"></head>
+    <body
+        class="bg-paper-white text-on-surface font-body-lg text-body-lg selection:bg-carbon-ink selection:text-paper-white antialiased pt-28"
+        data-use-chatbot="true">
+        <!-- TopNavBar -->
+        <div id="header-placeholder"></div>
+        <main class="w-full">
+
+            <div
+                class="max-w-container-max mx-auto px-gutter pt-lg pb-sm">
+                <div id="breadcrumb-container"
+                    class="w-full flex items-center font-body-sm text-body-sm text-graphite overflow-x-auto hide-scrollbar whitespace-nowrap">
+                    <!-- Javascript sẽ vẽ breadcrumb vào đây -->
+                </div>
+            </div>
+            <!-- Hero Section -->
+
+            <!-- Filter & Sort Bar -->
+            <section
+                class="w-full max-w-container-max mx-auto px-gutter py-lg border-b border-mist flex flex-col md:flex-row justify-between items-center gap-lg sticky top-[110px] bg-paper-white/80 backdrop-blur-md z-40">
+                <div class="flex flex-wrap items-center gap-sm"><div
+                        class="flex flex-wrap items-center gap-md">
+                        <!-- Brand Filter -->
+                        <div class="relative group">
+                            <button
+                                class="font-label-caps text-label-sm px-md py-sm border border-ash-border rounded hover:border-carbon-ink transition-colors flex items-center gap-xs text-secondary bg-paper-white">
+                                Thương hiệu
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px;">keyboard_arrow_down</span>
+                            </button>
+                            <div
+                                class="absolute top-full left-0 mt-xs w-48 bg-paper-white border border-ash-border rounded shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+
+                                <!-- THÊM ID "brand-filter-container" VÀ XÓA CÁC CODE CỨNG Ở ĐÂY -->
+                                <div id="brand-filter-container"
+                                    class="p-sm flex flex-col gap-xs max-h-60 overflow-y-auto hide-scrollbar">
+                                    <span
+                                        class="text-xs text-secondary px-sm py-xs">Đang
+                                        tải...</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Price Range Filter -->
+                        <div class="relative group">
+                            <button
+                                class="font-label-caps text-label-sm px-md py-sm border border-ash-border rounded hover:border-carbon-ink transition-colors flex items-center gap-xs text-secondary bg-paper-white">
+                                Khoảng giá <span
+                                    class="material-symbols-outlined"
+                                    style="font-size: 16px;">keyboard_arrow_down</span>
+                            </button>
+                            <div
+                                class="absolute top-full left-0 mt-xs w-80 bg-paper-white border border-ash-border rounded shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 p-md flex flex-col gap-md">
+                                <div class="flex justify-between items-center">
+                                    <span
+                                        class="font-label-caps text-label-sm text-primary uppercase tracking-wider">Khoảng
+                                        giá (VNĐ)</span>
+                                </div>
+                                <div class="relative pt-sm pb-1">
+                                    <div
+                                        class="relative h-1.5 w-full bg-mist rounded-full">
+                                        <div id="slider-progress"
+                                            class="absolute h-full bg-carbon-ink rounded-full"
+                                            style="left: 0%; right: 0%;"></div>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="price-min-range" type="range"
+                                            min="0" max="500" value="0" step="1"
+                                            class="absolute top-[-10px] left-0 w-full h-2 bg-transparent appearance-none pointer-events-none cursor-pointer [&amp;::-webkit-slider-thumb]:pointer-events-auto [&amp;::-webkit-slider-thumb]:appearance-none [&amp;::-webkit-slider-thumb]:w-4 [&amp;::-webkit-slider-thumb]:h-4 [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-carbon-ink [&amp;::-webkit-slider-thumb]:border-2 [&amp;::-webkit-slider-thumb]:border-paper-white [&amp;::-webkit-slider-thumb]:shadow [&amp;::-webkit-slider-thumb]:transition-transform [&amp;::-webkit-slider-thumb]:hover:scale-110">
+                                        <input id="price-max-range" type="range"
+                                            min="0" max="500" value="500"
+                                            step="1"
+                                            class="absolute top-[-10px] left-0 w-full h-2 bg-transparent appearance-none pointer-events-none cursor-pointer [&amp;::-webkit-slider-thumb]:pointer-events-auto [&amp;::-webkit-slider-thumb]:appearance-none [&amp;::-webkit-slider-thumb]:w-4 [&amp;::-webkit-slider-thumb]:h-4 [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-carbon-ink [&amp;::-webkit-slider-thumb]:border-2 [&amp;::-webkit-slider-thumb]:border-paper-white [&amp;::-webkit-slider-thumb]:shadow [&amp;::-webkit-slider-thumb]:transition-transform [&amp;::-webkit-slider-thumb]:hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="flex justify-between items-center mt-md text-[11px] font-body-lg text-secondary">
+                                        <span class>0₫</span>
+                                        <span class>500.000.000₫</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 gap-sm items-center">
+                                    <div class="flex flex-col gap-xs">
+                                        <label
+                                            class="font-label-caps text-[11px] text-secondary uppercase">Tối
+                                            thiểu</label>
+                                        <div
+                                            class="flex items-center border border-ash-border rounded px-sm py-xs bg-surface-bright focus-within:border-carbon-ink">
+                                            <input id="price-min-input"
+                                                type="text" value="10.000.000"
+                                                class="w-full bg-transparent border-none outline-none p-0 text-technical-mono text-[12px] text-primary focus:ring-0">
+                                            <span
+                                                class="text-[11px] text-secondary ml-xs">₫</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-xs">
+                                        <label
+                                            class="font-label-caps text-[11px] text-secondary uppercase">Tối
+                                            đa</label>
+                                        <div
+                                            class="flex items-center border border-ash-border rounded px-sm py-xs bg-surface-bright focus-within:border-carbon-ink">
+                                            <input id="price-max-input"
+                                                type="text" value="500.000.000"
+                                                class="w-full bg-transparent border-none outline-none p-0 text-technical-mono text-[12px] text-primary focus:ring-0">
+                                            <span
+                                                class="text-[11px] text-secondary ml-xs">₫</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-wrap gap-xs pt-xs border-t border-mist">
+                                    <button type="button"
+                                        onclick="setPricePreset(0, 15)"
+                                        class="font-body-sm text-[11px] px-sm py-1 border border-ash-border rounded hover:border-carbon-ink text-on-surface-variant hover:text-primary transition-colors">&lt;
+                                        15tr</button>
+                                    <button type="button"
+                                        onclick="setPricePreset(15, 30)"
+                                        class="font-body-sm text-[11px] px-sm py-1 border border-ash-border rounded hover:border-carbon-ink text-on-surface-variant hover:text-primary transition-colors">15
+                                        - 30tr</button>
+                                    <button type="button"
+                                        onclick="setPricePreset(30, 80)"
+                                        class="font-body-sm text-[11px] px-sm py-1 border border-ash-border rounded hover:border-carbon-ink text-on-surface-variant hover:text-primary transition-colors">30
+                                        - 80tr</button>
+                                    <button type="button"
+                                        onclick="setPricePreset(80, 120)"
+                                        class="font-body-sm text-[11px] px-sm py-1 border border-ash-border rounded hover:border-carbon-ink text-on-surface-variant hover:text-primary transition-colors">80
+                                        - 120tr</button>
+                                    <button type="button"
+                                        onclick="setPricePreset(120, 500)"
+                                        class="font-body-sm text-[11px] px-sm py-1 border border-ash-border rounded hover:border-carbon-ink text-on-surface-variant hover:text-primary transition-colors">&gt;
+                                        120tr</button>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between pt-xs border-t border-mist">
+                                    <button type="button"
+                                        onclick="resetPriceRange()"
+                                        class="font-label-caps text-label-sm text-secondary hover:text-primary transition-colors uppercase">Thiết
+                                        lập lại</button>
+                                    <button type="button"
+                                        onclick="applyFilters()"
+                                        class="font-label-caps text-label-sm px-md py-1.5 bg-carbon-ink text-paper-white rounded hover:opacity-90 transition-opacity uppercase tracking-wider">
+                                        Áp dụng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Configuration Filter -->
+                        <!-- Configuration Filter -->
+                        <div class="relative group">
+                            <button
+                                class="font-label-caps text-label-sm px-md py-sm border border-ash-border rounded hover:border-carbon-ink transition-colors flex items-center gap-xs text-secondary bg-paper-white">
+                                Cấu hình
+                                <span class="material-symbols-outlined"
+                                    style="font-size: 16px;">keyboard_arrow_down</span>
+                            </button>
+                            <!-- Đổi w-64 thành w-[800px] max-w-[90vw] để tạo không gian rộng rãi -->
+                            <div
+                                class="absolute top-full left-0 mt-xs w-[900px] max-w-[90vw] bg-paper-white border border-ash-border rounded shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                                <!-- THẺ CHỨA BỘ LỌC ĐỘNG -->
+                                <div id="dynamic-specs-container"
+                                    class="p-md max-h-[70vh] overflow-y-auto hide-scrollbar">
+                                    <span class="text-xs text-secondary">Đang
+                                        tải cấu hình...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="flex items-center gap-md">
+                    <span
+                        class="font-label-caps text-label-sm text-secondary uppercase">Sắp
+                        xếp theo</span>
+                    <select id="sort"
+                        class="min-w-[180px] pr-8 font-body-sm text-body-sm pl-md py-sm border border-ash-border rounded focus:border-carbon-ink focus:ring-0 bg-transparent text-primary outline-none cursor-pointer">
+                        <option value="createdAt-desc">Mới nhất</option>
+                        <option value="salePrice-asc">Giá: Thấp đến Cao</option>
+                        <option value="salePrice-desc">Giá: Cao đến
+                            Thấp</option>
+                    </select>
+                </div>
+            </section>
+            <!-- Product Grid -->
+            <!-- Product Grid -->
+            <section class="w-full max-w-container-max mx-auto px-gutter py-xl">
+
+                <!-- Tiêu đề và tổng số sản phẩm -->
+                <div class="flex items-center justify-between mb-md">
+                    <h2 id="category-title"
+                        class="font-headline-md text-[24px] text-primary">Tất cả
+                        sản phẩm</h2>
+                    <span class="text-on-surface-variant text-body-sm"><span
+                            id="product-count">0</span> sản phẩm</span>
+                </div>
+
+                <!-- Hộp chứa sản phẩm (id="product-list" dùng để JS đẩy bài vào) -->
+                <div id="product-list"
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter gap-y-xl">
+                    <!-- JS sẽ tự động đổ các thẻ <article> vào đây -->
+                </div>
+
+                <!-- Trạng thái trống (hiện ra khi không có SP) -->
+                <div id="empty-state"
+                    class="hidden flex-col items-center justify-center py-xxl gap-4">
+                    <span
+                        class="material-symbols-outlined text-6xl text-mist">inventory_2</span>
+                    <p class="text-on-surface-variant font-body-lg">Không tìm
+                        thấy sản phẩm nào.</p>
+                </div>
+
+                <!-- Hộp chứa nút chuyển trang -->
+                <div
+                    class="w-full flex justify-center mt-xxl pt-xl border-t border-mist">
+                    <div id="pagination"
+                        class="flex justify-center items-center gap-md font-body-sm text-body-sm">
+                        <!-- JS tự động phân trang -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+        <!-- Editorial Drawer (Comparison) -->
+
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/compare.js"></script>
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova - Trải nghiệm mua sắm công nghệ cao cấp</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Tailwind Config -->
+        <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2c",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "surface-container-lowest": "#0e0e10",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "surface": "#131315",
+                    "surface-container": "#201f22",
+                    "on-tertiary-container": "#fff6f4",
+                    "on-tertiary": "#5d1900",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "zinc-400": "#a1a1aa",
+                    "outline": "#8c90a1",
+                    "surface-dim": "#131315",
+                    "outline-variant": "#424656",
+                    "on-surface": "#e5e1e4",
+                    "surface-tint": "#b3c5ff",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#630e00",
+                    "inverse-primary": "#0054d6",
+                    "on-surface-variant": "#c2c6d8",
+                    "on-tertiary-fixed": "#390c00",
+                    "zinc-800": "#27272a",
+                    "inverse-on-surface": "#313032",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#b72301",
+                    "on-secondary-fixed": "#3d0600",
+                    "on-secondary-fixed-variant": "#8c1800",
+                    "secondary": "#ffb4a4",
+                    "tertiary-fixed": "#ffdbd0",
+                    "primary-container": "#0066ff",
+                    "surface-bright": "#39393b",
+                    "inverse-surface": "#e5e1e4",
+                    "slate-900": "#0f172a",
+                    "surface-container-highest": "#353437",
+                    "on-primary": "#002b75",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "surface-variant": "#353437",
+                    "on-primary-fixed": "#001849",
+                    "on-secondary-container": "#ffcdc2",
+                    "background": "#131315",
+                    "surface-container-low": "#1c1b1d",
+                    "secondary-fixed": "#ffdad3",
+                    "tertiary-container": "#cc4204",
+                    "on-tertiary-fixed-variant": "#832600",
+                    "on-primary-container": "#f8f7ff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "primary": "#b3c5ff",
+                    "tertiary": "#ffb59d",
+                    "flash-sale-red": "#EF4444",
+                    "primary-fixed": "#dae1ff",
+                    "on-background": "#e5e1e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "grid-bento-gap": "1rem",
+                    "section-gap-sm": "3rem",
+                    "container-max": "1400px",
+                    "section-gap-lg": "6rem"
+            },
+            "fontFamily": {
+                    "hero-xl": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-base": [
+                            "Geist"
+                    ],
+                    "price-display": [
+                            "Geist"
+                    ],
+                    "hero-xl-mobile": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-sm": [
+                            "Geist"
+                    ],
+                    "label-mono": [
+                            "Geist"
+                    ]
+            },
+            "fontSize": {
+                    "hero-xl": [
+                            "72px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-base": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "price-display": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "hero-xl-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-mono": [
+                            "11px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.2em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+        <style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+    </head>
+    <body
+        class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container font-body-base text-body-base overflow-x-hidden"
+        data-use-chatbot="true">
+        <!-- TopNavBar -->
+        <div id="header-placeholder"></div>
+        <main
+            class="max-w-container-max mx-auto px-gutter py-12 flex flex-col lg:flex-row gap-gutter">
+            <!-- Cart Items (Left Column 7/12) -->
+            <section class="lg:w-7/12 w-full flex flex-col gap-6">
+                <h1
+                    class="font-headline-md text-headline-md text-on-background mb-4">Giỏ
+                    hàng của bạn</h1>
+
+                <!-- Khối chứa checkbox "Chọn tất cả" -->
+                <div id="cart-content-wrapper"
+                    class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                    <input type="checkbox" id="select-all"
+                        onchange="toggleSelectAll(this.checked)"
+                        class="w-5 h-5 rounded border-white/10 bg-zinc-800 text-primary focus:ring-primary focus:ring-offset-0 transition-colors cursor-pointer">
+                    <label for="select-all"
+                        class="font-body-base text-body-base text-on-background cursor-pointer">Chọn
+                        tất cả</label>
+                </div>
+
+                <!-- Khối thông báo giỏ hàng trống (Ẩn mặc định) -->
+                <div id="empty-cart-message"
+                    class="hidden text-center py-12 bg-zinc-900 border border-white/10 rounded-xl">
+                    <span
+                        class="material-symbols-outlined text-6xl text-zinc-600 mb-4"
+                        data-icon="shopping_cart">shopping_cart</span>
+                    <p class="font-body-base text-zinc-400 mb-4">Giỏ hàng của
+                        bạn đang trống.</p>
+                    <a href="products.html"
+                        class="inline-flex bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:brightness-110 transition">Tiếp
+                        tục mua sắm</a>
+                </div>
+
+                <!-- Vùng chứa các sản phẩm (JS sẽ đổ HTML vào đây) -->
+                <div id="cart-items-container" class="flex flex-col gap-4">
+                    <!-- Dữ liệu từ API sẽ được nạp vào đây -->
+                </div>
+
+                <a
+                    class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-body-sm text-body-sm mt-4"
+                    href="products.html">
+                    <span class="material-symbols-outlined text-sm"
+                        data-icon="arrow_back">arrow_back</span>
+                    Tiếp tục mua sắm
+                </a>
+            </section>
+
+            <!-- Cart Summary & Quick Checkout (Right Column 5/12) -->
+            <aside class="lg:w-5/12 w-full">
+                <div
+                    class="bg-zinc-900 border border-white/10 rounded-xl p-6 sticky top-24">
+                    <h2
+                        class="font-headline-md text-headline-md text-on-background mb-6 text-xl">Tổng
+                        quan đơn hàng</h2>
+                    <div
+                        class="flex flex-col gap-4 border-b border-white/10 pb-6 mb-6">
+                        <div
+                            class="flex justify-between font-body-sm text-body-sm">
+                            <span class="text-zinc-400">Đã chọn</span>
+                            <span id="summary-total-items">0 sản phẩm</span>
+                        </div>
+                        <div
+                            class="flex justify-between font-body-sm text-body-sm">
+                            <span class="text-zinc-400">Tạm tính</span>
+                            <span id="summary-subtotal">0₫</span>
+                        </div>
+                        <div
+                            class="flex justify-between font-body-sm text-body-sm">
+                            <span class="text-zinc-400">Phí vận chuyển</span>
+                            <span id="summary-shipping">Miễn phí</span>
+                        </div>
+                        <div
+                            class="flex justify-between font-body-sm text-body-sm">
+                            <span class="text-zinc-400">Giảm giá voucher</span>
+                            <span id="summary-discount"
+                                class="text-primary">-0₫</span>
+                        </div>
+                        <div
+                            class="flex justify-between font-body-sm text-body-sm">
+                            <span class="text-zinc-400">Thuế VAT (8%)</span>
+                            <span>Đã bao gồm</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-end mb-6">
+                        <span
+                            class="font-body-base text-body-base font-semibold">Tổng
+                            cộng:</span>
+                        <span id="summary-final-total"
+                            class="font-price-display text-price-display text-primary text-3xl">0₫</span>
+                    </div>
+                    <!-- Khối nút Chọn mã giảm giá -->
+                    <div class="mb-8">
+                        <h3
+                            class="font-body-sm text-body-sm text-zinc-400 mb-2 flex items-center justify-between">
+                            Khuyến mãi
+                            <span id="voucher-message"
+                                class="text-xs font-medium text-emerald-500 hidden">Áp
+                                mã thành công!</span>
+                        </h3>
+
+                        <button onclick="openVoucherModal()"
+                            class="w-full flex items-center justify-between bg-zinc-800 border border-white/10 rounded-xl py-3 px-4 hover:bg-zinc-700 hover:border-white/20 transition-all group">
+                            <div class="flex items-center gap-3 text-left">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                    <span
+                                        class="material-symbols-outlined text-[18px]"
+                                        data-icon="local_activity">local_activity</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span id="display-voucher-code"
+                                        class="font-body-sm text-body-sm font-semibold text-on-background">Chọn
+                                        mã giảm giá</span>
+                                    <span id="display-voucher-desc"
+                                        class="text-[10px] text-zinc-400">Bấm để
+                                        xem các mã có sẵn</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <!-- Nút xóa mã được tích hợp gọn gàng vào trong -->
+                                <span id="btn-clear-voucher"
+                                    onclick="event.stopPropagation(); clearVoucher();"
+                                    class="hidden text-[10px] font-bold text-error hover:underline bg-error/10 px-2 py-1 rounded">Xóa
+                                    mã</span>
+                                <span
+                                    class="material-symbols-outlined text-zinc-400 group-hover:text-on-background transition-colors"
+                                    data-icon="chevron_right">chevron_right</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- ==================== 1. FORM CHO KHÁCH VÃNG LAI (MUA HÀNG NHANH) ==================== -->
+                    <div id="guest-checkout-form"
+                        class="bg-zinc-950 rounded-xl p-5 border border-white/5 hidden">
+                        <h3
+                            class="font-body-base text-body-base font-semibold mb-4 text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg"
+                                data-icon="bolt">bolt</span>
+                            Mua hàng nhanh
+                        </h3>
+                        <form class="flex flex-col gap-4">
+                            <input id="guest-name"
+                                class="bg-zinc-800 border border-white/10 rounded-xl py-3 px-4 text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full"
+                                placeholder="Họ và tên" required type="text">
+                            <input id="guest-email"
+                                class="bg-zinc-800 border border-white/10 rounded-xl py-3 px-4 text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full"
+                                placeholder="Email" required type="email">
+                            <input id="guest-phone"
+                                class="bg-zinc-800 border border-white/10 rounded-xl py-3 px-4 text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full"
+                                placeholder="Số điện thoại" required type="tel">
+                            <textarea id="guest-address"
+                                class="bg-zinc-800 border border-white/10 rounded-xl py-3 px-4 text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full resize-none"
+                                placeholder="Địa chỉ giao hàng chi tiết"
+                                required rows="2"></textarea>
+
+                            <div class="mt-2">
+                                <p
+                                    class="font-body-sm text-body-sm text-zinc-400 mb-2">Phương
+                                    thức thanh toán</p>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <label
+                                        class="border border-primary bg-zinc-800/50 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input checked
+                                            class="hidden guest-payment-radio"
+                                            name="guest-payment" type="radio"
+                                            value="COD">
+                                        <span
+                                            class="material-symbols-outlined text-primary"
+                                            data-icon="local_shipping">local_shipping</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">COD</span>
+                                    </label>
+                                    <label
+                                        class="border border-white/10 bg-zinc-800 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input
+                                            class="hidden guest-payment-radio"
+                                            name="guest-payment" type="radio"
+                                            value="BANK_TRANSFER">
+                                        <span
+                                            class="material-symbols-outlined text-zinc-400"
+                                            data-icon="account_balance">account_balance</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">Banking</span>
+                                    </label>
+                                    <label
+                                        class="border border-white/10 bg-zinc-800 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input
+                                            class="hidden guest-payment-radio"
+                                            name="guest-payment" type="radio"
+                                            value="MOMO">
+                                        <span
+                                            class="material-symbols-outlined text-zinc-400"
+                                            data-icon="qr_code_scanner">qr_code_scanner</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">ZaloPay</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button id="btn-guest-place-order"
+                                onclick="placeOrder(event)" type="button"
+                                class="w-full bg-primary-container text-on-primary-container font-body-base text-body-base font-semibold py-4 rounded-xl mt-4 hover:bg-primary transition-colors flex items-center justify-center gap-2 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                                Thanh toán ngay <span
+                                    class="material-symbols-outlined"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- ==================== 2. FORM CHO KHÁCH ĐĂNG NHẬP (GIAO HÀNG ĐẾN) ==================== -->
+                    <div id="user-checkout-form"
+                        class="bg-zinc-950 rounded-xl p-5 border border-white/5 hidden">
+                        <h3
+                            class="font-body-base text-body-base font-semibold mb-4 text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg"
+                                data-icon="local_shipping">local_shipping</span>
+                            Giao hàng đến
+                        </h3>
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="bg-zinc-800/50 border border-primary/30 rounded-xl p-4 relative group">
+
+                                <!-- CÁC INPUT ẨN GIỮ DỮ LIỆU ĐỂ GỬI LÊN API -->
+                                <input type="hidden" id="user-receiver-name">
+                                <input type="hidden" id="user-receiver-phone">
+                                <input type="hidden" id="user-shipping-address">
+
+                                <div
+                                    class="flex justify-between items-start mb-2">
+                                    <!-- Cụm Tên và SĐT nằm ngang -->
+                                    <div
+                                        class="flex items-center gap-2 flex-wrap">
+                                        <span id="display-receiver-name"
+                                            class="font-body-base text-body-base font-semibold text-on-background">Đang
+                                            tải...</span>
+                                        <span
+                                            class="text-outline-variant text-sm">•</span>
+                                        <span id="display-receiver-phone"
+                                            class="font-body-sm text-body-sm text-on-surface-variant"></span>
+                                    </div>
+                                    <button onclick="openAddressModal()"
+                                        class="text-primary hover:text-primary-container transition-colors font-body-sm text-body-sm font-medium shrink-0">Thay
+                                        đổi</button>
+                                </div>
+                                <!-- (Đã xóa thẻ <p> chứa SĐT nằm ở dòng dưới đi vì nó đã được chuyển lên trên) -->
+                                <p id="display-receiver-phone"
+                                    class="font-body-sm text-body-sm text-on-surface-variant mb-1"></p>
+                                <p id="display-full-address"
+                                    class="font-body-sm text-body-sm text-zinc-400 leading-relaxed"></p>
+                            </div>
+
+                            <div class="mt-2">
+                                <p
+                                    class="font-body-sm text-body-sm text-zinc-400 mb-2">Phương
+                                    thức thanh toán</p>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <label
+                                        class="border border-primary bg-zinc-800/50 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input checked
+                                            class="hidden user-payment-radio"
+                                            name="user-payment" type="radio"
+                                            value="COD">
+                                        <span
+                                            class="material-symbols-outlined text-primary"
+                                            data-icon="local_shipping">local_shipping</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">COD</span>
+                                    </label>
+                                    <label
+                                        class="border border-white/10 bg-zinc-800 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input class="hidden user-payment-radio"
+                                            name="user-payment" type="radio"
+                                            value="BANK_TRANSFER">
+                                        <span
+                                            class="material-symbols-outlined text-zinc-400"
+                                            data-icon="account_balance">account_balance</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">Banking</span>
+                                    </label>
+                                    <label
+                                        class="border border-white/10 bg-zinc-800 rounded-lg p-2 flex flex-col items-center gap-1 cursor-pointer hover:border-primary/50 transition-colors">
+                                        <input class="hidden user-payment-radio"
+                                            name="user-payment" type="radio"
+                                            value="ZALOPAY">
+                                        <span
+                                            class="material-symbols-outlined text-zinc-400"
+                                            data-icon="qr_code_scanner">qr_code_scanner</span>
+                                        <span
+                                            class="font-label-mono text-label-mono text-[10px]">ZaloPay</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button id="btn-place-order"
+                                onclick="placeOrder(event)" type="button"
+                                class="w-full bg-primary-container text-on-primary-container font-body-base text-body-base font-semibold py-4 rounded-xl mt-4 hover:bg-primary transition-colors flex items-center justify-center gap-2 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                                Thanh toán ngay <span
+                                    class="material-symbols-outlined"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        <!-- Recommended Products -->
+        <section
+            class="max-w-container-max mx-auto px-gutter py-section-gap-sm mb-section-gap-lg">
+            <div
+                class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                <h2
+                    class="font-headline-md text-headline-md text-on-background text-2xl">Có
+                    thể bạn cũng thích</h2>
+                <!-- <a
+                    class="text-primary hover:text-primary-container transition-colors font-body-sm text-body-sm flex items-center gap-1"
+                    href="#">
+                    Xem tất cả <span class="material-symbols-outlined text-sm"
+                        data-icon="chevron_right">chevron_right</span>
+                </a> -->
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-grid-bento-gap">
+                <!-- Rec Item 1 -->
+                <div
+                    class="group bg-zinc-900 border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-white/30 transition-all duration-300">
+                    <div
+                        class="aspect-square bg-zinc-800 relative overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A sleek, minimalist wireless charging pad for multiple devices, premium dark tech aesthetic, studio lighting, top-down view, sharp focus on the matte texture."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzp5ac1a3QdNmnLoi6OVnzeVCYdOwGu4puRgwwkega7lj3eWiOhGwh5NZ150daC6H2G0-ShpvPD66ajAbT0Th05ijJH6Sa93dNrpeIMARYkx3X4pPQ3b6KuhoD6zrnsGBplRr6pvqGSCzeDV_l1vU16QEGOLfVJOlZ-PprL6QGtQ1_P_Bjfjv4utp8t2rtxg3Wi8ostbo5nXCJQDxF5xL3j_su925ubKWYzwAH77LAXZoiLhugI_HN">
+                        <!-- <button
+                            class="absolute bottom-4 right-4 bg-primary text-on-primary rounded-full p-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                            <span class="material-symbols-outlined"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                        </button> -->
+                    </div>
+                    <div class="p-4">
+                        <h4
+                            class="font-body-sm text-body-sm font-semibold text-on-background line-clamp-2 mb-2">Đế
+                            Sạc Không Dây Đa Năng Premium</h4>
+                        <p
+                            class="font-price-display text-price-display text-primary text-lg">1,290,000₫</p>
+                    </div>
+                </div>
+                <!-- Rec Item 2 -->
+                <div
+                    class="group bg-zinc-900 border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-white/30 transition-all duration-300">
+                    <div
+                        class="aspect-square bg-zinc-800 relative overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A high-end mechanical keyboard with low-profile switches, dark gray keycaps, subtle blue RGB backlighting, resting on a clean dark desk surface, professional product photography."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Qi7KLC9tzQihHRZgd7YWaxhF_bXeWp3iWtGP007S10RACAiPPXAf_QiZgoNR13BOZ5YNKPEU7oRT8ynLCtc5wUDoW8hvyUFA7t2nhdCIsFHnAk8aNe69NAN5S7tqComynZvSuCnSMJIRdbm-gY1vZjg9UAu1LlisImJ2-Bq5iPdjBs-huYm8wGU0y-kVK93RCZ5T-x_Gl2vr9zQ6t9Rm9YgLOgcZK2dnah55xbm0A33iMRY6iYVT">
+
+                    </div>
+                    <div class="p-4">
+                        <h4
+                            class="font-body-sm text-body-sm font-semibold text-on-background line-clamp-2 mb-2">Bàn
+                            Phím Cơ Low-Profile Không Dây</h4>
+                        <p
+                            class="font-price-display text-price-display text-primary text-lg">3,490,000₫</p>
+                    </div>
+                </div>
+                <!-- Rec Item 3 -->
+                <div
+                    class="group bg-zinc-900 border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-white/30 transition-all duration-300">
+                    <div
+                        class="aspect-square bg-zinc-800 relative overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A compact, premium external SSD drive, brushed metal finish, next to a sleek laptop edge, moody dramatic lighting, high-tech vibe."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9fsxkSokpujoMprhIx0kcnC8hveQ3hq56RuCqaF6ZBtXkO0nlNq8y0Embb2MWJKiWpOmatkT_Slr0yJ02oDumpFUe2qmq-vN5nozlZXcvlyLoyz4-Za6Jy0PoTGhFmluXHci26ZSp3qYIHpGdlI33K4ACZVQomIUqozeySzNTMsgrhILWgqzFqpapo25szbMSySK811vDL8BeBmgP_lHwJw9bj3O8ba3w9bKJCRKCScMkCBhK1FQ">
+                        <!-- <button
+                            class="absolute bottom-4 right-4 bg-primary text-on-primary rounded-full p-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                            <span class="material-symbols-outlined"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                        </button> -->
+                    </div>
+                    <div class="p-4">
+                        <h4
+                            class="font-body-sm text-body-sm font-semibold text-on-background line-clamp-2 mb-2">Ổ
+                            Cứng SSD Di Động Pro 2TB</h4>
+                        <p
+                            class="font-price-display text-price-display text-primary text-lg">4,590,000₫</p>
+                    </div>
+                </div>
+                <!-- Rec Item 4 -->
+                <div
+                    class="group bg-zinc-900 border border-white/10 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-white/30 transition-all duration-300">
+                    <div
+                        class="aspect-square bg-zinc-800 relative overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A stylish, minimalist tech backpack, dark gray fabric, sleek design, placed on a dark surface with dramatic side lighting highlighting the texture."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzlfGs8ITe00kibevMXhp48IardNlbTqHH8OPI27E7HXHUsmifcExKwwLwfJ1p30dhGq--ZvMpWg_33hxlBgUQl4o3Mh7hyQJQyeFy7y_HC6jn66xrbDToZwRSv0di11witDkZi1wzW2hlN9YOa6zEWrxn0X-lJLNpIN6mpMFtAd8kANE-lJnDHCYYVL9lU91A9a0KK2hqd6MIixnc5UUZRWdJM9NGLu2vgk4abChjp6wjZdhG1ANn">
+                        <!-- <button
+                            class="absolute bottom-4 right-4 bg-primary text-on-primary rounded-full p-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                            <span class="material-symbols-outlined"
+                                data-icon="add_shopping_cart">add_shopping_cart</span>
+                        </button> -->
+                    </div>
+                    <div class="p-4">
+                        <h4
+                            class="font-body-sm text-body-sm font-semibold text-on-background line-clamp-2 mb-2">Balo
+                            Chống Sốc TechNova Urban</h4>
+                        <p
+                            class="font-price-display text-price-display text-primary text-lg">1,890,000₫</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Chọn Mã Giảm Giá -->
+        <div id="voucher-modal"
+            class="fixed inset-0 z-[100] hidden bg-black/60 flex items-center justify-center backdrop-blur-sm transition-opacity opacity-0">
+            <div
+                class="bg-surface-container-high border border-outline-variant/30 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden transform transition-all flex flex-col max-h-[80vh] mx-4">
+
+                <!-- Header -->
+                <div
+                    class="px-6 py-4 border-b border-outline-variant/30 flex justify-between items-center bg-surface/50">
+                    <h3 class="text-lg font-bold text-on-surface">Chọn mã giảm
+                        giá</h3>
+                    <button onclick="closeVoucherModal()"
+                        class="text-on-surface-variant hover:text-error transition-colors p-1">
+                        <span
+                            class="material-symbols-outlined text-[20px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div
+                    class="p-4 overflow-y-auto custom-scrollbar flex-1 bg-surface-container-lowest"
+                    id="voucher-list-container">
+                    <div class="text-center py-6 text-on-surface-variant">Đang
+                        tải mã giảm giá...</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal Chọn Địa Chỉ -->
+        <div id="address-modal"
+            class="fixed inset-0 z-[100] hidden bg-black/60 flex items-center justify-center backdrop-blur-sm transition-opacity opacity-0">
+            <!-- Vỏ bọc Modal -->
+            <div
+                class="bg-surface-container-high border border-outline-variant/30 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden transform transition-all flex flex-col max-h-[80vh] mx-4">
+
+                <!-- Header -->
+                <div
+                    class="px-6 py-4 border-b border-outline-variant/30 flex justify-between items-center bg-surface/50">
+                    <h3 class="text-lg font-bold text-on-surface">Chọn địa chỉ
+                        nhận hàng</h3>
+                    <button onclick="closeAddressModal()"
+                        class="text-on-surface-variant hover:text-error transition-colors p-1">
+                        <span
+                            class="material-symbols-outlined text-[20px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Body (Nơi chứa nút thêm mới và danh sách địa chỉ) -->
+                <div
+                    class="p-6 overflow-y-auto custom-scrollbar flex-1 bg-surface-container-lowest">
+                    <!-- Nút chuyển sang trang thêm địa chỉ -->
+                    <button onclick="window.location.href = 'address.html'"
+                        class="w-full flex items-center justify-center gap-2 py-3 border-2 border-dashed border-primary/40 text-primary font-bold rounded-xl hover:bg-primary/10 transition-colors mb-4 group">
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover:rotate-90">add</span>
+                        Thêm địa chỉ mới
+                    </button>
+
+                    <!-- Container chờ JS đổ dữ liệu -->
+                    <div id="address-list-container" class="space-y-3">
+                        <div
+                            class="text-center py-6 text-on-surface-variant">Đang
+                            tải danh sách địa chỉ...</div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                    class="px-6 py-4 border-t border-outline-variant/30 flex justify-end gap-3 bg-surface-container-high/50">
+                    <button onclick="closeAddressModal()"
+                        class="px-5 py-2.5 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-highest font-bold text-sm transition-colors">
+                        Hủy
+                    </button>
+                    <button onclick="confirmAddressSelection()"
+                        class="px-6 py-2.5 rounded-lg bg-primary text-on-primary font-bold text-sm hover:bg-primary-fixed transition-colors shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
+                        Xác nhận
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+        <script>
+        // Simple interactivity for radio buttons styling
+        document.querySelectorAll('input[type="radio"][name="payment"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('input[type="radio"][name="payment"]').forEach(r => {
+                    r.closest('label').classList.remove('border-primary', 'bg-zinc-800/50');
+                    r.closest('label').querySelector('.material-symbols-outlined').classList.remove('text-primary');
+                    r.closest('label').querySelector('.material-symbols-outlined').classList.add('text-zinc-400');
+                });
+                if(e.target.checked) {
+                    e.target.closest('label').classList.add('border-primary', 'bg-zinc-800/50');
+                    e.target.closest('label').querySelector('.material-symbols-outlined').classList.remove('text-zinc-400');
+                    e.target.closest('label').querySelector('.material-symbols-outlined').classList.add('text-primary');
+                }
+            });
+        });
+        
+        // Init active state for default checked
+        const checkedRadio = document.querySelector('input[type="radio"][name="payment"]:checked');
+        if(checkedRadio) {
+            checkedRadio.closest('label').classList.add('border-primary', 'bg-zinc-800/50');
+            checkedRadio.closest('label').querySelector('.material-symbols-outlined').classList.remove('text-zinc-400');
+            checkedRadio.closest('label').querySelector('.material-symbols-outlined').classList.add('text-primary');
+        }
+    </script>
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/cart.js"></script>
+</html>

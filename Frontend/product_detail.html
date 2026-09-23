@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="light hide-scrollbar" lang="vi" style>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0"
+            name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+        <link rel="icon" href="data:,">
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com"
+            rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-dm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                    }
+                }
+            }
+        }
+        </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-lg antialiased pt-28" data-use-chatbot="true">
+        <div id="header-placeholder"></div>
+        <main class="max-w-container-max mx-auto px-lg py-xl">
+            <div id="breadcrumb-container"
+                class=" w-full flex items-center font-body-sm text-body-sm text-graphite overflow-x-auto hide-scrollbar whitespace-nowrap">
+                <!-- Javascript sẽ vẽ breadcrumb vào đây -->
+            </div>
+            <!-- Main Product Section Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xxl">
+                <!-- Left: Gallery -->
+                <div class="lg:col-span-7 flex flex-col gap-sm">
+                    <div
+                        class="aspect-[16/9] bg-surface-container-lowest border border-mist flex items-center justify-center relative overflow-hidden group">
+                        <img id="main-image" alt="Aether Pro 14"
+                            class="w-full h-full object-contain mix-blend-multiply"
+                            src="...">
+                        <div id="flash-sale-badge"
+                            class="absolute top-4 left-4 text-paper-white font-label-caps text-label-caps uppercase px-sm py-xs rounded-full z-10 text-[10px] tracking-widest hidden">
+                            <div
+                                class="flex items-center gap-md cursor-pointer">
+                                <span
+                                    class="material-symbols-outlined text-ember-red text-xl"
+                                    style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                                <span
+                                    class="text-ember-red font-label-caps text-label-caps uppercase tracking-widest block">FLASH
+                                    SALE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gallery-list"
+                        class="flex overflow-x-auto gap-sm snap-x snap-mandatory hide-scrollbar scroll-smooth pb-2">
+                        <!-- Javascript sẽ tự động đổ các ảnh con vào đây -->
+                    </div>
+                </div>
+                <!-- Right: Details & Actions -->
+                <div
+                    class="lg:col-span-5 flex flex-col justify-start py-md lg:pl-lg">
+
+                    <h1 id="p-name"
+                        class="font-body-lg font-bold text-[48px] md:text-[48px] text-carbon-ink mb-md leading-tight">Aether
+                        Pro 14</h1>
+                    <div class="flex items-baseline gap-md mb-xs">
+                        <span id="p-sale-price"
+                            class="font-body-lg text-[32px] font-bold text-ember-red">42.990,000₫</span>
+                        <span id="p-base-price"
+                            class="font-body-lg text-body-lg text-graphite line-through">48,990,000₫</span>
+                        <span id="p-discount-badge"
+                            class="font-body-lg text-[12px] font-bold text-ember-red uppercase">-12%</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-md font-body-sm text-body-sm text-graphite mb-lg pb-md border-b border-mist">
+                        <span id="p-sku">SKU: AP14-M3-16512</span>
+                        <span class="w-1 h-1"></span>
+                        <span id="p-stock-status"
+                            class="text-carbon-ink flex items-center gap-1">
+                            <!-- Javascript sẽ tự động điền trạng thái (Còn hàng/Hết hàng) vào đây -->
+                        </span>
+                    </div>
+                    <div
+                        class="flex items-center gap-sm font-body-sm text-body-sm text-graphite mb-lg">
+                        <div class="flex items-center gap-1"
+                            id="p-rating-stars">
+                            <!-- JS sẽ chèn sao vào đây -->
+                        </div>
+                        <span class="text-carbon-ink font-bold"
+                            id="p-rating-score">4.8</span>
+                        <span class="text-mist">•</span>
+                        <span class="text-graphite" id="p-review-count">(128
+                            đánh giá)</span>
+                        <span class="text-mist">•</span>
+                        <span class="text-graphite" id="p-sold">Đã bán
+                            1,250</span>
+                    </div>
+                    <!-- Config: RAM -->
+                    <div id="color-section" class="mb-lg">
+                        <h3
+                            class="font-bodylg text-[16px] font-bold uppercase text-carbon-ink mb-sm">Màu
+                            sắc <span id="selected-color-name"
+                                class="hidden"></span></h3>
+                        <div id="color-options-container"
+                            class="flex flex-wrap gap-sm">
+                            <!-- JS chèn màu vào đây -->
+                        </div>
+                    </div>
+                    <!-- Config: Storage -->
+
+                    <!-- Actions -->
+                    <div id="product-action-buttons"
+                        class="flex flex-col gap-sm mt-auto">
+                        <!-- JavaScript sẽ tự động kết xuất (render) các nút bấm vào đây dựa trên tồn kho -->
+                    </div>
+                    <div
+                        class="mt-lg pt-md border-t border-mist font-body-sm text-body-sm text-graphite flex flex-col gap-xs">
+                        <p class="flex items-center gap-sm"><span
+                                class="material-symbols-outlined text-[16px]">local_shipping</span>
+                            Miễn phí vận chuyển toàn quốc.</p>
+                        <p class="flex items-center gap-sm"><span
+                                class="material-symbols-outlined text-[16px]">verified</span>
+                            Bảo hành chính hãng 12 tháng.</p>
+                        <p class="flex items-center gap-sm"><span
+                                class="material-symbols-outlined text-[16px]">assignment_return</span>
+                            Đổi trả trong 30 ngày nếu có lỗi NSX.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Specs & Details -->
+            <div class="pt-xl border-t border-mist">
+                <!-- Khu vực Tab Buttons -->
+                <!-- Khu vực Tab Buttons -->
+                <div class="flex gap-lg border-b border-mist mb-lg">
+                    <!-- Thêm id và onclick, chuyển border-b thành border-b-2 để nét gạch dưới rõ hơn -->
+                    <button id="tab-btn-specs" onclick="switchTab('specs')"
+                        class="pb-sm border-b-2 border-carbon-ink font-body-lg text-[16px] font-bold uppercase text-carbon-ink transition-colors">
+                        Thông số kỹ thuật
+                    </button>
+
+                    <button id="tab-btn-reviews" onclick="switchTab('reviews')"
+                        class="pb-sm border-b-2 border-transparent text-graphite hover:text-carbon-ink font-body-lg text-[16px] font-bold uppercase transition-colors">
+                        Đánh giá (<span id="tab-review-count-title">0</span>)
+                    </button>
+                </div>
+
+                <!-- Khu vực Nội dung của các Tab -->
+                <div>
+                    <!-- TẤT CẢ NỘI DUNG: THÔNG SỐ KỸ THUẬT -->
+                    <div id="tab-content-specs" class="block">
+                        <div
+                            class="border border-mist rounded overflow-hidden w-full">
+                            <table class="w-full text-left border-collapse">
+                                <tbody id="specs-summary-list"
+                                    class="divide-y divide-mist">
+                                    <!-- Javascript đổ bảng thông số vào đây -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex justify-center mt-lg">
+                            <button id="btn-show-specs"
+                                class="px-lg py-md border border-mist rounded font-body-lg text-[16px] font-bold uppercase tracking-widest text-carbon-ink bg-transparent hover:bg-fog transition-colors">
+                                XEM THÔNG SỐ CHI TIẾT
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TẤT CẢ NỘI DUNG: ĐÁNH GIÁ -->
+                    <div id="tab-content-reviews" class="hidden">
+                        <h2
+                            class="font-headline-md text-headline-md italic text-carbon-ink mb-lg">Đánh
+                            giá từ khách hàng</h2>
+                        <div
+                            class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                            <!-- Thống kê đánh giá -->
+                            <div id="review-stats-container"
+                                class="lg:col-span-4 flex flex-col gap-lg"></div>
+
+                            <!-- Danh sách đánh giá và Nút xem thêm -->
+                            <div class="lg:col-span-8 flex flex-col">
+                                <div id="reviews-list-container"
+                                    class="flex flex-col divide-y divide-mist">
+                                    <!-- Javascript sẽ đổ đánh giá vào đây -->
+                                </div>
+
+                                <!-- ĐOẠN HTML MỚI THÊM: Nút tải thêm -->
+                                <div id="load-more-container"
+                                    class="hidden flex justify-center mt-lg pt-md">
+                                    <button id="btn-load-more"
+                                        class="px-lg py-md border border-ash-border rounded font-body-lg text-[16px] font-bold text-carbon-ink hover:bg-fog transition-colors">
+                                        Xem thêm đánh giá
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <!-- Phần Gợi ý sản phẩm -->
+        <section
+            class="max-w-container-max mx-auto px-lg mb-xxl pt-lg border-t border-mist">
+            <h2
+                class="font-headline-md text-headline-md text-carbon-ink mb-lg italic">
+                Có thể bạn cũng thích —
+            </h2>
+            <div id="related-products"
+                class="flex overflow-x-auto gap-gutter snap-x snap-mandatory pb-4 hide-scrollbar scroll-smooth">
+                <!-- Javascript sẽ đổ dữ liệu các thẻ sản phẩm vào đây -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+        <div id="specs-modal"
+            class="fixed inset-0 z-50 flex items-center justify-center hidden opacity-0 px-lg">
+
+            <!-- Lớp phủ nền mờ - Đổi thành nền tối mờ để popup trắng nổi bật hơn -->
+            <div id="specs-modal-overlay"
+                class="absolute inset-0 bg-carbon-ink/40 backdrop-blur-sm"></div>
+
+            <!-- Nội dung Popup - Nền Paper White, chữ Carbon Ink, viền mảnh Mist -->
+            <div id="specs-modal-content"
+                class="relative w-full max-w-3xl max-h-[85vh] bg-paper-white text-carbon-ink border border-mist flex flex-col scale-95 transition-transform duration-300 rounded-lg overflow-hidden shadow-none">
+
+                <!-- Header của Popup -->
+                <div
+                    class="flex justify-between items-center p-lg border-b border-mist shrink-0">
+                    <h2
+                        class="font-headline-md text-headline-md-mobile md:text-headline-md text-carbon-ink italic tracking-tight">
+                        Thông số kỹ thuật
+                    </h2>
+                    <!-- Nút đóng Popup -->
+                    <button id="btn-close-specs"
+                        class="text-graphite hover:text-true-black transition-colors flex items-center justify-center p-sm rounded-full">
+                        <span
+                            class="material-symbols-outlined text-[24px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Body chứa danh sách thông số (Cho phép cuộn dọc) -->
+                <div
+                    class="p-lg overflow-y-auto hide-scrollbar flex-1 bg-paper-white">
+                    <div id="specs-detail-list" class="flex flex-col">
+                        <!-- Nội dung sẽ được đổ bằng JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/product_detail.js"></script>
+    <script src="assets/js/compare.js"></script>
+</html>

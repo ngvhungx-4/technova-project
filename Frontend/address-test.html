@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova - Trải nghiệm mua sắm công nghệ cao cấp</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Tailwind Config -->
+        <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2c",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "surface-container-lowest": "#0e0e10",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "surface": "#131315",
+                    "surface-container": "#201f22",
+                    "on-tertiary-container": "#fff6f4",
+                    "on-tertiary": "#5d1900",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "zinc-400": "#a1a1aa",
+                    "outline": "#8c90a1",
+                    "surface-dim": "#131315",
+                    "outline-variant": "#424656",
+                    "on-surface": "#e5e1e4",
+                    "surface-tint": "#b3c5ff",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#630e00",
+                    "inverse-primary": "#0054d6",
+                    "on-surface-variant": "#c2c6d8",
+                    "on-tertiary-fixed": "#390c00",
+                    "zinc-800": "#27272a",
+                    "inverse-on-surface": "#313032",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#b72301",
+                    "on-secondary-fixed": "#3d0600",
+                    "on-secondary-fixed-variant": "#8c1800",
+                    "secondary": "#ffb4a4",
+                    "tertiary-fixed": "#ffdbd0",
+                    "primary-container": "#0066ff",
+                    "surface-bright": "#39393b",
+                    "inverse-surface": "#e5e1e4",
+                    "slate-900": "#0f172a",
+                    "surface-container-highest": "#353437",
+                    "on-primary": "#002b75",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "surface-variant": "#353437",
+                    "on-primary-fixed": "#001849",
+                    "on-secondary-container": "#ffcdc2",
+                    "background": "#131315",
+                    "surface-container-low": "#1c1b1d",
+                    "secondary-fixed": "#ffdad3",
+                    "tertiary-container": "#cc4204",
+                    "on-tertiary-fixed-variant": "#832600",
+                    "on-primary-container": "#f8f7ff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "primary": "#b3c5ff",
+                    "tertiary": "#ffb59d",
+                    "flash-sale-red": "#EF4444",
+                    "primary-fixed": "#dae1ff",
+                    "on-background": "#e5e1e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "grid-bento-gap": "1rem",
+                    "section-gap-sm": "3rem",
+                    "container-max": "1400px",
+                    "section-gap-lg": "6rem"
+            },
+            "fontFamily": {
+                    "hero-xl": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-base": [
+                            "Geist"
+                    ],
+                    "price-display": [
+                            "Geist"
+                    ],
+                    "hero-xl-mobile": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-sm": [
+                            "Geist"
+                    ],
+                    "label-mono": [
+                            "Geist"
+                    ]
+            },
+            "fontSize": {
+                    "hero-xl": [
+                            "72px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-base": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "price-display": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "hero-xl-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-mono": [
+                            "11px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.2em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+        <style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+    </head>
+    <body
+        class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container font-body-base text-body-base overflow-x-hidden">
+        <!-- TopNavBar -->
+        <div id="header-placeholder"></div>
+        <main class="flex-1 w-full max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                <!-- Sidebar -->
+                <aside id="sidebar-placeholder"
+                    class="w-full lg:w-80 shrink-0 flex flex-col gap-6">
+                </aside>
+                <!-- Main Content Area -->
+                <div class="flex-1 w-full flex flex-col gap-8">
+                    <!-- Address Management -->
+                    <div
+                        class="bg-surface-container rounded-xl border border-outline-variant/30 p-6 md:p-8">
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                            <h1
+                                class="text-2xl md:text-headline-md font-headline text-on-surface">Quản
+                                lý địa chỉ</h1>
+                            <!-- Đã gắn onclick để mở Modal thêm mới -->
+                            <button onclick="toggleModal()"
+                                class="bg-primary hover:bg-primary-fixed text-on-primary font-semibold px-6 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2"
+                                type="button">
+                                <span
+                                    class="material-symbols-outlined text-[20px]">add</span>
+                                Thêm địa chỉ mới
+                            </button>
+                        </div>
+                        <!-- Minimalist Address List -->
+                        <div id="address-list-container"
+                            class="flex flex-col border border-outline-variant/30 rounded-lg overflow-hidden bg-surface-container-lowest">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Modal Thêm/Sửa Địa chỉ -->
+        <div id="address-modal"
+            class="fixed inset-0 z-[60] hidden bg-black/60 flex items-center justify-center backdrop-blur-sm transition-opacity">
+            <div
+                class="bg-surface-container-high border border-outline-variant/30 rounded-2xl shadow-xl w-full max-w-xl p-8 relative animate-fade-in-up mx-4">
+
+                <!-- Nút Đóng -->
+                <button onclick="toggleModal()"
+                    class="absolute top-5 right-5 text-on-surface-variant hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+
+                <h3 class="text-xl font-bold text-on-surface mb-6">
+                    Địa chỉ mới <span
+                        class="text-sm font-normal text-on-surface-variant ml-2">(Thông
+                        tin vận chuyển)</span>
+                </h3>
+
+                <form id="address-form" class="space-y-5">
+                    <!-- ID Ẩn dùng để xác định là Cập nhật hay Thêm mới -->
+                    <input type="hidden" id="address-id">
+
+                    <!-- Hàng 1: Tên và Số điện thoại -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <input id="receiverName" required type="text"
+                                placeholder="Họ và tên"
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none transition-shadow placeholder:text-outline">
+                            <span id="error-receiverName"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                        <div>
+                            <input id="phoneNumber" required type="text"
+                                placeholder="Số điện thoại"
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none transition-shadow placeholder:text-outline">
+                            <span id="error-phoneNumber"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hàng 2: Tỉnh/Thành và Quận/Huyện -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <select id="provinceCity" required
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none appearance-none transition-shadow">
+                                <option value selected disabled>Chọn Tỉnh/Thành
+                                    phố</option>
+                            </select>
+                            <span id="error-provinceCity"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                        <div>
+                            <select id="district" required disabled
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none appearance-none disabled:opacity-50 transition-shadow">
+                                <option value selected disabled>Chọn
+                                    Quận/Huyện</option>
+                            </select>
+                            <span id="error-district"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hàng 3: Phường/Xã và Số nhà -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <select id="ward" required disabled
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none appearance-none disabled:opacity-50 transition-shadow">
+                                <option value selected disabled>Chọn
+                                    Phường/Xã</option>
+                            </select>
+                            <span id="error-ward"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                        <div>
+                            <input id="detailAddress" required type="text"
+                                placeholder="Số nhà, tên đường"
+                                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary text-on-surface outline-none transition-shadow placeholder:text-outline">
+                            <span id="error-detailAddress"
+                                class="text-error text-[10px] hidden"></span>
+                        </div>
+                    </div>
+
+                    <!-- Nút gạt Mặc định (Đã sửa lỗi cấu trúc Tailwind) -->
+                    <label for="isDefault"
+                        class="flex items-center gap-3 py-2 cursor-pointer group w-fit">
+
+                        <!-- Cố định kích thước w-5 h-5 cho khung chứa -->
+                        <div
+                            class="relative flex items-center justify-center w-5 h-5">
+
+                            <!-- 1. Input ẩn (Đóng vai trò làm Peer) -->
+                            <input id="isDefault" type="checkbox"
+                                class="peer sr-only">
+
+                            <!-- 2. Khung ô vuông (Ngang hàng với input) -->
+                            <div
+                                class="absolute inset-0 rounded border-2 border-outline group-hover:border-primary peer-checked:border-primary peer-checked:bg-primary transition-all"></div>
+
+                            <!-- 3. Dấu tick (Ngang hàng với input, nằm đè lên khung) -->
+                            <!-- Thêm pointer-events-none để không cản trở thao tác click -->
+                            <span
+                                class="material-symbols-outlined absolute text-[16px] text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"
+                                style="font-weight: 800;">check</span>
+
+                        </div>
+
+                        <!-- Dòng chữ nhãn -->
+                        <span
+                            class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface transition-colors">
+                            Đặt làm địa chỉ mặc định
+                        </span>
+                    </label>
+
+                    <!-- Nút thao tác -->
+                    <div
+                        class="flex justify-end gap-3 pt-4 border-t border-outline-variant/30">
+                        <button type="button" onclick="toggleModal()"
+                            class="px-8 py-3 text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Trở
+                            Lại</button>
+                        <button type="button" onclick="AddressManager.save()"
+                            class="bg-primary hover:bg-primary-fixed text-on-primary px-10 py-3 rounded-xl font-bold transition-colors flex items-center gap-2">
+                            Lưu địa chỉ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+    </body>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/address.js"></script>
+</html>

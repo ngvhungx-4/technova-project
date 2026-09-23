@@ -1,0 +1,120 @@
+<header
+    class="bg-paper-white dark:bg-carbon-ink text-primary dark:text-inverse-primary border-b border-mist dark:border-graphite flat no shadows fixed left-0 top-0 z-50 w-full transition-colors duration-300">
+    <div
+        class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+        <!-- Search (Left) -->
+        <div class="flex-1 flex items-center">
+            <div id="search-container" class="group relative flex items-center">
+                <div class="relative flex items-center">
+                    <span id="search-toggle"
+                        class="material-symbols-outlined absolute left-md text-on-surface-variant cursor-pointer z-10">search</span>
+
+                    <!-- Đã xóa group-hover:w-64, group-hover:opacity-100, group-hover:cursor-text -->
+                    <input id="search-input"
+                        class="w-10 opacity-0 bg-fog border border-ash-border rounded-full py-xs pl-10 pr-md font-body-sm text-body-sm text-on-background focus:outline-none focus:border-carbon-ink transition-all duration-500 ease-in-out cursor-pointer"
+                        placeholder="Tìm kiếm sản phẩm..."
+                        type="text" />
+                </div>
+            </div>
+        </div>
+        <!-- Brand Logo -->
+        <div class="flex-1 flex justify-center">
+            <a
+                class="font-headline-md text-headline-md font-medium tracking-tighter text-primary dark:text-paper-white uppercase"
+                href="home.html">TECHNOVA</a>
+        </div>
+        <!-- Trailing Actions -->
+        <div
+            class="flex-1 flex justify-end items-center gap-lg font-label-caps text-label-caps">
+            <div class="hidden md:flex gap-lg items-center">
+
+                <!-- 1. TRẠNG THÁI CHƯA ĐĂNG NHẬP (GUEST ACTIONS) -->
+                <div id="guest-actions" class="flex items-center">
+                    <div class="group relative flex items-center">
+                        <a
+                            class="flex items-center gap-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-paper-white transition-colors duration-200 scale-95 active:scale-90 transition-transform uppercase"
+                            href="login.html">
+                            Đăng nhập
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'wght' 300;">person_add</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. TRẠNG THÁI ĐÃ ĐĂNG NHẬP (USER ACTIONS) -->
+                <!-- Mặc định ẩn (hidden), JS sẽ đổi thành flex khi có token -->
+                <div id="user-actions" class="hidden items-center gap-lg">
+                    <!-- Nút chuông thông báo (ẩn/hiện theo JS) -->
+                    <button id="header-notification-btn"
+                        class="flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors hidden">
+                        <span
+                            class="material-symbols-outlined">notifications</span>
+                    </button>
+
+                    <!-- Khối Avatar và Dropdown của User -->
+                    <div class="group relative" id="header-user-profile">
+                        <div
+                            class="flex items-center gap-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-paper-white transition-colors duration-200 cursor-pointer uppercase">
+
+                            <!-- Ảnh đại diện (Sẽ hiển thị nếu user có ảnh) -->
+                            <img src alt="Avatar"
+                                class="header-avatar-img w-8 h-8 rounded-full object-cover border border-mist/30 hidden">
+
+                            <!-- Chữ cái viết tắt (Dùng fallback khi user chưa cập nhật ảnh) -->
+                            <div
+                                class="header-avatar-initials w-8 h-8 rounded-full bg-primary text-paper-white flex items-center justify-center font-bold"></div>
+
+                            <!-- Tên hiển thị -->
+                            <span
+                                class="font-label-caps text-label-caps display-name-global">Minh
+                                Phạm</span>
+
+                            <span id="header-dropdown-arrow"
+                                class="material-symbols-outlined"
+                                style="font-variation-settings: 'wght' 300;">keyboard_arrow_down</span>
+                        </div>
+
+                        <div id="header-dropdown-content"
+                            class="absolute top-full right-0 mt-xs w-64 bg-paper-white border border-mist rounded shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                            <div class="flex flex-col">
+                                <a href="user_infor.html"
+                                    class="px-lg py-md font-body-sm text-body-sm text-carbon-ink hover:bg-fog transition-colors border-b border-mist/30">Quản
+                                    lý thông tin</a>
+                                <a href="orders.html"
+                                    class="px-lg py-md font-body-sm text-body-sm text-carbon-ink hover:bg-fog transition-colors border-b border-mist/30">Đơn
+                                    hàng của tôi</a>
+                                <a href="points.html"
+                                    class="px-lg py-md font-body-sm text-body-sm text-carbon-ink hover:bg-fog transition-colors border-b border-mist/30">Tích
+                                    điểm tiêu dùng</a>
+
+                                <!-- Đã gắn sự kiện onclick để gọi hàm logout() -->
+                                <a href="javascript:void(0)"
+                                    onclick="AuthUtils.logout()"
+                                    class="px-lg py-md font-body-sm text-body-sm text-ember-red hover:bg-fog transition-colors">
+                                    Đăng xuất
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. GIỎ HÀNG (Dùng chung cho cả 2 trạng thái) -->
+                <a
+                    class="relative flex items-center gap-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-paper-white transition-colors duration-200 scale-95 active:scale-90 transition-transform uppercase"
+                    href="cart.html">
+                    Giỏ hàng
+                    <span class="material-symbols-outlined"
+                        style='font-variation-settings: "wght" 300;'>shopping_cart</span>
+                    <!-- Chấm đỏ số lượng giỏ hàng -->
+                    <span
+                        class="global-cart-badge hidden absolute -top-2 -right-3 bg-ember-red text-paper-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Links -->
+    <nav id="category-list-container"
+        class="hidden md:flex justify-center w-full pb-md max-w-container-max mx-auto gap-xl border-t border-mist/30 items-center px-xl pt-md">
+        
+    </nav>
+</header>

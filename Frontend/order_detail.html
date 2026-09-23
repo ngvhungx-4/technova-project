@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light hide-scrollbar" lang="vi" style><head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TechNova | Kỷ Nguyên Công Nghệ Mới</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Tailwind CSS & Theme Config -->
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e2",
+                        "inverse-primary": "#c1c8c3",
+                        "on-tertiary-fixed-variant": "#93001b",
+                        "on-surface": "#181c1c",
+                        "graphite": "#606562",
+                        "inverse-surface": "#2d3131",
+                        "on-primary-fixed-variant": "#414845",
+                        "surface-variant": "#e0e3e2",
+                        "on-surface-variant": "#434845",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1a211e",
+                        "on-error": "#ffffff",
+                        "carbon-ink": "#1a211e",
+                        "on-primary-fixed": "#161d1a",
+                        "mist": "#e0e0e0",
+                        "ember-red": "#cc2e39",
+                        "tertiary": "#190001",
+                        "outline": "#747875",
+                        "surface-container-high": "#e6e9e8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf9",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f14a50",
+                        "paper-white": "#ffffff",
+                        "on-background": "#181c1c",
+                        "fog": "#eef1f0",
+                        "obsidian": "#0c0c0c",
+                        "inverse-on-surface": "#eef1f0",
+                        "surface-tint": "#59605c",
+                        "surface-container-low": "#f1f4f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#030806",
+                        "primary-fixed-dim": "#c1c8c3",
+                        "surface-container": "#ebeeed",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-dim": "#d7dbda",
+                        "on-tertiary": "#ffffff",
+                        "true-black": "#000000",
+                        "surface-bright": "#f7faf9",
+                        "primary-fixed": "#dde4df",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#480008",
+                        "on-primary-container": "#818984",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary": "#5d5f5f",
+                        "surface": "#f7faf9",
+                        "ash-border": "#cccfcd",
+                        "outline-variant": "#c3c7c4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "64px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "12px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "label-sm": ["Archivo Narrow", "sans-serif"],
+                        "display-xl": ["Playfair Display", "serif"],
+                        "label-caps": ["Archivo Narrow", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "technical-mono": ["JetBrains Mono", "monospace"],
+                        "body-sm": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.1", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+                        "label-caps": ["16px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "technical-mono": ["14px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+        <style type="text/tailwindcss">
+        @layer utilities {
+            
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-lg antialiased pt-28"
+        data-use-chatbot="true">
+        <div id="header-placeholder"></div>
+<main class="flex-1 max-w-container-max mx-auto w-full px-lg py-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            
+            <!-- LEFT COLUMN: Dispatch Info & Line Items -->
+            <div class="lg:col-span-7 flex flex-col gap-xl">
+                <!-- 1. Recipient & Delivery Details Card -->
+                <div class="border border-mist rounded-xl p-lg bg-paper-white">
+                    <div class="flex items-center justify-between pb-sm border-b border-mist mb-md">
+                        <div class="flex items-center gap-xs">
+                            <span class="material-symbols-outlined text-carbon-ink text-[20px]">pin_drop</span>
+                            <h2 class="font-label-caps text-label-caps text-primary">THÔNG TIN GIAO NHẬN &amp; NGƯỜI NHẬN</h2>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg text-body-sm">
+                        <div>
+                            <div class="text-graphite font-label-caps text-[14px] mb-xs">KHÁCH HÀNG NHẬN</div>
+                            <div class="flex items-center gap-xs">
+                                <span id="recipient-name" class="font-body-lg text-carbon-ink font-semibold">Đang tải...</span>
+                            </div>
+                            <div id="recipient-phone" class="font-body-lg text-carbon-ink mt-1">Đang tải...</div>
+                        </div>
+                        <div>
+                            <div class="text-graphite font-label-caps text-[14px] mb-xs">ĐỊA CHỈ NHẬN HÀNG</div>
+                            <p id="shipping-address" class="text-carbon-ink leading-relaxed">Đang tải...</p>
+                        </div>
+                    </div>
+                    <!-- Divider -->
+                    <div class="h-px bg-mist my-md"></div>
+                    <!-- Payment Method Line -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between text-body-sm gap-xs">
+                        <div class="flex items-center gap-xs">
+                            <span class="material-symbols-outlined text-graphite text-[18px]">account_balance_wallet</span>
+                            <span class="text-graphite">Phương thức:</span>
+                            <strong id="payment-method" class="text-carbon-ink">Đang tải...</strong>
+                        </div>
+                        <div class="flex items-center gap-xs">
+                            <span class="text-graphite">Trạng thái:</span>
+                            <span id="payment-status" class="font-body-lg text-carbon-ink font-medium px-2 py-0.5 bg-fog border border-mist rounded text-[12px]">Đang tải...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Products Summary List -->
+                <div class="border border-mist rounded-xl bg-paper-white p-lg">
+                    <div class="flex items-center justify-between pb-sm border-b border-mist mb-lg">
+                        <div class="flex items-center gap-xs">
+                            <span class="material-symbols-outlined text-carbon-ink text-[20px]">package_2</span>
+                            <h2 id="total-items-title" class="font-label-caps text-label-caps text-primary">DANH SÁCH KIỆN HÀNG</h2>
+                        </div>
+                    </div>
+                    <!-- Nơi đổ danh sách sản phẩm bằng JS -->
+                    <div id="order-items-container" class="divide-y divide-mist">
+                        <div class="text-center text-graphite py-4">Đang tải sản phẩm...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Financial Ledger & Actions -->
+            <aside class="lg:col-span-5 flex flex-col gap-lg sticky top-24">
+                <!-- Financial Summary Card -->
+                <div class="border border-mist rounded-xl bg-paper-white p-lg">
+                    <div class="flex items-center justify-between pb-sm border-b border-mist mb-md">
+                        <h2 class="font-label-caps text-label-caps text-primary tracking-wider">TỔNG KẾT THANH TOÁN</h2>
+                    </div>
+                    <!-- Ledger Rows -->
+                    <div class="space-y-sm text-body-sm font-body-lg">
+                        <div class="flex justify-between py-xs text-graphite">
+                            <span>Tạm tính</span>
+                            <span id="calc-subtotal" class="text-carbon-ink">0₫</span>
+                        </div>
+                        <div class="flex justify-between py-xs text-graphite">
+                            <span class="flex items-center gap-xs">Giảm giá voucher</span>
+                            <span id="calc-discount" class="text-ember-red">-0₫</span>
+                        </div>
+                        <div class="flex justify-between py-xs text-graphite">
+                            <span>Phí vận chuyển</span>
+                            <span id="calc-shipping" class="text-carbon-ink"><span class="text-[14px] text-graphite font-normal">0₫</span></span>
+                        </div>
+                        <div class="flex justify-between py-xs text-graphite">
+                            <span>Thuế VAT (10%)</span>
+                            <span class="text-carbon-ink">Đã bao gồm</span>
+                        </div>
+                        <!-- Major Divider -->
+                        <div class="h-px bg-carbon-ink my-sm"></div>
+                        <!-- Grand Total -->
+                        <div class="flex justify-between items-baseline py-xs">
+                            <span class="font-label-caps text-label-caps text-primary text-[17px]">TỔNG THANH TOÁN</span>
+                            <span id="calc-total" class="font-body-lg text-[28px] font-bold text-carbon-ink">0₫</span>
+                        </div>
+                        <!-- Sub-reconciliation -->
+                        <div class="p-sm bg-surface rounded-lg border border-mist space-y-1 mt-xs">
+                            <div class="flex justify-between text-body-sm text-graphite">
+                                <span>Đã ghi nhận thanh toán</span>
+                                <span id="calc-paid" class="text-carbon-ink font-semibold">0₫</span>
+                            </div>
+                            <div class="flex justify-between text-body-sm text-graphite">
+                                <span>Số tiền còn lại khi nhận</span>
+                                <span id="calc-remaining" class="text-carbon-ink font-bold">0₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Panel -->
+                <div class="border border-mist rounded-xl bg-paper-white p-lg flex flex-col gap-sm">
+                    <div class="font-label-caps text-label-caps text-primary pb-xs border-b border-mist">
+                        THAO TÁC ĐƠN HÀNG
+                    </div>
+                    <!-- Action 1: Back to Orders -->
+                    <a href="orders.html" class="w-full flex items-center justify-center gap-xs px-md py-sm border border-carbon-ink text-carbon-ink font-label-caps text-label-caps rounded hover:bg-carbon-ink hover:text-paper-white transition-all duration-200">
+                        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        QUAY LẠI ĐƠN HÀNG CỦA TÔI
+                    </a>
+                    <!-- Action 2: Print Invoice PDF -->
+                    <button onclick="window.print()" class="w-full flex items-center justify-center gap-xs px-md py-sm border border-mist bg-surface hover:bg-fog text-carbon-ink font-label-caps text-label-caps rounded transition-colors duration-200">
+                        <span class="material-symbols-outlined text-[18px]">print</span>
+                        IN HÓA ĐƠN ĐIỆN TỬ (PDF)
+                    </button>
+                    <!-- Action 3: Re-order / Buy Again -->
+                    <button id="btn-buy-again" onclick="buyAgain(this)" class="w-full flex items-center justify-center gap-xs px-md py-sm bg-carbon-ink text-paper-white font-label-caps text-label-caps rounded hover:bg-true-black transition-colors duration-200">
+                        <span class="material-symbols-outlined text-[18px]">refresh</span>
+                        MUA LẠI TOÀN BỘ ĐƠN HÀNG
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </main>
+        <div id="footer-placeholder"></div>
+    </body>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/order_detail.js"></script>
+</html>
