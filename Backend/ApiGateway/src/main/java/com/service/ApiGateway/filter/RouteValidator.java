@@ -10,7 +10,6 @@ import java.util.function.Predicate;
 @Component
 public class RouteValidator {
 
-    // 1. Đã thêm các API Giỏ hàng, Đặt hàng và Đánh giá vào danh sách công khai
     public static final List<String> openApiEndpoints = List.of(
             "/api/auth/register",
             "/api/auth/login",
@@ -38,15 +37,11 @@ public class RouteValidator {
         String path = request.getURI().getPath();
         HttpMethod method = request.getMethod();
 
-        // BƯỚC 1: ƯU TIÊN KIỂM TRA QUYỀN ADMIN
-        // Chặn ngay lập tức nếu URL chứa /admin (Bảo vệ an toàn tuyệt đối)
         if (path.contains("/admin") || path.contains("/internal")) return true;
 
-        // BƯỚC 2: Cho phép các API công khai đi qua (Khách vãng lai)
         boolean isOpenApi = openApiEndpoints.stream().anyMatch(path::contains);
         if (isOpenApi) return false;
 
-        // BƯỚC 3: Cho phép các API GET công khai đi qua
         boolean isOpenGetApi = openGetEndpoints.stream().anyMatch(path::startsWith);
         if (isOpenGetApi && HttpMethod.GET.equals(method)) return false;
 

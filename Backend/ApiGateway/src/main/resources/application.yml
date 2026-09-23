@@ -33,8 +33,7 @@ spring:
             - Path=/api/cart/**
           filters:
             - AuthenticationFilter
-
-        # ROUTE ĐÃ SỬA: Gộp chung và xóa dấu cách trong Path
+ 
         - id: OrderService
           uri: http://localhost:8084
           predicates:

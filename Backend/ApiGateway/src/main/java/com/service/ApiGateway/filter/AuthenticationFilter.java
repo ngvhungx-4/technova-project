@@ -29,27 +29,22 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     public GatewayFilter apply(Config config) {
         return ((exchange, chain) -> {
 
-            // Kiểm tra xem URL này có cần bảo vệ không
             if (validator.isSecured.test(exchange.getRequest())) {
 
-                // Kiểm tra xem có Header Authorization không
                 if (!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                     exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-                    return exchange.getResponse().setComplete(); // Chặn và báo lỗi 401
+                    return exchange.getResponse().setComplete();
                 }
 
-                // Trích xuất chuỗi Token
                 String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
                 if (authHeader != null && authHeader.startsWith("Bearer ")) {
                     authHeader = authHeader.substring(7);
                 }
 
                 try {
-                    // Sử dụng Decoders.BASE64.decode
                     byte[] keyBytes = Decoders.BASE64.decode(secret);
                     SecretKey key = Keys.hmacShaKeyFor(keyBytes);
 
-                    // Kiểm tra tính hợp lệ của Token
                     Jwts.parser()
                             .verifyWith(key)
                             .build()
@@ -62,12 +57,10 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 }
             }
 
-            // Nếu mọi thứ hợp lệ, cho phép yêu cầu đi tiếp xuống Microservice
             return chain.filter(exchange);
         });
     }
 
     public static class Config {
-        // Lớp rỗng dùng để tương thích với cấu trúc của Spring Cloud Gateway
     }
 }
